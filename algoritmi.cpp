@@ -10,9 +10,10 @@ using namespace std;
 
 const int CONST = 100;
 
-int avg (int *durata, int size);
+float avg (int *durata, int size);
 bool compareByPriority(Processo a, Processo b);
 void selectionSortByPriority(Processo *arr, int size);
+void selectionSortByTime(Processo *arr, int size);
 
 // Definizione dell'algoritmo FCFS
 
@@ -20,34 +21,47 @@ void algoritmo_FCFS (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int[n];
     cout << "FCFS ";
-
-    /* Nel ciclio for è stato inserito un controllo perché,
-     * essendo l'array allocato dinamicamente, si va a popolare
-     * di più valori di quelli richiesti e siccome, nel modello creato
-     * nessun elemento ha priorità 0, usiamo questo valore come valore
-     * di controllo
-     */
-
     for (int i = 0; i < num_processi; i++) {
         cout << "->" << p[i].nome;
         array_durata[i] = p[i].durata;
     }
-    ;
     cout << endl << "TEMPO MEDIO " << avg(array_durata, num_processi) << endl;
     delete [] array_durata;
 }
 
 // Definizione dell'algoritmo Priorità
 
-void algoritmo_priorita (Processo *p) {
-    int array_lenth = sizeof(p);
-    selectionSortByPriority(p, array_lenth);
-    for (int i = 0; i < array_lenth; i++) {
+void algoritmo_priorita (Processo *p, int num_processi) {
+    int n = CONST;
+    int *array_durata = new int [n];
+    selectionSortByPriority(p, num_processi);
+    cout << "PRIORITÀ ";
+    for (int i = 0; i < num_processi; i++) {
         cout << "->" << p[i].nome;
+        array_durata[i] = p[i].durata;
     }
+    cout << endl << "TEMPO MEDIO " << avg(array_durata, num_processi) << endl;
+    delete [] array_durata;
 }
 
-int avg (int *durata, int size) {
+// Definizione dell'algoritmo SJF
+
+void algoritmo_BJP (Processo *p, int num_processi) {
+    int n = CONST;
+    int *array_durata = new int [n];
+    selectionSortByTime(p, num_processi);
+    cout << "BJP ";
+    for (int i = 0; i < num_processi; i++) {
+        cout << "->" << p[i].nome;
+        array_durata[i] = p[i].durata;
+    }
+    cout << endl << "TEMPO MEDIO " << avg(array_durata, num_processi) << endl;
+    delete [] array_durata;
+}
+
+// Funzione di calcolo del tempo medio
+
+float avg (int *durata, int size) {
     int sum_int = 0; int sum = 0;
     for (int j = 0; j < size-1; j++) {
         sum_int += durata[j];
@@ -74,6 +88,28 @@ void selectionSortByPriority(Processo *arr, int size) {
                 min_idx = j;
             }
         }
+        swap(arr[min_idx], arr[i]);
     }
-    swap(arr[min_idx], arr[i]);
+}
+
+/*
+ * Due funzioni per ordinare gli elementi in base
+ * alla durata
+ */
+
+bool compareByTime(Processo a, Processo b) {
+    return a.durata < b.durata;
+}
+
+void selectionSortByTime(Processo *arr, int size) {
+    int i, j, min_idx;
+    for (i = 0; i < size - 1; i ++) {
+        min_idx = i;
+        for (j = i + 1; j < size; j++) {
+            if (compareByTime(arr[j], arr[min_idx])) {
+                min_idx = j;
+            }
+        }
+        swap(arr[min_idx], arr[i]);
+    }
 }

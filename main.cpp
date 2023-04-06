@@ -77,12 +77,13 @@ int main() {
             break;
 
         case 2:
-            cout << "Hai scelto l'algoritmo BJP";
+            cout << "Hai scelto l'algoritmo BJP" << endl;
+            algoritmo_BJP(arr, num_processi);
             break;
 
         case 3:
-            cout << "Hai scelto l'algoritmo Priorità";
-            algoritmo_priorita(arr);
+            cout << "Hai scelto l'algoritmo Priorità" << endl;
+            algoritmo_priorita(arr, num_processi);
             break;
 
         case 4:

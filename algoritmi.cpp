@@ -59,6 +59,19 @@ void algoritmo_BJP (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
+// Definizione dell'algoritmo RR
+void algoritmo_RR (Processo *p, int num_processi, int quanto) {
+    int n = CONST;
+    int *array_durata = new int [n];
+    for (int i = 0; i < num_processi; i++) {
+        if (p[i].durata <= quanto) {
+            cout << "->" << p[i].nome;
+        }
+        else {}
+    }
+    delete [] array_durata;
+}
+
 // Funzione di calcolo del tempo medio
 
 float avg (int *durata, int size) {
@@ -68,48 +81,4 @@ float avg (int *durata, int size) {
         sum += sum_int;
     }
     return sum/size;
-}
-
-/*
- * Due funzioni per ordinare gli elementi in base
- * alla priorità
- */
-
-bool compareByPriority(Processo a, Processo b) {
-    return a.priorita < b.priorita;
-}
-
-void selectionSortByPriority(Processo *arr, int size) {
-    int i, j, min_idx;
-    for (i = 0; i < size - 1; i ++) {
-        min_idx = i;
-        for (j = i + 1; j < size; j++) {
-            if (compareByPriority(arr[j], arr[min_idx])) {
-                min_idx = j;
-            }
-        }
-        swap(arr[min_idx], arr[i]);
-    }
-}
-
-/*
- * Due funzioni per ordinare gli elementi in base
- * alla durata
- */
-
-bool compareByTime(Processo a, Processo b) {
-    return a.durata < b.durata;
-}
-
-void selectionSortByTime(Processo *arr, int size) {
-    int i, j, min_idx;
-    for (i = 0; i < size - 1; i ++) {
-        min_idx = i;
-        for (j = i + 1; j < size; j++) {
-            if (compareByTime(arr[j], arr[min_idx])) {
-                min_idx = j;
-            }
-        }
-        swap(arr[min_idx], arr[i]);
-    }
 }

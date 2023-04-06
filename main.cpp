@@ -88,6 +88,7 @@ int main() {
 
         case 4:
             cout << "Hai scelto l'algoritmo RR";
+            algoritmo_RR(arr, num_processi, quanto);
             break;
     }
 

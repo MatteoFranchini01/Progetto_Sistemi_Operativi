@@ -18,5 +18,6 @@ struct Processo{
 void algoritmo_FCFS (Processo *p, int num_processi);
 void algoritmo_priorita (Processo *p, int num_processi);
 void algoritmo_BJP (Processo *p, int num_processi);
+void algoritmo_RR (Processo *p, int num_processi, int quanto);
 
 #endif //PROGETTO_SISTEMI_OPERATIVI_ALGORITMI_H

@@ -16,12 +16,10 @@ void selectionSortByPriority(Processo *arr, int size);
 
 // Definizione dell'algoritmo FCFS
 
-void algoritmo_FCFS (Processo *p) {
-    int size = 0;
+void algoritmo_FCFS (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int[n];
     cout << "FCFS ";
-    int array_lenth = sizeof(p);
 
     /* Nel ciclio for è stato inserito un controllo perché,
      * essendo l'array allocato dinamicamente, si va a popolare
@@ -30,22 +28,18 @@ void algoritmo_FCFS (Processo *p) {
      * di controllo
      */
 
-    for (int i = 0; i < array_lenth; i++) {
-        if (p[i].priorita != 0) {
-            cout << "->" << p[i].nome;
-            array_durata[i] = p[i].durata;
-            size++;
-        }
+    for (int i = 0; i < num_processi; i++) {
+        cout << "->" << p[i].nome;
+        array_durata[i] = p[i].durata;
     }
     ;
-    cout << endl << "TEMPO MEDIO " << avg(array_durata, size) << endl;
+    cout << endl << "TEMPO MEDIO " << avg(array_durata, num_processi) << endl;
     delete [] array_durata;
 }
 
 // Definizione dell'algoritmo Priorità
 
 void algoritmo_priorita (Processo *p) {
-    cout << "qUI";
     int array_lenth = sizeof(p);
     selectionSortByPriority(p, array_lenth);
     for (int i = 0; i < array_lenth; i++) {

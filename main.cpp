@@ -16,8 +16,10 @@ int main() {
     // Inizializzazione delle variabili
 
     string nome; int durata; int priorita;
-    string str1; string str2;
-    int counter = 0;
+    string str1; string str2; string str3; string str4;
+    int num_processi;
+    int quanto;
+    int counter = -1;
     int scelta_algoritmo = 0;
 
     /*
@@ -34,16 +36,27 @@ int main() {
 
     if (myfile.is_open()) {
         while (getline(myfile, nome, ' ')) {
-            getline(myfile, str1, ' ');
-            istringstream tk1(str1);
-            tk1 >> durata;
-            getline(myfile, str2);
-            istringstream tk2(str2);
-            tk2 >> priorita;
-            arr[counter].nome = nome;
-            arr[counter].durata = durata;
-            arr[counter].priorita = priorita;
-            counter++;
+            if (counter == -1) {
+                getline(myfile, str3, ' ');
+                istringstream tk3 (str3);
+                tk3 >> num_processi;
+                getline(myfile, str4);
+                istringstream tk4 (str4);
+                tk4 >> quanto;
+                counter++;
+            }
+            else {
+                getline(myfile, str1, ' ');
+                istringstream tk1(str1);
+                tk1 >> durata;
+                getline(myfile, str2);
+                istringstream tk2(str2);
+                tk2 >> priorita;
+                arr[counter].nome = nome;
+                arr[counter].durata = durata;
+                arr[counter].priorita = priorita;
+                counter++;
+            }
         }
         myfile.close();
     } else cout << "Impossibile aprire il file";
@@ -60,7 +73,7 @@ int main() {
     switch (scelta_algoritmo) {
         case 1:
             cout << "Hai scelto l'algoritmo FCFS" << endl;
-            algoritmo_FCFS(arr);
+            algoritmo_FCFS(arr, num_processi);
             break;
 
         case 2:

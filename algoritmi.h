@@ -13,7 +13,7 @@ struct Processo{
     int priorita;
 };
 
-void algoritmo_FCFS (Processo *p);
+void algoritmo_FCFS (Processo *p, int num_processi);
 void algoritmo_priorita (Processo *p);
 
 #endif //PROGETTO_SISTEMI_OPERATIVI_ALGORITMI_H

@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <queue>
 #include "algoritmi.h"
 
 using namespace std;
@@ -87,7 +88,7 @@ int main() {
             break;
 
         case 4:
-            cout << "Hai scelto l'algoritmo RR";
+            cout << "Hai scelto l'algoritmo RR" << endl;
             algoritmo_RR(arr, num_processi, quanto);
             break;
     }

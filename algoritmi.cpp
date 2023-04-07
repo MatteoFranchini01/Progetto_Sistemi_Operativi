@@ -115,25 +115,41 @@ float avg (int *durata, int size) {
 }
 
 
-/*
 float avg_RR (Processo *durata, int size, int num_processi) {
     int min = 0; int max = 0; int sum = 0;
+    int n = CONST;
+    //Processo_RR *processi_RR = new Processo_RR[n];
     for (int i = 0; i < num_processi; i++) {
         for (int j = 0; j < size; j++) {
             if (durata[i].nome == durata[j].nome) {
-                min = i; max = j;
+                cout << durata[i].nome << endl;
+                sum += durata[i].durata;
+                cout << "SUM: " << sum << endl;
+                cout << sum/num_processi << endl;
+                /*min = i;
+                max = j;
                 if (j > max) {
                     min = max;
                     max = j;
-                }
-                cout << "MAX " << max << " MIN "  << min << endl;
-                for (int k = min; k <= max; k++) {
-                    cout << durata[k].nome << endl;
-                    int sum = durata[k].durata + sum;
-                    cout << sum << endl;
-                }
+                }*/
             }
         }
     }
+        /*
+        Processo_RR temp;
+        temp.nome = durata[i].nome;
+        temp.max_index = max;
+        temp.min_index = min;
+        processi_RR[i] = temp;
+    }
+    for (int k = 0; k < num_processi; k++) {
+        Processo_RR temp_array_value = processi_RR[k];
+        cout << "NOME: " << temp_array_value.nome << " MIN: " << temp_array_value.min_index << " MAX: " << temp_array_value.max_index << endl;
+        for (int f = temp_array_value.min_index; f <= temp_array_value.max_index; f++) {
+            cout << "NOME: " << temp_array_value.nome << " f: " << f << endl;
+        }
+
+    }
+    delete [] processi_RR;
+         */
 }
-*/

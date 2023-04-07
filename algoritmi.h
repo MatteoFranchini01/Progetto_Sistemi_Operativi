@@ -5,15 +5,7 @@
 #ifndef PROGETTO_SISTEMI_OPERATIVI_ALGORITMI_H
 #define PROGETTO_SISTEMI_OPERATIVI_ALGORITMI_H
 
-#include <string>
-
-using namespace std;
-
-struct Processo{
-    string nome;
-    int durata;
-    int priorita;
-};
+#include "struct.h"
 
 void algoritmo_FCFS (Processo *p, int num_processi);
 void algoritmo_priorita (Processo *p, int num_processi);

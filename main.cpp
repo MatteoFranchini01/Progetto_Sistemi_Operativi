@@ -13,7 +13,19 @@ using namespace std;
 
 const int CONST = 100;
 
-int main() {
+int main(int argc, char *argv[]) {
+
+    // Controllo del numero di argomenti passati da riga di comando
+
+    if (argc != 2) {
+        cout << "Errore: inserire il nome del file di input" << endl;
+        return 1;
+    }
+
+    // Se il numero di argomenti è corretto, si procede con l'esecuzione del programma
+
+    else {
+
     // Inizializzazione delle variabili
 
     string nome; int durata; int priorita;
@@ -33,7 +45,7 @@ int main() {
 
     // Lettura da file
 
-    ifstream myfile ("config.txt");
+    ifstream myfile (argv[1]);
 
     if (myfile.is_open()) {
         while (getline(myfile, nome, ' ')) {
@@ -99,4 +111,5 @@ int main() {
     delete[] arr;
 
     return 0;
+    }
 }

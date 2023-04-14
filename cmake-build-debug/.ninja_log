@@ -1,11 +1,6 @@
 # ninja log v5
-11	1588	1680860205669262805	CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o	4708c485d1cefa62
-1589	1724	1680860205811647820	Progetto_Sistemi_Operativi	f5c806620b40fc1d
-13	1959	1680860066019846781	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a2f664439820d276
-15	1637	1680860065692096764	CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o	ef2b648b4977b528
-2	315	1681419217623920592	build.ninja	3417936281f8b6f2
-23	2777	1681419220428724696	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a2f664439820d276
 24	2801	1681419220460776581	CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o	4708c485d1cefa62
-2801	3213	1681419220879513808	Progetto_Sistemi_Operativi	f5c806620b40fc1d
-25	2081	1681419982350003551	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a2f664439820d276
 2084	2251	1681419982530683896	Progetto_Sistemi_Operativi	f5c806620b40fc1d
+25	2081	1681419982350003551	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a2f664439820d276
+0	112	1681424904868981425	build.ninja	3417936281f8b6f2
+15	1637	1680860065692096764	CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o	ef2b648b4977b528

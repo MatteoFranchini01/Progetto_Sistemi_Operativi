@@ -15,11 +15,4 @@ struct Processo{
     int priorita;
 };
 
-/*
- * struct Processo_RR {
-    string nome;
-    int max_index;
-    int min_index;
-};
-*/
 #endif //PROGETTO_SISTEMI_OPERATIVI_STRUCT_H

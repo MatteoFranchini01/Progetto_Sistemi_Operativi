@@ -45,7 +45,7 @@ void algoritmo_priorita (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-// Definizione dell'algoritmo SJF
+// Definizione dell'algoritmo BJF
 
 void algoritmo_BJP (Processo *p, int num_processi) {
     int n = CONST;
@@ -61,14 +61,16 @@ void algoritmo_BJP (Processo *p, int num_processi) {
 }
 
 // Definizione dell'algoritmo RR
+
 void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     int array_counter = 0;
     int n = CONST;
+    cout << "RR ";
     Processo *array_durata = new Processo [n];
     queue<Processo> processi = from_array_to_queue(p, num_processi);
     while (not processi.empty()) {
         if (processi.front().durata <= quanto) {
-            //cout << "->" << processi.front().nome;
+            cout << "->" << processi.front().nome;
             array_durata[array_counter] = processi.front();
             processi.pop();
             array_counter++;
@@ -77,9 +79,13 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
             Processo temp;
             temp.nome = processi.front().nome;
             temp.durata = processi.front().durata - quanto;
-            temp.priorita = processi.front().durata;
-            //cout << "->" << temp.nome;
-            array_durata[array_counter] = processi.front();
+            temp.priorita = processi.front().priorita;
+            cout << "->" << temp.nome;
+            Processo durata;
+            durata.nome = processi.front().nome;
+            durata.durata = quanto;
+            durata.priorita = processi.front().priorita;
+            array_durata[array_counter] = durata;
             processi.push(temp);
             processi.pop();
             array_counter++;
@@ -106,7 +112,14 @@ queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
 // Funzione di calcolo del tempo medio
 
 float avg (int *durata, int size) {
-    int sum_int = 0; int sum = 0;
+    // Tempo di attesa del singolo processo
+
+    int sum_int = 0;
+
+    // Tempo di attesa complessivo
+
+    int sum = 0;
+
     for (int j = 0; j < size-1; j++) {
         sum_int += durata[j];
         sum += sum_int;
@@ -114,42 +127,19 @@ float avg (int *durata, int size) {
     return sum/size;
 }
 
-
 float avg_RR (Processo *durata, int size, int num_processi) {
-    int min = 0; int max = 0; int sum = 0;
-    int n = CONST;
-    //Processo_RR *processi_RR = new Processo_RR[n];
+    bool flag = false;
+    int sum = 0;
     for (int i = 0; i < num_processi; i++) {
-        for (int j = 0; j < size; j++) {
+        for (int j = size; j >= 0; j--) {
             if (durata[i].nome == durata[j].nome) {
-                cout << durata[i].nome << endl;
-                sum += durata[i].durata;
-                cout << "SUM: " << sum << endl;
-                cout << sum/num_processi << endl;
-                /*min = i;
-                max = j;
-                if (j > max) {
-                    min = max;
-                    max = j;
-                }*/
+                flag = true;
+            }
+            if (flag == true && durata[i].nome != durata[j].nome) {
+                sum += durata[j].durata;
             }
         }
+        flag = false;
     }
-        /*
-        Processo_RR temp;
-        temp.nome = durata[i].nome;
-        temp.max_index = max;
-        temp.min_index = min;
-        processi_RR[i] = temp;
-    }
-    for (int k = 0; k < num_processi; k++) {
-        Processo_RR temp_array_value = processi_RR[k];
-        cout << "NOME: " << temp_array_value.nome << " MIN: " << temp_array_value.min_index << " MAX: " << temp_array_value.max_index << endl;
-        for (int f = temp_array_value.min_index; f <= temp_array_value.max_index; f++) {
-            cout << "NOME: " << temp_array_value.nome << " f: " << f << endl;
-        }
-
-    }
-    delete [] processi_RR;
-         */
+    return sum/num_processi;
 }

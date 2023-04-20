@@ -16,8 +16,8 @@ float avg (int *durata, int size);
 queue<Processo> from_array_to_queue(Processo *p, int num_processi);
 float avg_RR (Processo *durata, int size, int num_processi);
 
-// Definizione dell'algoritmo FCFS
 
+/// @brief Definizione dell'algoritmo FCFS
 void algoritmo_FCFS (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int[n];
@@ -30,8 +30,7 @@ void algoritmo_FCFS (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-// Definizione dell'algoritmo Priorità
-
+/// @brief Definizione dell'algoritmo Priorità
 void algoritmo_priorita (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int [n];
@@ -45,8 +44,7 @@ void algoritmo_priorita (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-// Definizione dell'algoritmo BJF
-
+/// @brief Definizione dell'algoritmo BJF
 void algoritmo_BJP (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int [n];
@@ -60,8 +58,8 @@ void algoritmo_BJP (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-// Definizione dell'algoritmo RR
 
+/// @brief Definizione dell'algoritmo RR
 void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     int array_counter = 0;
     int n = CONST;
@@ -95,8 +93,7 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     delete [] array_durata;
 }
 
-// Creazione di una funzione che trasforma un array in una coda
-
+/// @brief Creazione di una funzione che trasforma un array in una coda
 queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
     queue<Processo> var;
     for (int i = 0; i < num_processi; i++) {
@@ -109,8 +106,7 @@ queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
     return var;
 }
 
-// Funzione di calcolo del tempo medio
-
+/// @brief Funzione di calcolo del tempo medio
 float avg (int *durata, int size) {
     // Tempo di attesa del singolo processo
 
@@ -127,6 +123,7 @@ float avg (int *durata, int size) {
     return sum/size;
 }
 
+/// @brief Funzione di calcolo del tempo medio per l'algoritmo Round Robin
 float avg_RR (Processo *durata, int size, int num_processi) {
     bool flag = false;
     int sum = 0;

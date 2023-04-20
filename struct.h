@@ -7,8 +7,10 @@
 
 #include <string>
 
+
 using namespace std;
 
+/// @brief Struct creata per salvare il nome, la durata e la priorità del processo
 struct Processo{
     string nome;
     int durata;

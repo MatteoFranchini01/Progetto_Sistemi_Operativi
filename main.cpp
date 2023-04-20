@@ -15,19 +15,16 @@ const int CONST = 100;
 
 int main(int argc, char *argv[]) {
 
-    // Controllo del numero di argomenti passati da riga di comando
-
+    /// @brief Controllo del numero di argomenti passati da riga di comando
     if (argc != 2) {
         cout << "Errore: inserire il nome del file di input" << endl;
         return 1;
     }
 
-    // Se il numero di argomenti è corretto, si procede con l'esecuzione del programma
-
+    /// @brief Se il numero di argomenti è corretto, si procede con l'esecuzione del programma
     else {
 
-    // Inizializzazione delle variabili
-
+    /// @brief Inizializzazione delle variabili
     string nome; int durata; int priorita;
     string str1; string str2; string str3; string str4;
     int num_processi;
@@ -35,16 +32,13 @@ int main(int argc, char *argv[]) {
     int counter = -1;
     int scelta_algoritmo = 0;
 
-    /*
-     * Creazione di un array di tipo Processo
-     * con allocazione dinamica
-     */
 
+    /* @brief Creazione di un array di tipo Processo
+    con allocazione dinamica*/
     int n = CONST;
     Processo* arr = new Processo[n];
 
-    // Lettura da file
-
+    /// @brief Lettura da file
     ifstream myfile (argv[1]);
 
     if (myfile.is_open()) {
@@ -74,8 +68,7 @@ int main(int argc, char *argv[]) {
         myfile.close();
     } else cout << "Impossibile aprire il file";
 
-    // Scelta dell'algoritmo
-
+    /// @brief Scelta dell'algoritmo
     cout << "Selezionare l'algoritmo che si intende utilizzare" << endl;
     cout << "Premere 1 per FCFS" << endl;
     cout << "Premere 2 per BJP" << endl;
@@ -114,8 +107,7 @@ int main(int argc, char *argv[]) {
     }
 
 
-    // Cancellazione dell'array con allocazione dinamica
-
+    /// @brief Cancellazione dell'array con allocazione dinamica
     delete[] arr;
 
     return 0;

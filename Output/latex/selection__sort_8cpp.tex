@@ -1,0 +1,57 @@
+\hypertarget{selection__sort_8cpp}{}\doxysection{selection\+\_\+sort.\+cpp File Reference}
+\label{selection__sort_8cpp}\index{selection\_sort.cpp@{selection\_sort.cpp}}
+{\ttfamily \#include \char`\"{}selection\+\_\+sort.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}{compare\+By\+Priority}} (\mbox{\hyperlink{struct_processo}{Processo}} a, \mbox{\hyperlink{struct_processo}{Processo}} b)
+\begin{DoxyCompactList}\small\item\em Funzioni per ordinare gli elementi in base alla priorità \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}{selection\+Sort\+By\+Priority}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$arr, int size)
+\begin{DoxyCompactList}\small\item\em Algoritmo selection sort che opera in base alla priorità secondo la funzione \char`\"{}compare\+By\+Priority\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}{compare\+By\+Time}} (\mbox{\hyperlink{struct_processo}{Processo}} a, \mbox{\hyperlink{struct_processo}{Processo}} b)
+\begin{DoxyCompactList}\small\item\em Funzione per confrontare i processi in base alla durata. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}{selection\+Sort\+By\+Time}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$arr, int size)
+\begin{DoxyCompactList}\small\item\em Algoritmo selection sort che ordina in base alla durata secondo la funzione \char`\"{}compare\+By\+Time\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}\label{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}} 
+\index{selection\_sort.cpp@{selection\_sort.cpp}!compareByPriority@{compareByPriority}}
+\index{compareByPriority@{compareByPriority}!selection\_sort.cpp@{selection\_sort.cpp}}
+\doxysubsubsection{\texorpdfstring{compareByPriority()}{compareByPriority()}}
+{\footnotesize\ttfamily bool compare\+By\+Priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}}}]{a,  }\item[{\mbox{\hyperlink{struct_processo}{Processo}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Funzioni per ordinare gli elementi in base alla priorità 
+
+\mbox{\Hypertarget{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}\label{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}} 
+\index{selection\_sort.cpp@{selection\_sort.cpp}!compareByTime@{compareByTime}}
+\index{compareByTime@{compareByTime}!selection\_sort.cpp@{selection\_sort.cpp}}
+\doxysubsubsection{\texorpdfstring{compareByTime()}{compareByTime()}}
+{\footnotesize\ttfamily bool compare\+By\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}}}]{a,  }\item[{\mbox{\hyperlink{struct_processo}{Processo}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Funzione per confrontare i processi in base alla durata. 
+
+\mbox{\Hypertarget{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}\label{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}} 
+\index{selection\_sort.cpp@{selection\_sort.cpp}!selectionSortByPriority@{selectionSortByPriority}}
+\index{selectionSortByPriority@{selectionSortByPriority}!selection\_sort.cpp@{selection\_sort.cpp}}
+\doxysubsubsection{\texorpdfstring{selectionSortByPriority()}{selectionSortByPriority()}}
+{\footnotesize\ttfamily void selection\+Sort\+By\+Priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Algoritmo selection sort che opera in base alla priorità secondo la funzione \char`\"{}compare\+By\+Priority\char`\"{}. 
+
+\mbox{\Hypertarget{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}\label{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}} 
+\index{selection\_sort.cpp@{selection\_sort.cpp}!selectionSortByTime@{selectionSortByTime}}
+\index{selectionSortByTime@{selectionSortByTime}!selection\_sort.cpp@{selection\_sort.cpp}}
+\doxysubsubsection{\texorpdfstring{selectionSortByTime()}{selectionSortByTime()}}
+{\footnotesize\ttfamily void selection\+Sort\+By\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Algoritmo selection sort che ordina in base alla durata secondo la funzione \char`\"{}compare\+By\+Time\char`\"{}. 
+

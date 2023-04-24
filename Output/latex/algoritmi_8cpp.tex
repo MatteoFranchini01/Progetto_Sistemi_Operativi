@@ -1,0 +1,111 @@
+\hypertarget{algoritmi_8cpp}{}\doxysection{algoritmi.\+cpp File Reference}
+\label{algoritmi_8cpp}\index{algoritmi.cpp@{algoritmi.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include \char`\"{}algoritmi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}selection\+\_\+sort.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{algoritmi_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{avg}} (int $\ast$durata, int size)
+\begin{DoxyCompactList}\small\item\em Funzione di calcolo del tempo medio. \end{DoxyCompactList}\item 
+queue$<$ \mbox{\hyperlink{struct_processo}{Processo}} $>$ \mbox{\hyperlink{algoritmi_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}{from\+\_\+array\+\_\+to\+\_\+queue}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi)
+\begin{DoxyCompactList}\small\item\em Creazione di una funzione che trasforma un array in una coda. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{algoritmi_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}{avg\+\_\+\+RR}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$durata, int size, int num\+\_\+processi)
+\begin{DoxyCompactList}\small\item\em Funzione di calcolo del tempo medio per l\textquotesingle{}algoritmo Round Robin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b}{algoritmo\+\_\+\+FCFS}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi)
+\begin{DoxyCompactList}\small\item\em Definizione dell\textquotesingle{}algoritmo FCFS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{algoritmi_8cpp_afa823a96db950204c54db67098d219a3}{algoritmo\+\_\+priorita}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi)
+\begin{DoxyCompactList}\small\item\em Definizione dell\textquotesingle{}algoritmo Priorità \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}{algoritmo\+\_\+\+BJP}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi)
+\begin{DoxyCompactList}\small\item\em Definizione dell\textquotesingle{}algoritmo BJF. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}{algoritmo\+\_\+\+RR}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi, int quanto)
+\begin{DoxyCompactList}\small\item\em Definizione dell\textquotesingle{}algoritmo RR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}} = 100
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}\label{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_BJP@{algoritmo\_BJP}}
+\index{algoritmo\_BJP@{algoritmo\_BJP}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_BJP()}{algoritmo\_BJP()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+\+BJP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi }\end{DoxyParamCaption})}
+
+
+
+Definizione dell\textquotesingle{}algoritmo BJF. 
+
+\mbox{\Hypertarget{algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b}\label{algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_FCFS@{algoritmo\_FCFS}}
+\index{algoritmo\_FCFS@{algoritmo\_FCFS}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_FCFS()}{algoritmo\_FCFS()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+\+FCFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi }\end{DoxyParamCaption})}
+
+
+
+Definizione dell\textquotesingle{}algoritmo FCFS. 
+
+\mbox{\Hypertarget{algoritmi_8cpp_afa823a96db950204c54db67098d219a3}\label{algoritmi_8cpp_afa823a96db950204c54db67098d219a3}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_priorita@{algoritmo\_priorita}}
+\index{algoritmo\_priorita@{algoritmo\_priorita}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_priorita()}{algoritmo\_priorita()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+priorita (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi }\end{DoxyParamCaption})}
+
+
+
+Definizione dell\textquotesingle{}algoritmo Priorità 
+
+\mbox{\Hypertarget{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}\label{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_RR@{algoritmo\_RR}}
+\index{algoritmo\_RR@{algoritmo\_RR}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_RR()}{algoritmo\_RR()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+\+RR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi,  }\item[{int}]{quanto }\end{DoxyParamCaption})}
+
+
+
+Definizione dell\textquotesingle{}algoritmo RR. 
+
+\mbox{\Hypertarget{algoritmi_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}\label{algoritmi_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!avg@{avg}}
+\index{avg@{avg}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{avg()}{avg()}}
+{\footnotesize\ttfamily float avg (\begin{DoxyParamCaption}\item[{int $\ast$}]{durata,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Funzione di calcolo del tempo medio. 
+
+\mbox{\Hypertarget{algoritmi_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}\label{algoritmi_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!avg\_RR@{avg\_RR}}
+\index{avg\_RR@{avg\_RR}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{avg\_RR()}{avg\_RR()}}
+{\footnotesize\ttfamily float avg\+\_\+\+RR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{durata,  }\item[{int}]{size,  }\item[{int}]{num\+\_\+processi }\end{DoxyParamCaption})}
+
+
+
+Funzione di calcolo del tempo medio per l\textquotesingle{}algoritmo Round Robin. 
+
+\mbox{\Hypertarget{algoritmi_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}\label{algoritmi_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!from\_array\_to\_queue@{from\_array\_to\_queue}}
+\index{from\_array\_to\_queue@{from\_array\_to\_queue}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{from\_array\_to\_queue()}{from\_array\_to\_queue()}}
+{\footnotesize\ttfamily queue$<$ \mbox{\hyperlink{struct_processo}{Processo}} $>$ from\+\_\+array\+\_\+to\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi }\end{DoxyParamCaption})}
+
+
+
+Creazione di una funzione che trasforma un array in una coda. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}\label{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!CONST@{CONST}}
+\index{CONST@{CONST}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{CONST}{CONST}}
+{\footnotesize\ttfamily const int CONST = 100}
+

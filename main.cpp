@@ -25,16 +25,15 @@ int main(int argc, char *argv[]) {
     else {
 
     /// @brief Inizializzazione delle variabili
-    string nome; int durata; int priorita;
-    string str1; string str2; string str3; string str4;
+    string nome; int durata; int priorita; int istante_arrivo;
+    string str1; string str2; string str3; string str4; string str5;
     int num_processi;
     int quanto;
     int counter = -1;
     int scelta_algoritmo = 0;
 
 
-    /* @brief Creazione di un array di tipo Processo
-    con allocazione dinamica*/
+    /// @brief Creazione di un array di tipo Processo con allocazione dinamica
     int n = CONST;
     Processo* arr = new Processo[n];
 
@@ -42,8 +41,9 @@ int main(int argc, char *argv[]) {
     ifstream myfile (argv[1]);
 
     if (myfile.is_open()) {
-        while (getline(myfile, nome, ' ')) {
+        while (getline(myfile, str5, ' ')) {
             if (counter == -1) {
+                getline(myfile, nome, ' ');
                 getline(myfile, str3, ' ');
                 istringstream tk3 (str3);
                 tk3 >> num_processi;
@@ -53,6 +53,9 @@ int main(int argc, char *argv[]) {
                 counter++;
             }
             else {
+                istringstream tk5(str5);
+                tk5 >> istante_arrivo;
+                getline(myfile, nome, ' ');
                 getline(myfile, str1, ' ');
                 istringstream tk1(str1);
                 tk1 >> durata;
@@ -60,6 +63,7 @@ int main(int argc, char *argv[]) {
                 istringstream tk2(str2);
                 tk2 >> priorita;
                 arr[counter].nome = nome;
+                arr[counter].istante_arrivo = istante_arrivo;
                 arr[counter].durata = durata;
                 arr[counter].priorita = priorita;
                 counter++;
@@ -104,6 +108,7 @@ int main(int argc, char *argv[]) {
             algoritmo_BJP(arr, num_processi);
             algoritmo_priorita(arr, num_processi);
             algoritmo_RR(arr, num_processi, quanto);
+            break;
     }
 
 

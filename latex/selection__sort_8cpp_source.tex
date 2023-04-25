@@ -1,0 +1,44 @@
+\hypertarget{selection__sort_8cpp_source}{}\doxysection{selection\+\_\+sort.\+cpp}
+\mbox{\hyperlink{selection__sort_8cpp}{Vai alla documentazione di questo file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Matteo\ Franchini\ on\ 06/04/23.}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{selection__sort_8h}{selection\_sort.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00008}\mbox{\hyperlink{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}{00008}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}{compareByPriority}}(\mbox{\hyperlink{struct_processo}{Processo}}\ a,\ \mbox{\hyperlink{struct_processo}{Processo}}\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}}\ <\ b.\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}};}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00013}\mbox{\hyperlink{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}{selectionSortByPriority}}(\mbox{\hyperlink{struct_processo}{Processo}}\ *arr,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ min\_idx;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ min\_idx\ =\ i;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ i\ +\ 1;\ j\ <\ size;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed}{compareByPriority}}(arr[j],\ arr[min\_idx]))\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_idx\ =\ j;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ swap(arr[min\_idx],\ arr[i]);}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00027}\mbox{\hyperlink{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}{00027}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}{compareByTime}}(\mbox{\hyperlink{struct_processo}{Processo}}\ a,\ \mbox{\hyperlink{struct_processo}{Processo}}\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}}\ <\ b.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00032}\mbox{\hyperlink{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}{selectionSortByTime}}(\mbox{\hyperlink{struct_processo}{Processo}}\ *arr,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ min\_idx;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ min\_idx\ =\ i;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ i\ +\ 1;\ j\ <\ size;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d}{compareByTime}}(arr[j],\ arr[min\_idx]))\ \{}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_idx\ =\ j;}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ swap(arr[min\_idx],\ arr[i]);}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{selection__sort_8cpp_source_l00043}00043\ \}}
+
+\end{DoxyCode}

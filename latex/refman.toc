@@ -1,0 +1,75 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}LICENSE}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Progetto\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sistemi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Operativi}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Indice dei tipi composti}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Elenco dei tipi composti}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Indice dei file}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Elenco dei file}{9}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Documentazione delle classi}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Riferimenti per la struct Processo}{11}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Descrizione dettagliata}{11}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Documentazione dei membri dato}{11}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}durata}{11}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}istante\_arrivo}{12}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}nome}{12}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}priorita}{12}{subsubsection.5.1.2.4}%
+\contentsline {chapter}{\numberline {6}Documentazione dei file}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Riferimenti per il file algoritmi.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{13}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Documentazione delle funzioni}{14}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}algoritmo\_BJP()}{14}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}algoritmo\_FCFS()}{15}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}algoritmo\_priorita()}{15}{subsubsection.6.1.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.1.4}algoritmo\_RR()}{16}{subsubsection.6.1.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.1.5}algoritmo\_SRTF()}{17}{subsubsection.6.1.1.5}%
+\contentsline {subsection}{\numberline {6.1.2}Documentazione delle variabili}{18}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}CONST}{18}{subsubsection.6.1.2.1}%
+\contentsline {section}{\numberline {6.2}algoritmi.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Riferimenti per il file algoritmi.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Documentazione delle funzioni}{21}{subsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.1}algoritmo\_BJP()}{21}{subsubsection.6.3.1.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.2}algoritmo\_FCFS()}{22}{subsubsection.6.3.1.2}%
+\contentsline {subsubsection}{\numberline {6.3.1.3}algoritmo\_priorita()}{23}{subsubsection.6.3.1.3}%
+\contentsline {subsubsection}{\numberline {6.3.1.4}algoritmo\_RR()}{24}{subsubsection.6.3.1.4}%
+\contentsline {subsubsection}{\numberline {6.3.1.5}algoritmo\_SRTF()}{24}{subsubsection.6.3.1.5}%
+\contentsline {section}{\numberline {6.4}algoritmi.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Riferimenti per il file auxyliary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}functions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{26}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Documentazione delle funzioni}{26}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}analisi\_processi()}{26}{subsubsection.6.5.1.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.2}avg()}{27}{subsubsection.6.5.1.2}%
+\contentsline {subsubsection}{\numberline {6.5.1.3}avg\_RR()}{28}{subsubsection.6.5.1.3}%
+\contentsline {subsubsection}{\numberline {6.5.1.4}confronto\_durata()}{29}{subsubsection.6.5.1.4}%
+\contentsline {subsubsection}{\numberline {6.5.1.5}from\_array\_to\_queue()}{29}{subsubsection.6.5.1.5}%
+\contentsline {section}{\numberline {6.6}auxyliary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}functions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{30}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Riferimenti per il file auxyliary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}functions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Documentazione delle funzioni}{32}{subsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.1.1}analisi\_processi()}{32}{subsubsection.6.7.1.1}%
+\contentsline {subsubsection}{\numberline {6.7.1.2}avg()}{33}{subsubsection.6.7.1.2}%
+\contentsline {subsubsection}{\numberline {6.7.1.3}avg\_RR()}{34}{subsubsection.6.7.1.3}%
+\contentsline {subsubsection}{\numberline {6.7.1.4}confronto\_durata()}{35}{subsubsection.6.7.1.4}%
+\contentsline {subsubsection}{\numberline {6.7.1.5}from\_array\_to\_queue()}{35}{subsubsection.6.7.1.5}%
+\contentsline {section}{\numberline {6.8}auxyliary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}functions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{36}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Riferimenti per il file LICENSE.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{36}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Riferimenti per il file main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{36}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Documentazione delle funzioni}{37}{subsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.1}main()}{37}{subsubsection.6.10.1.1}%
+\contentsline {subsection}{\numberline {6.10.2}Documentazione delle variabili}{38}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}CONST}{38}{subsubsection.6.10.2.1}%
+\contentsline {section}{\numberline {6.11}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{38}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Riferimenti per il file README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{40}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Riferimenti per il file selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{40}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Documentazione delle funzioni}{40}{subsection.6.13.1}%
+\contentsline {subsubsection}{\numberline {6.13.1.1}compareByPriority()}{41}{subsubsection.6.13.1.1}%
+\contentsline {subsubsection}{\numberline {6.13.1.2}compareByTime()}{41}{subsubsection.6.13.1.2}%
+\contentsline {subsubsection}{\numberline {6.13.1.3}selectionSortByPriority()}{42}{subsubsection.6.13.1.3}%
+\contentsline {subsubsection}{\numberline {6.13.1.4}selectionSortByTime()}{42}{subsubsection.6.13.1.4}%
+\contentsline {section}{\numberline {6.14}selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{43}{section.6.14}%
+\contentsline {section}{\numberline {6.15}Riferimenti per il file selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{44}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Documentazione delle funzioni}{45}{subsection.6.15.1}%
+\contentsline {subsubsection}{\numberline {6.15.1.1}selectionSortByPriority()}{45}{subsubsection.6.15.1.1}%
+\contentsline {subsubsection}{\numberline {6.15.1.2}selectionSortByTime()}{45}{subsubsection.6.15.1.2}%
+\contentsline {section}{\numberline {6.16}selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.6.16}%
+\contentsline {section}{\numberline {6.17}Riferimenti per il file struct.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.6.17}%
+\contentsline {section}{\numberline {6.18}struct.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.6.18}%
+\contentsline {chapter}{Indice analitico}{49}{section*.67}%

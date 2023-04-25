@@ -1,0 +1,129 @@
+\hypertarget{algoritmi_8cpp_source}{}\doxysection{algoritmi.\+cpp}
+\mbox{\hyperlink{algoritmi_8cpp}{Vai alla documentazione di questo file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Matteo\ Franchini\ on\ 04/04/23.}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{algoritmi_8h}{algoritmi.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00014}\mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{00014}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}}\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00022}\mbox{\hyperlink{algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b}{algoritmo\_FCFS}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ *array\_durata\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[n];}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00025}00025\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FCFS\ "{}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ p[i].\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ array\_durata[i]\ =\ p[i].\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00030}00030\ \ \ \ \ cout\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}TEMPO\ MEDIO\ "{}}\ <<\ \mbox{\hyperlink{auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{avg}}(array\_durata,\ num\_processi)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{delete}\ []\ array\_durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00040}\mbox{\hyperlink{algoritmi_8cpp_afa823a96db950204c54db67098d219a3}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{algoritmi_8cpp_afa823a96db950204c54db67098d219a3}{algoritmo\_priorita}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ *array\_durata\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}\ [n];}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06}{selectionSortByPriority}}(p,\ num\_processi);}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00044}00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}PRIORITÀ\ "{}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ p[i].\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ array\_durata[i]\ =\ p[i].\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00049}00049\ \ \ \ \ cout\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}TEMPO\ MEDIO\ "{}}\ <<\ \mbox{\hyperlink{auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{avg}}(array\_durata,\ num\_processi)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{delete}\ []\ array\_durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00059}\mbox{\hyperlink{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}{algoritmo\_BJP}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{int}\ *array\_durata\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}\ [n];}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85}{selectionSortByTime}}(p,\ num\_processi);}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00063}00063\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}BJP\ "{}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ p[i].\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ array\_durata[i]\ =\ p[i].\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00068}00068\ \ \ \ \ cout\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}TEMPO\ MEDIO\ "{}}\ <<\ \mbox{\hyperlink{auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{avg}}(array\_durata,\ num\_processi)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{delete}\ []\ array\_durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00080}\mbox{\hyperlink{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}{algoritmo\_RR}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi,\ \textcolor{keywordtype}{int}\ quanto)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{int}\ array\_counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{algoritmi_8cpp_a0fb5ccc0f078b426236a868707b505e7}{CONST}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00083}00083\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}RR\ "{}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{struct_processo}{Processo}}\ *array\_durata\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_processo}{Processo}}\ [n];}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00085}00085\ \ \ \ \ queue<Processo>\ processi\ =\ \mbox{\hyperlink{auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}{from\_array\_to\_queue}}(p,\ num\_processi);}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (not\ processi.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (processi.front().durata\ <=\ quanto)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ processi.front().nome;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ array\_durata[array\_counter]\ =\ processi.front();}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ processi.pop();}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ array\_counter++;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (processi.front().durata\ >=\ quanto)\{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo}{Processo}}\ temp;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}}\ =\ processi.front().nome;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}}\ =\ processi.front().durata\ -\/\ quanto;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}}\ =\ processi.front().priorita;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ temp.\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo}{Processo}}\ durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ durata.\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}}\ =\ processi.front().nome;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ durata.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}}\ =\ quanto;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ durata.\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}}\ =\ processi.front().priorita;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ array\_durata[array\_counter]\ =\ durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ processi.push(temp);}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ processi.pop();}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ array\_counter++;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00109}00109\ \ \ \ \ cout\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}TEMPO\ MEDIO\ "{}}\ <<\ \mbox{\hyperlink{auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}{avg\_RR}}(array\_durata,\ array\_counter,\ num\_processi)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keyword}{delete}\ []\ array\_durata;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00119}\mbox{\hyperlink{algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594}{00119}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594}{algoritmo\_SRTF}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;\ \textcolor{keywordtype}{int}\ time\ =\ -\/1;\ \mbox{\hyperlink{struct_processo}{Processo}}\ temp;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00121}00121\ \ \ \ \ list<Processo>\ lista;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00122}00122\ \ \ \ \ list<Processo>\ processi\_analizzati;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00124}00124\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}SRTF\ "{}};}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{while}\ (flag\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ time++;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ processi\_analizzati\ =\ \mbox{\hyperlink{auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5}{analisi\_processi}}(p,\ num\_processi,\ time);}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (not\ processi\_analizzati.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ lista.push\_front(processi\_analizzati.front());}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ processi\_analizzati.pop\_front();}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ lista.sort(\mbox{\hyperlink{auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0}{confronto\_durata}});}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ lista.front().durata-\/-\/;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}TIME\ "{}\ <<\ time\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Primo\ processo\ della\ lista\ "{}\ <<\ lista.front().nome\ <<\ "{}\ DURATA\ "{}\ <<\ lista.front().durata\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lista.front().durata\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ lista.front().nome;}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ lista.pop\_front();}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}NUOVO\ FRONT\ "{}\ <<\ lista.front().nome\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lista.empty())\ \{\ flag\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00175}00175\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{algoritmi_8cpp_source_l00176}00176\ \}}
+
+\end{DoxyCode}

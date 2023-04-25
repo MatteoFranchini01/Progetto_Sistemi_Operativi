@@ -6,6 +6,8 @@
 #define PROGETTO_SISTEMI_OPERATIVI_ALGORITMI_H
 
 #include "struct.h"
+#include "selection_sort.h"
+#include "auxyliary_functions.h"
 
 void algoritmo_FCFS (Processo *p, int num_processi);
 void algoritmo_priorita (Processo *p, int num_processi);

@@ -5,7 +5,7 @@
 #ifndef PROGETTO_SISTEMI_OPERATIVI_SELECTION_SORT_H
 #define PROGETTO_SISTEMI_OPERATIVI_SELECTION_SORT_H
 
-#include "algoritmi.h"
+#include "struct.h"
 
 void selectionSortByPriority(Processo *arr, int size);
 void selectionSortByTime(Processo *arr, int size);

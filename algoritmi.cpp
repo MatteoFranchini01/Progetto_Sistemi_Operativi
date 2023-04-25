@@ -7,21 +7,18 @@
 #include <queue>
 #include <list>
 #include "algoritmi.h"
-#include "selection_sort.h"
+
 
 using namespace std;
 
 const int CONST = 100;
 
-float avg (int *durata, int size);
-queue<Processo> from_array_to_queue(Processo *p, int num_processi);
-float avg_RR (Processo *durata, int size, int num_processi);
-void algoritmo_SRTF (Processo *p, int num_processi);
-void stampa_coda (queue<Processo> coda);
-list<Processo> analisi_processi (Processo *p, int num_processi, int time);
-bool confronto_durata (const Processo& a, const Processo& b);
 
-/// @brief Definizione dell'algoritmo FCFS
+/*!
+ * Definizione dell'algoritmo FCFS
+ * @param Processo p
+ * @param int num_processi
+ */
 void algoritmo_FCFS (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int[n];
@@ -34,7 +31,12 @@ void algoritmo_FCFS (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-/// @brief Definizione dell'algoritmo Priorità
+
+/*!
+ * Definizione dell'algoritmo "Priorità"
+ * @param Processo p
+ * @param int num_processi
+ */
 void algoritmo_priorita (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int [n];
@@ -48,7 +50,12 @@ void algoritmo_priorita (Processo *p, int num_processi) {
     delete [] array_durata;
 }
 
-/// @brief Definizione dell'algoritmo BJF
+
+/*!
+ * Definizione dell'algoritmo BJF
+ * @param Processo p
+ * @param int num_processi
+ */
 void algoritmo_BJP (Processo *p, int num_processi) {
     int n = CONST;
     int *array_durata = new int [n];
@@ -63,7 +70,13 @@ void algoritmo_BJP (Processo *p, int num_processi) {
 }
 
 
-/// @brief Definizione dell'algoritmo RR
+/*!
+ * Definizione dell'algoritmo RR
+ * @param Processo p
+ * @param int num_processi
+ * @param int quanto
+ */
+
 void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     int array_counter = 0;
     int n = CONST;
@@ -97,11 +110,18 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     delete [] array_durata;
 }
 
+
+/*!
+ * Definizione dell'algoritmo SRTF
+ * @param Processo p
+ * @param int num_processi
+ */
 void algoritmo_SRTF (Processo *p, int num_processi) {
     int counter = 0; int time = -1; Processo temp;
     list<Processo> lista;
     list<Processo> processi_analizzati;
     bool flag = false;
+    cout << "SRTF ";
     while (flag == false) {
         time++;
 
@@ -135,8 +155,8 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
         /// Ad ogni iterazione viene decrementata la durata del processo "front" della lista
 
         lista.front().durata--;
-        cout << "TIME " << time << endl;
-        cout << "Primo processo della lista " << lista.front().nome << " DURATA " << lista.front().durata << endl;
+        //cout << "TIME " << time << endl;
+        //cout << "Primo processo della lista " << lista.front().nome << " DURATA " << lista.front().durata << endl;
 
         /*!
          * Quando la durata di un processo arriva a 0 lo andiamo
@@ -144,86 +164,13 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
          */
 
         if (lista.front().durata == 0) {
-            cout << "FINE PROCESSO " << lista.front().nome << endl;
+            cout << "->" << lista.front().nome;
             lista.pop_front();
-            cout << "NUOVO FRONT " << lista.front().nome << endl;
+            //cout << "NUOVO FRONT " << lista.front().nome << endl;
         }
 
         /// L'algoritmo termina quando la lista è vuota
 
         if (lista.empty()) { flag = true; }
-    }
-}
-
-list<Processo> analisi_processi (Processo *p, int num_processi, int time) {
-    list<Processo> processi_in_arrivo;
-    for (int i = 0; i < num_processi; i++) {
-        if (p[i].istante_arrivo == time) {
-            processi_in_arrivo.push_back(p[i]);
-            processi_in_arrivo.sort(confronto_durata);
-        }
-    }
-    return processi_in_arrivo;
-}
-
-bool confronto_durata (const Processo& a, const Processo& b) {
-    return a.durata < b.durata;
-}
-
-
-/// @brief Creazione di una funzione che trasforma un array in una coda
-queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
-    queue<Processo> var;
-    for (int i = 0; i < num_processi; i++) {
-        Processo temp;
-        temp.nome = p[i].nome;
-        temp.durata = p[i].durata;
-        temp.priorita = p[i].priorita;
-        var.push(temp);
-    }
-    return var;
-}
-
-
-/// @brief Funzione di calcolo del tempo medio
-float avg (int *durata, int size) {
-    // Tempo di attesa del singolo processo
-
-    int sum_int = 0;
-
-    // Tempo di attesa complessivo
-
-    int sum = 0;
-
-    for (int j = 0; j < size-1; j++) {
-        sum_int += durata[j];
-        sum += sum_int;
-    }
-    return sum/size;
-}
-
-/// @brief Funzione di calcolo del tempo medio per l'algoritmo Round Robin
-float avg_RR (Processo *durata, int size, int num_processi) {
-    bool flag = false;
-    int sum = 0;
-    for (int i = 0; i < num_processi; i++) {
-        for (int j = size; j >= 0; j--) {
-            if (durata[i].nome == durata[j].nome) {
-                flag = true;
-            }
-            if (flag == true && durata[i].nome != durata[j].nome) {
-                sum += durata[j].durata;
-            }
-        }
-        flag = false;
-    }
-    return sum/num_processi;
-}
-
-/// @brief funzione per stampare le code semplicemente, si noti che la coda viene passata non come puntatore
-void stampa_coda (queue<Processo> coda) {
-    while (not coda.empty()) {
-        cout << coda.front().nome << endl;
-        coda.pop();
     }
 }

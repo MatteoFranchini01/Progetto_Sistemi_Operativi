@@ -67,6 +67,12 @@ build CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o: CXX_COMPIL
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
 
+build CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o: CXX_COMPILER__Progetto_Sistemi_Operativi_Debug /Users/matteofranchini/Library/CloudStorage/OneDrive-UniversitàdegliStudidiParma/Università/Appunti$ e$ slide/II$ anno/Sistemi$ operativi/Progetto_Sistemi_Operativi/auxyliary_functions.cpp || cmake_object_order_depends_target_Progetto_Sistemi_Operativi
+  DEP_FILE = CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
+  OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Progetto_Sistemi_Operativi
@@ -75,7 +81,7 @@ build CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o: CXX_COMPIL
 #############################################
 # Link the executable Progetto_Sistemi_Operativi
 
-build Progetto_Sistemi_Operativi: CXX_EXECUTABLE_LINKER__Progetto_Sistemi_Operativi_Debug CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o
+build Progetto_Sistemi_Operativi: CXX_EXECUTABLE_LINKER__Progetto_Sistemi_Operativi_Debug CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   POST_BUILD = :

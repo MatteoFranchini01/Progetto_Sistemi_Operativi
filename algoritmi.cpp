@@ -5,6 +5,7 @@
 #include <iostream>
 #include <algorithm>
 #include <queue>
+#include <list>
 #include "algoritmi.h"
 #include "selection_sort.h"
 
@@ -15,7 +16,10 @@ const int CONST = 100;
 float avg (int *durata, int size);
 queue<Processo> from_array_to_queue(Processo *p, int num_processi);
 float avg_RR (Processo *durata, int size, int num_processi);
-
+void algoritmo_SRTF (Processo *p, int num_processi);
+void stampa_coda (queue<Processo> coda);
+list<Processo> analisi_processi (Processo *p, int num_processi, int time);
+bool confronto_durata (const Processo& a, const Processo& b);
 
 /// @brief Definizione dell'algoritmo FCFS
 void algoritmo_FCFS (Processo *p, int num_processi) {
@@ -93,6 +97,80 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
     delete [] array_durata;
 }
 
+void algoritmo_SRTF (Processo *p, int num_processi) {
+    int counter = 0; int time = -1; Processo temp;
+    list<Processo> lista;
+    list<Processo> processi_analizzati;
+    bool flag = false;
+    while (flag == false) {
+        time++;
+
+        /*!
+         *  in caso ci siano più processi in arrivo nello
+         *  stesso istante viene creata una lista di processi
+         *  ordinata per durata, quindi il primo elemento della lista
+         *  sarà quello con durata minore
+         */
+
+        processi_analizzati = analisi_processi(p, num_processi, time);
+
+        /*!
+         * Andiamo ad inserire nella lista tutti i processi
+         * che entrano in giorco in quell'isante di tempo
+         */
+
+        while (not processi_analizzati.empty()) {
+            lista.push_front(processi_analizzati.front());
+            processi_analizzati.pop_front();
+        }
+
+        /*!
+         * Una volta che tutti i processi sono stati inseriti andiamo
+         * ad ordinare la lista in modo tale da avere come primo
+         * elemento quello con durata minore
+         */
+
+        lista.sort(confronto_durata);
+
+        /// Ad ogni iterazione viene decrementata la durata del processo "front" della lista
+
+        lista.front().durata--;
+        cout << "TIME " << time << endl;
+        cout << "Primo processo della lista " << lista.front().nome << " DURATA " << lista.front().durata << endl;
+
+        /*!
+         * Quando la durata di un processo arriva a 0 lo andiamo
+         * a togliere dalla lista
+         */
+
+        if (lista.front().durata == 0) {
+            cout << "FINE PROCESSO " << lista.front().nome << endl;
+            lista.pop_front();
+            cout << "NUOVO FRONT " << lista.front().nome << endl;
+        }
+
+        /// L'algoritmo termina quando la lista è vuota
+
+        if (lista.empty()) { flag = true; }
+    }
+}
+
+list<Processo> analisi_processi (Processo *p, int num_processi, int time) {
+    list<Processo> processi_in_arrivo;
+    for (int i = 0; i < num_processi; i++) {
+        if (p[i].istante_arrivo == time) {
+            processi_in_arrivo.push_back(p[i]);
+            processi_in_arrivo.sort(confronto_durata);
+        }
+    }
+    return processi_in_arrivo;
+}
+
+bool confronto_durata (const Processo& a, const Processo& b) {
+    return a.durata < b.durata;
+}
+
+
 /// @brief Creazione di una funzione che trasforma un array in una coda
 queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
     queue<Processo> var;
@@ -105,6 +183,7 @@ queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
     }
     return var;
 }
+
 
 /// @brief Funzione di calcolo del tempo medio
 float avg (int *durata, int size) {
@@ -139,4 +218,12 @@ float avg_RR (Processo *durata, int size, int num_processi) {
         flag = false;
     }
     return sum/num_processi;
+}
+
+/// @brief funzione per stampare le code semplicemente, si noti che la coda viene passata non come puntatore
+void stampa_coda (queue<Processo> coda) {
+    while (not coda.empty()) {
+        cout << coda.front().nome << endl;
+        coda.pop();
+    }
 }

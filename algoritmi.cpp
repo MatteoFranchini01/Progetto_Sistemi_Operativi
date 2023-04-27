@@ -121,7 +121,8 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
     list<Processo> lista;
     list<Processo> processi_analizzati;
     bool flag = false;
-    cout << "SRTF ";
+    cout << "L'output si riferisce a quale processo viene eseguito per ogni unità di tempo" << endl;
+    cout << "SRTF" << endl;
     while (flag == false) {
         time++;
 
@@ -158,13 +159,15 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
         //cout << "TIME " << time << endl;
         //cout << "Primo processo della lista " << lista.front().nome << " DURATA " << lista.front().durata << endl;
 
+        cout << " TIME:\t" << time << "\tPROCESSO:\t" << lista.front().nome << endl;
+        cout << "----------------------------------" << endl;
+
         /*!
          * Quando la durata di un processo arriva a 0 lo andiamo
          * a togliere dalla lista
          */
 
         if (lista.front().durata == 0) {
-            cout << "->" << lista.front().nome;
             lista.pop_front();
             //cout << "NUOVO FRONT " << lista.front().nome << endl;
         }
@@ -174,3 +177,66 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
         if (lista.empty()) { flag = true; }
     }
 }
+
+void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
+    int array_counter = 0;
+    int n = CONST;
+    queue<Processo> processi = from_array_to_queue(p, num_processi);
+    while (not processi.empty()) {
+        if (processi.front().durata <= quanto) {
+            cout << "->" << processi.front().nome;
+            processi.pop();
+        }
+        else if (processi.front().durata > quanto){
+            Processo temp;
+            temp.nome = processi.front().nome;
+            temp.durata = processi.front().durata - quanto;
+            temp.priorita = processi.front().priorita;
+            cout << "->" << temp.nome;
+            processi.push(temp);
+            processi.pop();
+        }
+    }
+}
+
+void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
+    bool not_empty;
+    int n = CONST; int num_proc_uguale_priorita = 0;
+    Processo *stessa_priorita = new Processo [n];
+
+    /*!
+     * Chiamo l'algoritmo selectionSortByPriority in modo da
+     * ordinare i miei processi per priorità
+     */
+
+    selectionSortByPriority(p, num_processi);
+
+    cout << "PRIORITÀ ";
+    for (int i = 0; i < num_processi; i++) {
+        not_empty = false;
+        for (int j = 0; j < num_processi; j++) {
+
+            /// Creo una lista di processi con uguale priorità
+
+            if (p[i].priorita == p[j].priorita && p[i].nome != p[j].nome) {
+                stessa_priorita[j] = p[j];
+                not_empty = true;
+                num_proc_uguale_priorita++;
+            }
+        }
+
+        /// Se ho più di un processo di uguale durata chiamo l'algoritmo RR
+
+        if (not_empty) {
+            algoritmo_RR_modificato(stessa_priorita, num_proc_uguale_priorita, quanto);
+        }
+
+        /// altrimenti proseguo con l'algoritmo "priorità"
+
+        else {
+            cout << "->" << p[i].nome;
+        }
+    }
+    delete [] stessa_priorita;
+}
+

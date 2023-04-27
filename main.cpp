@@ -79,6 +79,7 @@ int main(int argc, char *argv[]) {
     cout << "Premere 3 per Priorità" << endl;
     cout << "Premere 4 per RR" << endl;
     cout << "Premere 5 per SRTF" << endl;
+    cout << "Premere 6 per priorità con RR" << endl;
     cin >> scelta_algoritmo;
 
     switch (scelta_algoritmo) {
@@ -106,6 +107,10 @@ int main(int argc, char *argv[]) {
             cout << "Hai scelto l'algoritmo SRTF" << endl;
             algoritmo_SRTF(arr, num_processi);
             break;
+
+        case 6:
+            cout << "Hai scelto l'algoritmo priorità RR" << endl;
+            algoritmo_priorita_RR(arr, num_processi, quanto);
     }
 
 

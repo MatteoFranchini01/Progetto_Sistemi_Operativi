@@ -4,64 +4,72 @@
     \subitem {algoritmo\_BJP}, \hyperpage{14}
     \subitem {algoritmo\_FCFS}, \hyperpage{14}
     \subitem {algoritmo\_priorita}, \hyperpage{15}
-    \subitem {algoritmo\_RR}, \hyperpage{16}
-    \subitem {algoritmo\_SRTF}, \hyperpage{17}
-    \subitem {CONST}, \hyperpage{18}
+    \subitem {algoritmo\_priorita\_RR}, \hyperpage{16}
+    \subitem {algoritmo\_RR}, \hyperpage{17}
+    \subitem {algoritmo\_RR\_modificato}, \hyperpage{18}
+    \subitem {algoritmo\_SRTF}, \hyperpage{19}
+    \subitem {CONST}, \hyperpage{20}
   \item {algoritmi.h}, \hyperpage{20}
-    \subitem {algoritmo\_BJP}, \hyperpage{21}
+    \subitem {algoritmo\_BJP}, \hyperpage{22}
     \subitem {algoritmo\_FCFS}, \hyperpage{22}
     \subitem {algoritmo\_priorita}, \hyperpage{23}
-    \subitem {algoritmo\_RR}, \hyperpage{23}
-    \subitem {algoritmo\_SRTF}, \hyperpage{24}
+    \subitem {algoritmo\_priorita\_RR}, \hyperpage{24}
+    \subitem {algoritmo\_RR}, \hyperpage{25}
+    \subitem {algoritmo\_SRTF}, \hyperpage{26}
   \item {algoritmo\_BJP}
     \subitem {algoritmi.cpp}, \hyperpage{14}
-    \subitem {algoritmi.h}, \hyperpage{21}
+    \subitem {algoritmi.h}, \hyperpage{22}
   \item {algoritmo\_FCFS}
     \subitem {algoritmi.cpp}, \hyperpage{14}
     \subitem {algoritmi.h}, \hyperpage{22}
   \item {algoritmo\_priorita}
     \subitem {algoritmi.cpp}, \hyperpage{15}
     \subitem {algoritmi.h}, \hyperpage{23}
-  \item {algoritmo\_RR}
+  \item {algoritmo\_priorita\_RR}
     \subitem {algoritmi.cpp}, \hyperpage{16}
-    \subitem {algoritmi.h}, \hyperpage{23}
-  \item {algoritmo\_SRTF}
-    \subitem {algoritmi.cpp}, \hyperpage{17}
     \subitem {algoritmi.h}, \hyperpage{24}
+  \item {algoritmo\_RR}
+    \subitem {algoritmi.cpp}, \hyperpage{17}
+    \subitem {algoritmi.h}, \hyperpage{25}
+  \item {algoritmo\_RR\_modificato}
+    \subitem {algoritmi.cpp}, \hyperpage{18}
+  \item {algoritmo\_SRTF}
+    \subitem {algoritmi.cpp}, \hyperpage{19}
+    \subitem {algoritmi.h}, \hyperpage{26}
   \item {analisi\_processi}
-    \subitem {auxyliary\_functions.cpp}, \hyperpage{26}
-    \subitem {auxyliary\_functions.h}, \hyperpage{32}
-  \item {auxyliary\_functions.cpp}, \hyperpage{26}
-    \subitem {analisi\_processi}, \hyperpage{26}
-    \subitem {avg}, \hyperpage{27}
-    \subitem {avg\_RR}, \hyperpage{28}
-    \subitem {confronto\_durata}, \hyperpage{29}
-    \subitem {from\_array\_to\_queue}, \hyperpage{29}
-  \item {auxyliary\_functions.h}, \hyperpage{31}
-    \subitem {analisi\_processi}, \hyperpage{32}
-    \subitem {avg}, \hyperpage{33}
-    \subitem {avg\_RR}, \hyperpage{34}
-    \subitem {confronto\_durata}, \hyperpage{34}
-    \subitem {from\_array\_to\_queue}, \hyperpage{35}
-  \item {avg}
-    \subitem {auxyliary\_functions.cpp}, \hyperpage{27}
-    \subitem {auxyliary\_functions.h}, \hyperpage{33}
-  \item {avg\_RR}
     \subitem {auxyliary\_functions.cpp}, \hyperpage{28}
+    \subitem {auxyliary\_functions.h}, \hyperpage{33}
+  \item {auxyliary\_functions.cpp}, \hyperpage{28}
+    \subitem {analisi\_processi}, \hyperpage{28}
+    \subitem {avg}, \hyperpage{29}
+    \subitem {avg\_RR}, \hyperpage{30}
+    \subitem {confronto\_durata}, \hyperpage{31}
+    \subitem {from\_array\_to\_queue}, \hyperpage{31}
+  \item {auxyliary\_functions.h}, \hyperpage{32}
+    \subitem {analisi\_processi}, \hyperpage{33}
+    \subitem {avg}, \hyperpage{34}
+    \subitem {avg\_RR}, \hyperpage{35}
+    \subitem {confronto\_durata}, \hyperpage{36}
+    \subitem {from\_array\_to\_queue}, \hyperpage{36}
+  \item {avg}
+    \subitem {auxyliary\_functions.cpp}, \hyperpage{29}
     \subitem {auxyliary\_functions.h}, \hyperpage{34}
+  \item {avg\_RR}
+    \subitem {auxyliary\_functions.cpp}, \hyperpage{30}
+    \subitem {auxyliary\_functions.h}, \hyperpage{35}
 
   \indexspace
 
   \item {compareByPriority}
     \subitem {selection\_sort.cpp}, \hyperpage{40}
   \item {compareByTime}
-    \subitem {selection\_sort.cpp}, \hyperpage{41}
+    \subitem {selection\_sort.cpp}, \hyperpage{40}
   \item {confronto\_durata}
-    \subitem {auxyliary\_functions.cpp}, \hyperpage{29}
-    \subitem {auxyliary\_functions.h}, \hyperpage{34}
+    \subitem {auxyliary\_functions.cpp}, \hyperpage{31}
+    \subitem {auxyliary\_functions.h}, \hyperpage{36}
   \item {CONST}
-    \subitem {algoritmi.cpp}, \hyperpage{18}
-    \subitem {main.cpp}, \hyperpage{38}
+    \subitem {algoritmi.cpp}, \hyperpage{20}
+    \subitem {main.cpp}, \hyperpage{39}
 
   \indexspace
 
@@ -71,8 +79,8 @@
   \indexspace
 
   \item {from\_array\_to\_queue}
-    \subitem {auxyliary\_functions.cpp}, \hyperpage{29}
-    \subitem {auxyliary\_functions.h}, \hyperpage{35}
+    \subitem {auxyliary\_functions.cpp}, \hyperpage{31}
+    \subitem {auxyliary\_functions.h}, \hyperpage{36}
 
   \indexspace
 
@@ -81,20 +89,20 @@
 
   \indexspace
 
-  \item {LICENSE.md}, \hyperpage{36}
+  \item {LICENSE.md}, \hyperpage{37}
 
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, \hyperpage{37}
-  \item {main.cpp}, \hyperpage{36}
-    \subitem {CONST}, \hyperpage{38}
-    \subitem {main}, \hyperpage{37}
+    \subitem {main.cpp}, \hyperpage{38}
+  \item {main.cpp}, \hyperpage{37}
+    \subitem {CONST}, \hyperpage{39}
+    \subitem {main}, \hyperpage{38}
 
   \indexspace
 
   \item {nome}
-    \subitem {Processo}, \hyperpage{12}
+    \subitem {Processo}, \hyperpage{11}
 
   \indexspace
 
@@ -103,29 +111,29 @@
   \item {Processo}, \hyperpage{11}
     \subitem {durata}, \hyperpage{11}
     \subitem {istante\_arrivo}, \hyperpage{11}
-    \subitem {nome}, \hyperpage{12}
+    \subitem {nome}, \hyperpage{11}
     \subitem {priorita}, \hyperpage{12}
 
   \indexspace
 
-  \item {README.md}, \hyperpage{40}
+  \item {README.md}, \hyperpage{39}
 
   \indexspace
 
-  \item {selection\_sort.cpp}, \hyperpage{40}
+  \item {selection\_sort.cpp}, \hyperpage{39}
     \subitem {compareByPriority}, \hyperpage{40}
-    \subitem {compareByTime}, \hyperpage{41}
-    \subitem {selectionSortByPriority}, \hyperpage{41}
-    \subitem {selectionSortByTime}, \hyperpage{42}
-  \item {selection\_sort.h}, \hyperpage{44}
-    \subitem {selectionSortByPriority}, \hyperpage{45}
-    \subitem {selectionSortByTime}, \hyperpage{45}
+    \subitem {compareByTime}, \hyperpage{40}
+    \subitem {selectionSortByPriority}, \hyperpage{40}
+    \subitem {selectionSortByTime}, \hyperpage{41}
+  \item {selection\_sort.h}, \hyperpage{42}
+    \subitem {selectionSortByPriority}, \hyperpage{43}
+    \subitem {selectionSortByTime}, \hyperpage{43}
   \item {selectionSortByPriority}
-    \subitem {selection\_sort.cpp}, \hyperpage{41}
-    \subitem {selection\_sort.h}, \hyperpage{45}
+    \subitem {selection\_sort.cpp}, \hyperpage{40}
+    \subitem {selection\_sort.h}, \hyperpage{43}
   \item {selectionSortByTime}
-    \subitem {selection\_sort.cpp}, \hyperpage{42}
-    \subitem {selection\_sort.h}, \hyperpage{45}
-  \item {struct.h}, \hyperpage{46}
+    \subitem {selection\_sort.cpp}, \hyperpage{41}
+    \subitem {selection\_sort.h}, \hyperpage{43}
+  \item {struct.h}, \hyperpage{45}
 
 \end{theindex}

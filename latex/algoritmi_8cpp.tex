@@ -5,8 +5,7 @@
 {\ttfamily \#include $<$queue$>$}\newline
 {\ttfamily \#include $<$list$>$}\newline
 {\ttfamily \#include \char`\"{}algoritmi.\+h\char`\"{}}\newline
-Grafo delle dipendenze di inclusione per algoritmi.\+cpp\+:
-\nopagebreak
+Grafo delle dipendenze di inclusione per algoritmi.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,7 +24,11 @@ void \mbox{\hyperlink{algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243}{algoritm
 void \mbox{\hyperlink{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}{algoritmo\+\_\+\+RR}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi, int quanto)
 \item 
 void \mbox{\hyperlink{algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594}{algoritmo\+\_\+\+SRTF}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi)
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000}{algoritmo\+\_\+\+RR\+\_\+modificato}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi, int quanto)
+\item 
+void \mbox{\hyperlink{algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b}{algoritmo\+\_\+priorita\+\_\+\+RR}} (\mbox{\hyperlink{struct_processo}{Processo}} $\ast$p, int num\+\_\+processi, int quanto)
+\begin{DoxyCompactList}\small\item\em Algoritmo priorità che in caso di processi uguali chiama la funzione algoritmo\+\_\+\+RR\+\_\+modificato. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variabili}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,10 +50,6 @@ Definizione dell\textquotesingle{}algoritmo BJF
 {\em int} & num\+\_\+processi \\
 \hline
 \end{DoxyParams}
-
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00059}{59}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
-
 Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -78,10 +77,6 @@ Definizione dell\textquotesingle{}algoritmo FCFS
 {\em int} & num\+\_\+processi \\
 \hline
 \end{DoxyParams}
-
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00022}{22}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
-
 Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -109,10 +104,6 @@ Definizione dell\textquotesingle{}algoritmo \char`\"{}\+Priorità\char`\"{}
 {\em int} & num\+\_\+processi \\
 \hline
 \end{DoxyParams}
-
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00040}{40}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
-
 Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -125,6 +116,45 @@ Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=243pt]{algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b}\label{algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_priorita\_RR@{algoritmo\_priorita\_RR}}
+\index{algoritmo\_priorita\_RR@{algoritmo\_priorita\_RR}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_priorita\_RR()}{algoritmo\_priorita\_RR()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+priorita\+\_\+\+RR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi,  }\item[{int}]{quanto }\end{DoxyParamCaption})}
+
+
+
+Algoritmo priorità che in caso di processi uguali chiama la funzione algoritmo\+\_\+\+RR\+\_\+modificato. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em p} & \\
+\hline
+{\em num\+\_\+processi} & \\
+\hline
+{\em quanto} & \\
+\hline
+\end{DoxyParams}
+Chiamo l\textquotesingle{}algoritmo selection\+Sort\+By\+Priority in modo da ordinare i miei processi per priorità
+
+Creo una lista di processi con uguale priorità
+
+Se ho più di un processo di uguale durata chiamo l\textquotesingle{}algoritmo RR
+
+altrimenti proseguo con l\textquotesingle{}algoritmo \char`\"{}priorità\char`\"{}Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgraph}
+\end{center}
+\end{figure}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}\label{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d}} 
@@ -142,10 +172,6 @@ Definizione dell\textquotesingle{}algoritmo RR
 {\em int} & quanto \\
 \hline
 \end{DoxyParams}
-
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00080}{80}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
-
 Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -158,6 +184,35 @@ Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=229pt]{algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000}\label{algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000}} 
+\index{algoritmi.cpp@{algoritmi.cpp}!algoritmo\_RR\_modificato@{algoritmo\_RR\_modificato}}
+\index{algoritmo\_RR\_modificato@{algoritmo\_RR\_modificato}!algoritmi.cpp@{algoritmi.cpp}}
+\doxysubsubsection{\texorpdfstring{algoritmo\_RR\_modificato()}{algoritmo\_RR\_modificato()}}
+{\footnotesize\ttfamily void algoritmo\+\_\+\+RR\+\_\+modificato (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_processo}{Processo}} $\ast$}]{p,  }\item[{int}]{num\+\_\+processi,  }\item[{int}]{quanto }\end{DoxyParamCaption})}
+
+Questo algoritmo viene chiamato quando abbiamo due processi con uguale priorità, è simile al RR visto prima, ma con qualche modifica per adattarsi meglio al caso in questione 
+\begin{DoxyParams}{Parametri}
+{\em p} & \\
+\hline
+{\em num\+\_\+processi} & \\
+\hline
+{\em quanto} & \\
+\hline
+\end{DoxyParams}
+Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgraph}
+\end{center}
+\end{figure}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594}\label{algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594}} 
@@ -183,11 +238,7 @@ Ad ogni iterazione viene decrementata la durata del processo \char`\"{}front\cha
 
 Quando la durata di un processo arriva a 0 lo andiamo a togliere dalla lista
 
-L\textquotesingle{}algoritmo termina quando la lista è vuota
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00119}{119}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
-
-Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
+L\textquotesingle{}algoritmo termina quando la lista è vuotaQuesto è il grafo delle chiamate per questa funzione\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -209,8 +260,4 @@ Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
 \index{CONST@{CONST}!algoritmi.cpp@{algoritmi.cpp}}
 \doxysubsubsection{\texorpdfstring{CONST}{CONST}}
 {\footnotesize\ttfamily const int CONST = 100}
-
-
-
-Definizione alla linea \mbox{\hyperlink{algoritmi_8cpp_source_l00014}{14}} del file \mbox{\hyperlink{algoritmi_8cpp_source}{algoritmi.\+cpp}}.
 

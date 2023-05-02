@@ -1,8 +1,10 @@
 //
 // Created by Matteo Franchini on 25/04/23.
 //
+#include <iostream>
 
 #include "auxyliary_functions.h"
+
 
 /*!
  * Questa funzione viene chiamata nell'esecuzione dell'algoritmo SRTF
@@ -43,9 +45,13 @@ bool confronto_durata (const Processo& a, const Processo& b) {
  * @param int num_processi
  * @return queue<Processo> coda
  */
+
 queue<Processo> from_array_to_queue(Processo *p, int num_processi) {
     queue<Processo> var;
     for (int i = 0; i < num_processi; i++) {
+        if (p[i].nome == "") {
+            continue;
+        }
         Processo temp;
         temp.nome = p[i].nome;
         temp.durata = p[i].durata;

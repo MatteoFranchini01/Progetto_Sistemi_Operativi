@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  25 APR 2023 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.4.4)  3 MAY 2023 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,9 +1030,9 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 17
 atex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 175.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 175.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 175.
  [1] [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 178.
@@ -1076,16 +1076,22 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 
 ]
 Capitolo 2.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 184.
-(md__r_e_a_d_m_e.tex) [5] [6
+(md__r_e_a_d_m_e.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 12.
+) [5] [6
 
 ]
 Capitolo 3.
-(annotated.tex
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
-) [7] [8
+(annotated.tex) [7] [8
 
 ]
 Capitolo 4.
@@ -1103,26 +1109,32 @@ Capitolo 6.
 pdfTeX warning: pdflatex (file ./algoritmi_8cpp__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >
-<algoritmi_8cpp__incl.pdf, id=496, 553.06625pt x 321.2pt>
+<algoritmi_8cpp__incl.pdf, id=482, 553.06625pt x 321.2pt>
 File: algoritmi_8cpp__incl.pdf Graphic file (type pdf)
 <use algoritmi_8cpp__incl.pdf>
-Package pdftex.def Info: algoritmi_8cpp__incl.pdf  used on input line 13.
+Package pdftex.def Info: algoritmi_8cpp__incl.pdf  used on input line 12.
 (pdftex.def)             Requested size: 350.0pt x 203.26378pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 31.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 31.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 31.
  [13
 
 ]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 41.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 44.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 41.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 44.
  <./algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgraph.pdf>
-<algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgraph.pdf, id=534, 427.5975p
+<algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgraph.pdf, id=524, 427.5975p
 t x 136.51pt>
 File: algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgraph.pdf Graphic file 
 (type pdf)
 <use algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_cgrap
-h.pdf  used on input line 58.
+h.pdf  used on input line 57.
 (pdftex.def)             Requested size: 350.0pt x 111.73686pt.
  <./algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgraph.pdf
 
@@ -1130,22 +1142,22 @@ pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a4fb4758345f1160fe3e883512e8412
 43_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
 >
-<algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgraph.pdf, id=542, 233.8737
+<algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgraph.pdf, id=532, 233.8737
 5pt x 99.37125pt>
 File: algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgraph.pdf Graphic file
  (type pdf)
 <use algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a4fb4758345f1160fe3e883512e841243_icgra
-ph.pdf  used on input line 65.
+ph.pdf  used on input line 64.
 (pdftex.def)             Requested size: 233.0pt x 99.00557pt.
  [14] <./algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgraph.pdf>
-<algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgraph.pdf, id=571, 235.88126
+<algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgraph.pdf, id=556, 235.88126
 pt x 99.37125pt>
 File: algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgraph.pdf Graphic file 
 (type pdf)
 <use algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_cgrap
-h.pdf  used on input line 89.
+h.pdf  used on input line 84.
 (pdftex.def)             Requested size: 235.0pt x 99.00102pt.
  <./algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgraph.pdf
 
@@ -1153,140 +1165,177 @@ pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a20a98b243ec63926c11036643e703d
 5b_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
 >
-<algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgraph.pdf, id=579, 240.9pt 
+<algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgraph.pdf, id=564, 240.9pt 
 x 99.37125pt>
 File: algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgraph.pdf Graphic file
  (type pdf)
 <use algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a20a98b243ec63926c11036643e703d5b_icgra
-ph.pdf  used on input line 96.
+ph.pdf  used on input line 91.
 (pdftex.def)             Requested size: 240.0pt x 99.00253pt.
+ <./algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf
 
-Overfull \vbox (20.69493pt too high) has occurred while \output is active []
-
-
-[15] <./algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf>
-<algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf, id=604, 455.7025p
+pdfTeX warning: pdflatex (file ./algoritmi_8cpp_afa823a96db950204c54db67098d219
+a3_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf, id=576, 455.7025p
 t x 136.51pt>
 File: algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf Graphic file 
 (type pdf)
 <use algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_afa823a96db950204c54db67098d219a3_cgrap
-h.pdf  used on input line 120.
+h.pdf  used on input line 111.
 (pdftex.def)             Requested size: 350.0pt x 104.84848pt.
- <./algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8cpp_afa823a96db950204c54db67098d219
-a3_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
-gle page
->
-<algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf, id=612, 243.9112
+ [15] <./algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf>
+<algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf, id=594, 243.9112
 5pt x 99.37125pt>
 File: algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf Graphic file
  (type pdf)
 <use algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_afa823a96db950204c54db67098d219a3_icgra
-ph.pdf  used on input line 127.
+ph.pdf  used on input line 118.
 (pdftex.def)             Requested size: 243.0pt x 99.00102pt.
+ <./algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c
+3b_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf, id=603, 497.86pt 
+x 136.51pt>
+File: algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf Graphic file 
+(type pdf)
+<use algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf>
+Package pdftex.def Info: algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_cgrap
+h.pdf  used on input line 150.
+(pdftex.def)             Requested size: 350.0pt x 95.96877pt.
+ [16] <./algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf>
+<algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf, id=626, 264.99pt
+ x 99.37125pt>
+File: algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf Graphic file
+ (type pdf)
+<use algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf>
+Package pdftex.def Info: algoritmi_8cpp_a4656f44f75b49df1d45be0555cd07c3b_icgra
+ph.pdf  used on input line 157.
+(pdftex.def)             Requested size: 264.0pt x 99.00708pt.
  <./algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f
 7d_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >
-<algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf, id=626, 301.125pt
+<algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf, id=638, 301.125pt
  x 136.51pt>
 File: algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf Graphic file 
 (type pdf)
 <use algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_cgrap
-h.pdf  used on input line 153.
+h.pdf  used on input line 179.
 (pdftex.def)             Requested size: 300.0pt x 136.01183pt.
- [16] <./algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf>
-<algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf, id=644, 229.8587
+ [17] <./algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf>
+<algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf, id=654, 229.8587
 5pt x 99.37125pt>
 File: algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf Graphic file
  (type pdf)
 <use algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a8297525246f541df4b9f8e6da2402f7d_icgra
-ph.pdf  used on input line 160.
+ph.pdf  used on input line 186.
 (pdftex.def)             Requested size: 229.0pt x 99.00557pt.
+ <./algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgraph.pdf
 
-[17] <./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf>
-<algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf, id=666, 415.5525p
+pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a930
+00_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgraph.pdf, id=663, 351.3125p
+t x 99.37125pt>
+File: algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgraph.pdf Graphic file 
+(type pdf)
+<use algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgraph.pdf>
+Package pdftex.def Info: algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_cgrap
+h.pdf  used on input line 208.
+(pdftex.def)             Requested size: 350.0pt x 99.00708pt.
+ [18] <./algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgraph.pdf>
+<algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgraph.pdf, id=686, 427.5975
+pt x 99.37125pt>
+File: algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgraph.pdf Graphic file
+ (type pdf)
+<use algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgraph.pdf>
+Package pdftex.def Info: algoritmi_8cpp_a74c68233e5fc6fd2ff74786079a93000_icgra
+ph.pdf  used on input line 215.
+(pdftex.def)             Requested size: 350.0pt x 81.33786pt.
+ <./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea5
+94_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>
+<algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf, id=705, 415.5525p
 t x 118.4425pt>
 File: algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf Graphic file 
 (type pdf)
 <use algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_cgrap
-h.pdf  used on input line 194.
+h.pdf  used on input line 245.
 (pdftex.def)             Requested size: 350.0pt x 99.7621pt.
- <./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea5
-94_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
-gle page
->
-<algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf, id=674, 240.9pt 
+ [19] <./algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf>
+<algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf, id=721, 240.9pt 
 x 99.37125pt>
 File: algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf Graphic file
  (type pdf)
 <use algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8cpp_a60a51e17222e1a8d06e3419f1b6ea594_icgra
-ph.pdf  used on input line 201.
+ph.pdf  used on input line 252.
 (pdftex.def)             Requested size: 240.0pt x 99.00253pt.
-) (algoritmi_8cpp_source.tex [18] [19]) (algoritmi_8h.tex <./algoritmi_8h__incl
-.pdf
+)
+(algoritmi_8h.tex <./algoritmi_8h__incl.pdf
 
 pdfTeX warning: pdflatex (file ./algoritmi_8h__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >
-<algoritmi_8h__incl.pdf, id=844, 305.14pt x 265.99374pt>
+<algoritmi_8h__incl.pdf, id=729, 305.14pt x 265.99374pt>
 File: algoritmi_8h__incl.pdf Graphic file (type pdf)
 <use algoritmi_8h__incl.pdf>
-Package pdftex.def Info: algoritmi_8h__incl.pdf  used on input line 11.
+Package pdftex.def Info: algoritmi_8h__incl.pdf  used on input line 10.
 (pdftex.def)             Requested size: 304.0pt x 265.01086pt.
- <./algoritmi_8h__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8h__dep__incl.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->
-<algoritmi_8h__dep__incl.pdf, id=852, 226.8475pt x 155.58125pt>
+ [20] <./algoritmi_8h__dep__incl.pdf>
+<algoritmi_8h__dep__incl.pdf, id=744, 226.8475pt x 155.58125pt>
 File: algoritmi_8h__dep__incl.pdf Graphic file (type pdf)
 <use algoritmi_8h__dep__incl.pdf>
-Package pdftex.def Info: algoritmi_8h__dep__incl.pdf  used on input line 19.
+Package pdftex.def Info: algoritmi_8h__dep__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 226.0pt x 155.0016pt.
- [20] <./algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf>
-<algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf, id=910, 427.5975pt 
+ [21] <./algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf>
+<algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf, id=783, 427.5975pt 
 x 136.51pt>
 File: algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf Graphic file (t
 ype pdf)
 <use algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a4fb4758345f1160fe3e883512e841243_cgraph.
-pdf  used on input line 59.
+pdf  used on input line 55.
 (pdftex.def)             Requested size: 350.0pt x 111.73686pt.
- [21] <./algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf>
-<algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf, id=932, 233.87375p
+ <./algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8h_a4fb4758345f1160fe3e883512e841243
+_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>
+<algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf, id=791, 233.87375p
 t x 99.37125pt>
 File: algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf Graphic file (
 type pdf)
 <use algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a4fb4758345f1160fe3e883512e841243_icgraph
-.pdf  used on input line 66.
+.pdf  used on input line 62.
 (pdftex.def)             Requested size: 233.0pt x 99.00557pt.
- <./algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8h_a20a98b243ec63926c11036643e703d5b
-_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
- page
->
-<algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf, id=946, 235.88126pt
+ [22] <./algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf>
+<algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf, id=811, 235.88126pt
  x 99.37125pt>
 File: algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf Graphic file (t
 ype pdf)
 <use algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a20a98b243ec63926c11036643e703d5b_cgraph.
-pdf  used on input line 90.
+pdf  used on input line 82.
 (pdftex.def)             Requested size: 235.0pt x 99.00102pt.
  <./algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph.pdf
 
@@ -1294,108 +1343,132 @@ pdfTeX warning: pdflatex (file ./algoritmi_8h_a20a98b243ec63926c11036643e703d5b
 _icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
 e page
 >
-<algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph.pdf, id=954, 240.9pt x 
+<algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph.pdf, id=819, 240.9pt x 
 99.37125pt>
 File: algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph.pdf Graphic file (
 type pdf)
 <use algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a20a98b243ec63926c11036643e703d5b_icgraph
-.pdf  used on input line 97.
+.pdf  used on input line 89.
 (pdftex.def)             Requested size: 240.0pt x 99.00253pt.
- [22] <./algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf>
-<algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf, id=977, 455.7025pt 
+ <./algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8h_afa823a96db950204c54db67098d219a3
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf, id=831, 455.7025pt 
 x 136.51pt>
 File: algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf Graphic file (t
 ype pdf)
 <use algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_afa823a96db950204c54db67098d219a3_cgraph.
-pdf  used on input line 121.
+pdf  used on input line 109.
 (pdftex.def)             Requested size: 350.0pt x 104.84848pt.
- <./algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8h_afa823a96db950204c54db67098d219a3
-_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
->
-<algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf, id=985, 243.91125p
+ [23] <./algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf>
+<algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf, id=848, 243.91125p
 t x 99.37125pt>
 File: algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf Graphic file (
 type pdf)
 <use algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_afa823a96db950204c54db67098d219a3_icgraph
-.pdf  used on input line 128.
+.pdf  used on input line 116.
 (pdftex.def)             Requested size: 243.0pt x 99.00102pt.
- [23] <./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf>
-<algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf, id=1008, 301.125pt 
-x 136.51pt>
+ <./algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf, id=857, 497.86pt x 
+136.51pt>
+File: algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf Graphic file (t
+ype pdf)
+<use algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_cgraph.pdf>
+Package pdftex.def Info: algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_cgraph.
+pdf  used on input line 148.
+(pdftex.def)             Requested size: 350.0pt x 95.96877pt.
+ [24] <./algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf>
+<algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf, id=880, 264.99pt x
+ 99.37125pt>
+File: algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf Graphic file (
+type pdf)
+<use algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_icgraph.pdf>
+Package pdftex.def Info: algoritmi_8h_a4656f44f75b49df1d45be0555cd07c3b_icgraph
+.pdf  used on input line 155.
+(pdftex.def)             Requested size: 264.0pt x 99.00708pt.
+ <./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf, id=892, 301.125pt x
+ 136.51pt>
 File: algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf Graphic file (t
 ype pdf)
 <use algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_cgraph.
-pdf  used on input line 154.
+pdf  used on input line 177.
 (pdftex.def)             Requested size: 300.0pt x 136.01183pt.
- <./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d
-_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
->
-<algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf, id=1016, 229.85875
-pt x 99.37125pt>
+ [25] <./algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf>
+<algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf, id=908, 229.85875p
+t x 99.37125pt>
 File: algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf Graphic file (
 type pdf)
 <use algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a8297525246f541df4b9f8e6da2402f7d_icgraph
-.pdf  used on input line 161.
+.pdf  used on input line 184.
 (pdftex.def)             Requested size: 229.0pt x 99.00557pt.
- [24] <./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf>
-<algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf, id=1038, 415.5525pt
- x 118.4425pt>
+ <./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf
+
+pdfTeX warning: pdflatex (file ./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594
+_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>
+<algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf, id=920, 415.5525pt 
+x 118.4425pt>
 File: algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf Graphic file (t
 ype pdf)
 <use algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_cgraph.
-pdf  used on input line 195.
+pdf  used on input line 214.
 (pdftex.def)             Requested size: 350.0pt x 99.7621pt.
- <./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594
-_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
->
-<algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf, id=1046, 240.9pt x
- 99.37125pt>
+ [26] <./algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf>
+<algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf, id=936, 240.9pt x 
+99.37125pt>
 File: algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf Graphic file (
 type pdf)
 <use algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph.pdf>
 Package pdftex.def Info: algoritmi_8h_a60a51e17222e1a8d06e3419f1b6ea594_icgraph
-.pdf  used on input line 202.
+.pdf  used on input line 221.
 (pdftex.def)             Requested size: 240.0pt x 99.00253pt.
-) (algoritmi_8h_source.tex) (auxyliary__functions_8cpp.tex <./auxyliary__functi
-ons_8cpp__incl.pdf
+)
+(algoritmi_8h_source.tex) (auxyliary__functions_8cpp.tex <./auxyliary__function
+s_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./auxyliary__functions_8cpp__incl.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >
-<auxyliary__functions_8cpp__incl.pdf, id=1068, 237.88875pt x 265.99374pt>
+<auxyliary__functions_8cpp__incl.pdf, id=960, 282.05376pt x 265.99374pt>
 File: auxyliary__functions_8cpp__incl.pdf Graphic file (type pdf)
 <use auxyliary__functions_8cpp__incl.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp__incl.pdf  used on input lin
-e 8.
-(pdftex.def)             Requested size: 237.0pt x 265.01086pt.
- [25] [26]
-Underfull \hbox (badness 10000) detected at line 42
+e 9.
+(pdftex.def)             Requested size: 281.0pt x 265.01898pt.
+ [27] [28]
+Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
  <./auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf>
-<auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf, id=113
-0, 292.09125pt x 99.37125pt>
+<auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf, id=100
+7, 292.09125pt x 99.37125pt>
 File: auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf Gr
 aphic file (type pdf)
 <use auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e
-20ab5_cgraph.pdf  used on input line 53.
+20ab5_cgraph.pdf  used on input line 50.
 (pdftex.def)             Requested size: 291.0pt x 99.0086pt.
  <./auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf
 
@@ -1403,30 +1476,30 @@ pdfTeX warning: pdflatex (file ./auxyliary__functions_8cpp_a554a44b83cdd2f59675
 485e795e20ab5_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >
-<auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf, id=11
-38, 363.3575pt x 99.37125pt>
+<auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf, id=10
+15, 363.3575pt x 99.37125pt>
 File: auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf G
 raphic file (type pdf)
 <use auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e
-20ab5_icgraph.pdf  used on input line 60.
+20ab5_icgraph.pdf  used on input line 57.
 (pdftex.def)             Requested size: 350.0pt x 95.7213pt.
- [27]
-Underfull \hbox (badness 10000) detected at line 76
+ [29]
+Underfull \hbox (badness 10000) detected at line 73
 [][][]
  []
 
  <./auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf>
-<auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf, id=11
-60, 312.16624pt x 173.64874pt>
+<auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf, id=10
+32, 312.16624pt x 173.64874pt>
 File: auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf G
 raphic file (type pdf)
 <use auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882e
-d1e21_icgraph.pdf  used on input line 87.
+d1e21_icgraph.pdf  used on input line 80.
 (pdftex.def)             Requested size: 311.0pt x 173.00444pt.
 
-Underfull \hbox (badness 10000) detected at line 105
+Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
@@ -1436,47 +1509,49 @@ pdfTeX warning: pdflatex (file ./auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b
 48d6ba943b104_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >
-<auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf, id=11
-74, 318.18875pt x 99.37125pt>
+<auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf, id=10
+44, 318.18875pt x 99.37125pt>
 File: auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf G
 raphic file (type pdf)
 <use auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba94
-3b104_icgraph.pdf  used on input line 116.
+3b104_icgraph.pdf  used on input line 105.
 (pdftex.def)             Requested size: 317.0pt x 98.99951pt.
- [28]
-Underfull \hbox (badness 10000) detected at line 132
+ [30]
+Underfull \hbox (badness 10000) detected at line 121
 [][][]
  []
 
  <./auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0_icgraph.pdf>
-<auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0_icgraph.pdf, id=12
-01, 488.82625pt x 118.4425pt>
+<auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0_icgraph.pdf, id=10
+68, 488.82625pt x 118.4425pt>
 File: auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0_icgraph.pdf G
 raphic file (type pdf)
 <use auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_aaeb7d20917f739703e386190446
-7dec0_icgraph.pdf  used on input line 143.
+7dec0_icgraph.pdf  used on input line 128.
 (pdftex.def)             Requested size: 350.0pt x 84.80682pt.
 
-[29]
-Underfull \hbox (badness 10000) detected at line 159
+Underfull \hbox (badness 10000) detected at line 144
 [][][]
  []
 
- <./auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf>
-<auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf, id=12
-25, 374.39874pt x 99.37125pt>
+ <./auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./auxyliary__functions_8cpp_ace10562a91dd8d1c495
+bd5ec8609eab4_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf, id=10
+81, 571.13374pt x 136.51pt>
 File: auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf G
 raphic file (type pdf)
 <use auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec860
-9eab4_icgraph.pdf  used on input line 170.
-(pdftex.def)             Requested size: 350.0pt x 92.90102pt.
-)
-(auxyliary__functions_8cpp_source.tex [30]) (auxyliary__functions_8h.tex <./aux
-yliary__functions_8h__incl.pdf>
-<auxyliary__functions_8h__incl.pdf, id=1307, 237.88875pt x 210.7875pt>
+9eab4_icgraph.pdf  used on input line 151.
+(pdftex.def)             Requested size: 350.0pt x 83.65631pt.
+) (auxyliary__functions_8h.tex [31] <./auxyliary__functions_8h__incl.pdf>
+<auxyliary__functions_8h__incl.pdf, id=1104, 237.88875pt x 210.7875pt>
 File: auxyliary__functions_8h__incl.pdf Graphic file (type pdf)
 <use auxyliary__functions_8h__incl.pdf>
 Package pdftex.def Info: auxyliary__functions_8h__incl.pdf  used on input line 
@@ -1487,25 +1562,25 @@ Package pdftex.def Info: auxyliary__functions_8h__incl.pdf  used on input line
 pdfTeX warning: pdflatex (file ./auxyliary__functions_8h__dep__incl.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<auxyliary__functions_8h__dep__incl.pdf, id=1315, 325.215pt x 210.7875pt>
+<auxyliary__functions_8h__dep__incl.pdf, id=1112, 325.215pt x 210.7875pt>
 File: auxyliary__functions_8h__dep__incl.pdf Graphic file (type pdf)
 <use auxyliary__functions_8h__dep__incl.pdf>
 Package pdftex.def Info: auxyliary__functions_8h__dep__incl.pdf  used on input 
-line 18.
+line 17.
 (pdftex.def)             Requested size: 324.0pt x 210.01506pt.
- [31] [32]
-Underfull \hbox (badness 10000) detected at line 52
+ [32] [33]
+Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
  <./auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf>
-<auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf, id=1385,
+<auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf, id=1158,
  292.09125pt x 99.37125pt>
 File: auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf Grap
 hic file (type pdf)
 <use auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_cgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20
-ab5_cgraph.pdf  used on input line 63.
+ab5_cgraph.pdf  used on input line 58.
 (pdftex.def)             Requested size: 291.0pt x 99.0086pt.
  <./auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf
 
@@ -1513,16 +1588,16 @@ pdfTeX warning: pdflatex (file ./auxyliary__functions_8h_a554a44b83cdd2f5967548
 5e795e20ab5_icgraph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf, id=1393
+<auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf, id=1166
 , 363.3575pt x 99.37125pt>
 File: auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf Gra
 phic file (type pdf)
 <use auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20ab5_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_a554a44b83cdd2f59675485e795e20
-ab5_icgraph.pdf  used on input line 70.
+ab5_icgraph.pdf  used on input line 65.
 (pdftex.def)             Requested size: 350.0pt x 95.7213pt.
 
-Underfull \hbox (badness 10000) detected at line 86
+Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
 
@@ -1532,45 +1607,45 @@ pdfTeX warning: pdflatex (file ./auxyliary__functions_8h_a6c6776f8d3161d3a79e28
 d7882ed1e21_icgraph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<auxyliary__functions_8h_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf, id=1403
+<auxyliary__functions_8h_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf, id=1174
 , 312.16624pt x 173.64874pt>
 File: auxyliary__functions_8h_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf Gra
 phic file (type pdf)
 <use auxyliary__functions_8h_a6c6776f8d3161d3a79e28d7882ed1e21_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_a6c6776f8d3161d3a79e28d7882ed1
-e21_icgraph.pdf  used on input line 97.
+e21_icgraph.pdf  used on input line 88.
 (pdftex.def)             Requested size: 311.0pt x 173.00444pt.
- [33]
-Underfull \hbox (badness 10000) detected at line 115
+ [34]
+Underfull \hbox (badness 10000) detected at line 106
 [][][]
  []
 
  <./auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf>
-<auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf, id=1426
+<auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf, id=1194
 , 318.18875pt x 99.37125pt>
 File: auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf Gra
 phic file (type pdf)
 <use auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b104_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_a8c714bb8d5c8f392c4b48d6ba943b
-104_icgraph.pdf  used on input line 126.
+104_icgraph.pdf  used on input line 113.
 (pdftex.def)             Requested size: 317.0pt x 98.99951pt.
 
-[34]
-Underfull \hbox (badness 10000) detected at line 142
+[35]
+Underfull \hbox (badness 10000) detected at line 129
 [][][]
  []
 
  <./auxyliary__functions_8h_aaeb7d20917f739703e3861904467dec0_icgraph.pdf>
-<auxyliary__functions_8h_aaeb7d20917f739703e3861904467dec0_icgraph.pdf, id=1452
+<auxyliary__functions_8h_aaeb7d20917f739703e3861904467dec0_icgraph.pdf, id=1218
 , 488.82625pt x 118.4425pt>
 File: auxyliary__functions_8h_aaeb7d20917f739703e3861904467dec0_icgraph.pdf Gra
 phic file (type pdf)
 <use auxyliary__functions_8h_aaeb7d20917f739703e3861904467dec0_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_aaeb7d20917f739703e3861904467d
-ec0_icgraph.pdf  used on input line 153.
+ec0_icgraph.pdf  used on input line 136.
 (pdftex.def)             Requested size: 350.0pt x 84.80682pt.
 
-Underfull \hbox (badness 10000) detected at line 169
+Underfull \hbox (badness 10000) detected at line 152
 [][][]
  []
 
@@ -1580,70 +1655,64 @@ pdfTeX warning: pdflatex (file ./auxyliary__functions_8h_ace10562a91dd8d1c495bd
 5ec8609eab4_icgraph.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >
-<auxyliary__functions_8h_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf, id=1467
-, 374.39874pt x 99.37125pt>
+<auxyliary__functions_8h_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf, id=1231
+, 571.13374pt x 136.51pt>
 File: auxyliary__functions_8h_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf Gra
 phic file (type pdf)
 <use auxyliary__functions_8h_ace10562a91dd8d1c495bd5ec8609eab4_icgraph.pdf>
 Package pdftex.def Info: auxyliary__functions_8h_ace10562a91dd8d1c495bd5ec8609e
-ab4_icgraph.pdf  used on input line 180.
-(pdftex.def)             Requested size: 350.0pt x 92.90102pt.
-) (auxyliary__functions_8h_source.tex [35]) (_l_i_c_e_n_s_e_8md.tex)
+ab4_icgraph.pdf  used on input line 159.
+(pdftex.def)             Requested size: 350.0pt x 83.65631pt.
+) (auxyliary__functions_8h_source.tex [36]) (_l_i_c_e_n_s_e_8md.tex)
 (main_8cpp.tex <./main_8cpp__incl.pdf>
-<main_8cpp__incl.pdf, id=1495, 615.29875pt x 321.2pt>
+<main_8cpp__incl.pdf, id=1266, 615.29875pt x 321.2pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 <use main_8cpp__incl.pdf>
-Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 14.
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 350.0pt x 182.70851pt.
- [36] <./main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
-<main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1534, 528.97626pt x
- 324.21124pt>
+ [37] <./main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
+<main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1286, 571.13374pt x
+ 343.2825pt>
 File: main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic file (type
  pdf)
 <use main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf
-  used on input line 56.
-(pdftex.def)             Requested size: 350.0pt x 214.51436pt.
- [37]) (main_8cpp_source.tex [38]) (_r_e_a_d_m_e_8md.tex) (selection__sort_8cpp
-.tex <./selection__sort_8cpp__incl.pdf>
-<selection__sort_8cpp__incl.pdf, id=1602, 176.66pt x 265.99374pt>
+  used on input line 51.
+(pdftex.def)             Requested size: 350.0pt x 210.37105pt.
+) (_r_e_a_d_m_e_8md.tex) (selection__sort_8cpp.tex <./selection__sort_8cpp__inc
+l.pdf
+
+pdfTeX warning: pdflatex (file ./selection__sort_8cpp__incl.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>
+<selection__sort_8cpp__incl.pdf, id=1301, 176.66pt x 265.99374pt>
 File: selection__sort_8cpp__incl.pdf Graphic file (type pdf)
 <use selection__sort_8cpp__incl.pdf>
-Package pdftex.def Info: selection__sort_8cpp__incl.pdf  used on input line 9.
+Package pdftex.def Info: selection__sort_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 176.0pt x 265.00275pt.
- [39]
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 16.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 16.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 18.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 18.
- <./selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./selection__sort_8cpp_abe673ebe5e0074d8a5d56555
-244c20ed_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in
- a single page
->
-<selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pdf, id=1717, 5
-28.97626pt x 99.37125pt>
+ [38] [39] <./selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pd
+f>
+<selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pdf, id=1344, 5
+50.055pt x 136.51pt>
 File: selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pdf Graphi
 c file (type pdf)
 <use selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_abe673ebe5e0074d8a5d56555244c20ed
-_icgraph.pdf  used on input line 44.
-(pdftex.def)             Requested size: 350.0pt x 65.74898pt.
- [40] <./selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf>
-<selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf, id=1738, 5
+_icgraph.pdf  used on input line 39.
+(pdftex.def)             Requested size: 350.0pt x 86.86409pt.
+ <./selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./selection__sort_8cpp_a4fe8dea4c73b5643413c2a0e
+aea1197d_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+>
+<selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf, id=1354, 5
 00.87125pt x 99.37125pt>
 File: selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf Graphi
 c file (type pdf)
 <use selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_a4fe8dea4c73b5643413c2a0eaea1197d
-_icgraph.pdf  used on input line 65.
+_icgraph.pdf  used on input line 56.
 (pdftex.def)             Requested size: 350.0pt x 69.44112pt.
  <./selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf
 
@@ -1651,36 +1720,36 @@ pdfTeX warning: pdflatex (file ./selection__sort_8cpp_a5f088b07860f6bb7c673e49c
 6179bc06_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
 >
-<selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf, id=1749, 32
+<selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf, id=1363, 32
 9.23pt x 99.37125pt>
 File: selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf Graphic
  file (type pdf)
 <use selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06
-_cgraph.pdf  used on input line 86.
+_cgraph.pdf  used on input line 73.
 (pdftex.def)             Requested size: 328.0pt x 99.00253pt.
- [41] <./selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf>
-<selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf, id=1767, 3
-96.48125pt x 99.37125pt>
+ [40] <./selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf>
+<selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf, id=1378, 4
+16.55624pt x 136.51pt>
 File: selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf Graphi
 c file (type pdf)
 <use selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_a5f088b07860f6bb7c673e49c6179bc06
-_icgraph.pdf  used on input line 93.
-(pdftex.def)             Requested size: 350.0pt x 87.72292pt.
+_icgraph.pdf  used on input line 80.
+(pdftex.def)             Requested size: 350.0pt x 114.7051pt.
  <./selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./selection__sort_8cpp_ab12f879c287dcc730725c53b
 04683a85_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
 >
-<selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_cgraph.pdf, id=1778, 31
+<selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_cgraph.pdf, id=1387, 31
 1.1625pt x 99.37125pt>
 File: selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_cgraph.pdf Graphic
  file (type pdf)
 <use selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_cgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85
-_cgraph.pdf  used on input line 114.
+_cgraph.pdf  used on input line 97.
 (pdftex.def)             Requested size: 310.0pt x 99.00102pt.
  <./selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_icgraph.pdf
 
@@ -1688,36 +1757,39 @@ pdfTeX warning: pdflatex (file ./selection__sort_8cpp_ab12f879c287dcc730725c53b
 04683a85_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
 >
-<selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_icgraph.pdf, id=1786, 3
+<selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_icgraph.pdf, id=1395, 3
 77.41pt x 99.37125pt>
 File: selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_icgraph.pdf Graphi
 c file (type pdf)
 <use selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8cpp_ab12f879c287dcc730725c53b04683a85
-_icgraph.pdf  used on input line 121.
+_icgraph.pdf  used on input line 104.
 (pdftex.def)             Requested size: 350.0pt x 92.1535pt.
-) (selection__sort_8cpp_source.tex [42]) (selection__sort_8h.tex <./selection__
-sort_8h__incl.pdf>
-<selection__sort_8h__incl.pdf, id=1826, 165.61874pt x 210.7875pt>
+) (selection__sort_8h.tex [41] <./selection__sort_8h__incl.pdf>
+<selection__sort_8h__incl.pdf, id=1411, 165.61874pt x 210.7875pt>
 File: selection__sort_8h__incl.pdf Graphic file (type pdf)
 <use selection__sort_8h__incl.pdf>
-Package pdftex.def Info: selection__sort_8h__incl.pdf  used on input line 9.
+Package pdftex.def Info: selection__sort_8h__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 165.0pt x 210.00862pt.
- [43] <./selection__sort_8h__dep__incl.pdf>
-<selection__sort_8h__dep__incl.pdf, id=1875, 302.12875pt x 210.7875pt>
+ <./selection__sort_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./selection__sort_8h__dep__incl.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>
+<selection__sort_8h__dep__incl.pdf, id=1419, 302.12875pt x 210.7875pt>
 File: selection__sort_8h__dep__incl.pdf Graphic file (type pdf)
 <use selection__sort_8h__dep__incl.pdf>
 Package pdftex.def Info: selection__sort_8h__dep__incl.pdf  used on input line 
-17.
+15.
 (pdftex.def)             Requested size: 301.0pt x 209.99898pt.
- [44] <./selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf>
-<selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf, id=1900, 329.
+ [42] <./selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf>
+<selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf, id=1440, 329.
 23pt x 99.37125pt>
 File: selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf Graphic f
 ile (type pdf)
 <use selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_cgraph.pdf>
 Package pdftex.def Info: selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_c
-graph.pdf  used on input line 48.
+graph.pdf  used on input line 42.
 (pdftex.def)             Requested size: 328.0pt x 99.00253pt.
  <./selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf
 
@@ -1725,75 +1797,71 @@ pdfTeX warning: pdflatex (file ./selection__sort_8h_a5f088b07860f6bb7c673e49c61
 79bc06_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
 >
-<selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf, id=1908, 396
-.48125pt x 99.37125pt>
+<selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf, id=1448, 416
+.55624pt x 136.51pt>
 File: selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf Graphic 
 file (type pdf)
 <use selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8h_a5f088b07860f6bb7c673e49c6179bc06_i
-cgraph.pdf  used on input line 55.
-(pdftex.def)             Requested size: 350.0pt x 87.72292pt.
+cgraph.pdf  used on input line 49.
+(pdftex.def)             Requested size: 350.0pt x 114.7051pt.
  <./selection__sort_8h_ab12f879c287dcc730725c53b04683a85_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./selection__sort_8h_ab12f879c287dcc730725c53b04
 683a85_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >
-<selection__sort_8h_ab12f879c287dcc730725c53b04683a85_cgraph.pdf, id=1919, 311.
+<selection__sort_8h_ab12f879c287dcc730725c53b04683a85_cgraph.pdf, id=1457, 311.
 1625pt x 99.37125pt>
 File: selection__sort_8h_ab12f879c287dcc730725c53b04683a85_cgraph.pdf Graphic f
 ile (type pdf)
 <use selection__sort_8h_ab12f879c287dcc730725c53b04683a85_cgraph.pdf>
 Package pdftex.def Info: selection__sort_8h_ab12f879c287dcc730725c53b04683a85_c
-graph.pdf  used on input line 76.
+graph.pdf  used on input line 66.
 (pdftex.def)             Requested size: 310.0pt x 99.00102pt.
- <./selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./selection__sort_8h_ab12f879c287dcc730725c53b04
-683a85_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
- single page
->
-<selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf, id=1927, 377
+ [43] <./selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf>
+<selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf, id=1475, 377
 .41pt x 99.37125pt>
 File: selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf Graphic 
 file (type pdf)
 <use selection__sort_8h_ab12f879c287dcc730725c53b04683a85_icgraph.pdf>
 Package pdftex.def Info: selection__sort_8h_ab12f879c287dcc730725c53b04683a85_i
-cgraph.pdf  used on input line 83.
+cgraph.pdf  used on input line 73.
 (pdftex.def)             Requested size: 350.0pt x 92.1535pt.
-) (selection__sort_8h_source.tex [45]) (struct_8h.tex <./struct_8h__incl.pdf>
-<struct_8h__incl.pdf, id=1949, 129.48375pt x 155.58125pt>
+)
+(selection__sort_8h_source.tex) (struct_8h.tex <./struct_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./struct_8h__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<struct_8h__incl.pdf, id=1489, 129.48375pt x 155.58125pt>
 File: struct_8h__incl.pdf Graphic file (type pdf)
 <use struct_8h__incl.pdf>
 Package pdftex.def Info: struct_8h__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 129.0pt x 155.01584pt.
- <./struct_8h__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./struct_8h__dep__incl.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->
-<struct_8h__dep__incl.pdf, id=1957, 392.46625pt x 265.99374pt>
+ [44] <./struct_8h__dep__incl.pdf>
+<struct_8h__dep__incl.pdf, id=1505, 392.46625pt x 265.99374pt>
 File: struct_8h__dep__incl.pdf Graphic file (type pdf)
 <use struct_8h__dep__incl.pdf>
-Package pdftex.def Info: struct_8h__dep__incl.pdf  used on input line 16.
+Package pdftex.def Info: struct_8h__dep__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 237.22884pt.
- [46]) (struct_8h_source.tex) [47] [48
+) (struct_8h_source.tex [45]) [46]
+(refman.ind [47
 
-] (refman.ind [49
 
 
-] [50
+] [48
 
 ]) (refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 08DB71CA9945B40D8A549D68A9D27707;14989.
+(rerunfilecheck)             Checksum: 4743AE132BD2D13B5915C1AFC4C9838A;15343.
  ) 
 Here is how much of TeX's memory you used:
- 20375 strings out of 476339
- 376852 string characters out of 5774840
- 1874388 words of memory out of 5000000
- 39711 multiletter control sequences out of 15000+600000
- 571533 words of font info for 102 fonts, out of 8000000 for 9000
+ 20008 strings out of 476339
+ 367226 string characters out of 5774840
+ 1868388 words of memory out of 5000000
+ 39754 multiletter control sequences out of 15000+600000
+ 569899 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,1049b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/install/fon
@@ -1812,9 +1880,9 @@ iKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvb8ac.pfb></Users/matteofranchi
 ni/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/u
 hvr8a.pfb></Users/matteofranchini/Library/Application Support/MiKTeX/texmfs/ins
 tall/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (54 pages, 876297 bytes).
+Output written on refman.pdf (52 pages, 856265 bytes).
 PDF statistics:
- 2295 PDF objects out of 2487 (max. 8388607)
- 682 named destinations out of 1000 (max. 500000)
- 852 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1730 PDF objects out of 2073 (max. 8388607)
+ 280 named destinations out of 1000 (max. 500000)
+ 882 words of extra memory for PDF output out of 10000 (max. 10000000)
 

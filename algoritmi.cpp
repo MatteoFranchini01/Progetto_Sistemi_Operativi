@@ -178,6 +178,14 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
     }
 }
 
+/*!
+ * Questo algoritmo viene chiamato quando abbiamo due processi
+ * con uguale priorità, è simile al RR visto prima, ma con qualche modifica
+ * per adattarsi meglio al caso in questione
+ * @param p
+ * @param num_processi
+ * @param quanto
+ */
 void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
     int array_counter = 0;
     int n = CONST;
@@ -199,11 +207,16 @@ void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
     }
 }
 
+/*!
+ * @brief Algoritmo priorità che in caso di processi uguali chiama la funzione algoritmo_RR_modificato
+ * @param p
+ * @param num_processi
+ * @param quanto
+ */
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
     bool not_empty;
     int n = CONST; int num_proc_uguale_priorita = 0;
     Processo *stessa_priorita = new Processo [n];
-
     /*!
      * Chiamo l'algoritmo selectionSortByPriority in modo da
      * ordinare i miei processi per priorità
@@ -219,12 +232,11 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
             /// Creo una lista di processi con uguale priorità
 
             if (p[i].priorita == p[j].priorita && p[i].nome != p[j].nome) {
-                stessa_priorita[j] = p[j];
+                stessa_priorita[j] = (p[j]);
                 not_empty = true;
                 num_proc_uguale_priorita++;
             }
         }
-
         /// Se ho più di un processo di uguale durata chiamo l'algoritmo RR
 
         if (not_empty) {

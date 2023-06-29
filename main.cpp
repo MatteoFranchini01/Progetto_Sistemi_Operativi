@@ -77,17 +77,27 @@ int main(int argc, char *argv[]) {
     cout << "Esecuzione algoritmo FCFS" << endl;
     algoritmo_FCFS(arr, num_processi);
 
+    cout << "<------------------------------------------->" << endl;
+
     cout << "Esecuzione algoritmo BJP" << endl;
     algoritmo_BJP(arr, num_processi);
+
+    cout << "<------------------------------------------->" << endl;
 
     cout << "Esecuzione algoritmo Priorità" << endl;
     algoritmo_priorita(arr, num_processi);
 
+    cout << "<------------------------------------------->" << endl;
+
     cout << "Esecuzione algoritmo RR" << endl;
     algoritmo_RR(arr, num_processi, quanto);
 
+    cout << "<------------------------------------------->" << endl;
+
     cout << "Esecuzione algoritmo SRTF" << endl;
     algoritmo_SRTF(arr, num_processi);
+
+    cout << "<------------------------------------------->" << endl;
 
     cout << "Esecuzione algoritmo priorità RR" << endl;
     algoritmo_priorita_RR(arr, num_processi, quanto);

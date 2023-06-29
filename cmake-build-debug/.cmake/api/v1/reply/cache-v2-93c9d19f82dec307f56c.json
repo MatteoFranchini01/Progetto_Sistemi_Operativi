@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/CloudStorage/OneDrive-Universit\u00e0degliStudidiParma/Universit\u00e0/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi/cmake-build-debug"
+			"value" : "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/bin/cpack"
+			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/CLion.app/Contents/bin/cmake/mac/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/bin/ctest"
+			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/CLion.app/Contents/bin/cmake/mac/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matteofranchini/Library/CloudStorage/OneDrive-Universit\u00e0degliStudidiParma/Universit\u00e0/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/CloudStorage/OneDrive-Universit\u00e0degliStudidiParma/Universit\u00e0/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi"
+			"value" : "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -595,7 +595,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/ninja/mac/ninja"
+			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/CLion.app/Contents/bin/ninja/mac/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -863,7 +863,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.8770.66/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25"
+			"value" : "/Users/matteofranchini/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matteofranchini/Library/CloudStorage/OneDrive-Universit\u00e0degliStudidiParma/Universit\u00e0/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi/cmake-build-debug"
+			"value" : "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/cmake-build-debug"
 		},
 		{
 			"name" : "Progetto_Sistemi_Operativi_IS_TOP_LEVEL",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/matteofranchini/Library/CloudStorage/OneDrive-Universit\u00e0degliStudidiParma/Universit\u00e0/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi"
+			"value" : "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU"
 		}
 	],
 	"kind" : "cache",

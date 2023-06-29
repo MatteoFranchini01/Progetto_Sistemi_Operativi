@@ -72,47 +72,25 @@ int main(int argc, char *argv[]) {
         myfile.close();
     } else cout << "Impossibile aprire il file";
 
-    /// @brief Scelta dell'algoritmo
-    cout << "Selezionare l'algoritmo che si intende utilizzare" << endl;
-    cout << "Premere 1 per FCFS" << endl;
-    cout << "Premere 2 per BJP" << endl;
-    cout << "Premere 3 per Priorità" << endl;
-    cout << "Premere 4 per RR" << endl;
-    cout << "Premere 5 per SRTF" << endl;
-    cout << "Premere 6 per priorità con RR" << endl;
-    cin >> scelta_algoritmo;
+    /// @brief Esecuzione degli algoritmi
 
-    switch (scelta_algoritmo) {
-        case 1:
-            cout << "Hai scelto l'algoritmo FCFS" << endl;
-            algoritmo_FCFS(arr, num_processi);
-            break;
+    cout << "Esecuzione algoritmo FCFS" << endl;
+    algoritmo_FCFS(arr, num_processi);
 
-        case 2:
-            cout << "Hai scelto l'algoritmo BJP" << endl;
-            algoritmo_BJP(arr, num_processi);
-            break;
+    cout << "Esecuzione algoritmo BJP" << endl;
+    algoritmo_BJP(arr, num_processi);
 
-        case 3:
-            cout << "Hai scelto l'algoritmo Priorità" << endl;
-            algoritmo_priorita(arr, num_processi);
-            break;
+    cout << "Esecuzione algoritmo Priorità" << endl;
+    algoritmo_priorita(arr, num_processi);
 
-        case 4:
-            cout << "Hai scelto l'algoritmo RR" << endl;
-            algoritmo_RR(arr, num_processi, quanto);
-            break;
+    cout << "Esecuzione algoritmo RR" << endl;
+    algoritmo_RR(arr, num_processi, quanto);
 
-        case 5:
-            cout << "Hai scelto l'algoritmo SRTF" << endl;
-            algoritmo_SRTF(arr, num_processi);
-            break;
+    cout << "Esecuzione algoritmo SRTF" << endl;
+    algoritmo_SRTF(arr, num_processi);
 
-        case 6:
-            cout << "Hai scelto l'algoritmo priorità RR" << endl;
-            algoritmo_priorita_RR(arr, num_processi, quanto);
-    }
-
+    cout << "Esecuzione algoritmo priorità RR" << endl;
+    algoritmo_priorita_RR(arr, num_processi, quanto);
 
     /// @brief Cancellazione dell'array con allocazione dinamica
     delete[] arr;

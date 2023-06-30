@@ -81,7 +81,16 @@ float avg (int *durata, int size) {
         sum_int += durata[j];
         sum += sum_int;
     }
-    return sum/size;
+
+    /*!
+     * Conversione da int a float per garantire che la funzione
+     * restituisca anche numeri decimali
+     */
+
+    float sum_dec = static_cast<float>(sum);
+    float size_dec = static_cast<float>(size);
+
+    return sum_dec/size_dec;
 }
 
 
@@ -101,13 +110,22 @@ float avg_RR (Processo *durata, int size, int num_processi) {
             if (durata[i].nome == durata[j].nome) {
                 flag = true;
             }
-            if (flag == true && durata[i].nome != durata[j].nome) {
+            if (flag && durata[i].nome != durata[j].nome) {
                 sum += durata[j].durata;
             }
         }
         flag = false;
     }
-    return sum/num_processi;
+
+    /*!
+     * Conversione da int a float per garantire che la funzione
+     * restituisca anche numeri decimali
+     */
+
+    float sum_dec = static_cast<float>(sum);
+    float processi_dec = static_cast<float>(num_processi);
+
+    return sum_dec/processi_dec;
 }
 
 /*!

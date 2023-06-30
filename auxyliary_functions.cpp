@@ -2,7 +2,7 @@
 // Created by Matteo Franchini on 25/04/23.
 //
 #include <iostream>
-
+#include <unordered_map>
 #include "auxyliary_functions.h"
 
 
@@ -140,3 +140,42 @@ void reset_array (Processo *arr, Processo *arr_copia, int num_processi) {
         arr_copia[i] = arr[i];
     }
 }
+
+void avg_SRTF (list<Processo_log> &log, Processo *p, int num_processi) {
+    list<Processo_log>::iterator temp;
+    list<Processo_log>::iterator it = log.begin();
+
+    unordered_map<string, int> map;
+
+    for (int i = 0; i < num_processi; i++) {
+        string temp1 = p[i].nome;
+        map[temp1] = 0;
+    }
+
+    while (it != log.end()) {
+       cout << "NOME: " << it->nome << " TEMPO " << it->time << endl;
+
+
+       // ragionare su come funzionano questi indici e cercare di invertire primo con secondo in modo
+       // che l'ordine sia rispettato, una volta fatto quello dovrebbe funzionare
+
+
+       temp = it++;
+       if (temp->nome != it->nome) {
+           cout << "NOME PRIMO " << it->nome << " TEMPO PRIMO " << it->time << endl;
+           cout << "NOME SECONDO " << temp->nome << " TEMPO SECONDO " << temp->time << endl;
+           int in_esecuzione = 60-it->time;
+           cout << "IN ESECUZIONE " << in_esecuzione << endl;
+           map[it->nome] = map[it->nome] + in_esecuzione;
+       }
+       it--;
+
+       //cout << "MAP: " << map[it->nome] << endl;
+       it++;
+    }
+
+    for (auto i = map.begin(); i != map.end(); i++) {
+        cout << "NOME: " << i->first << " TEMPO: " << i->second << endl;
+    }
+}
+

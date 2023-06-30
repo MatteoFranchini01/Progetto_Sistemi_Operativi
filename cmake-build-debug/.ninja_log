@@ -1,9 +1,15 @@
 # ninja log v5
-14	1030	1688140740867735102	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
-21	1335	1688063969487968222	CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o	72403dc8f1d05b56
+12	1703	1688156440343347214	CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o	3d60e0a0a32d85cd
+1196	1286	1688157053908338048	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
+11	1640	1688156440277477514	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a9b3dce3f0f2750c
 0	112	1688063589001656749	build.ninja	3417936281f8b6f2
-11	1348	1688140695643346123	CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o	a9b3dce3f0f2750c
-1030	1124	1688140740962911437	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
-12	1363	1688140695660594347	CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o	3d60e0a0a32d85cd
-9	1435	1688140856298834464	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
-1435	1562	1688140856431370417	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
+19	1868	1688153152387671886	CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o	72403dc8f1d05b56
+14	1196	1688157053812999327	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
+22	1185	1688157090419560409	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
+1186	1285	1688157090523520190	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
+12	1203	1688157170533423548	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
+1204	1295	1688157170627684123	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
+18	1187	1688157231615854162	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
+1188	1286	1688157231719218245	Progetto_Sistemi_Operativi	7a9a8dcc13db9723
+16	1290	1688157248247160764	CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o	1f51bb33ea529cad
+1290	1385	1688157248344169162	Progetto_Sistemi_Operativi	7a9a8dcc13db9723

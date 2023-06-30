@@ -21,8 +21,6 @@ const int CONST = 100;
  * @param int num_processi
  */
 void algoritmo_FCFS (Processo *p, int num_processi) {
-    cout << p[0].nome << endl;
-
     int n = CONST;
     int *array_durata = new int[n];
     cout << "FCFS ";
@@ -41,7 +39,6 @@ void algoritmo_FCFS (Processo *p, int num_processi) {
  * @param int num_processi
  */
 void algoritmo_priorita (Processo *p, int num_processi) {
-    cout << p[0].nome << endl;
     int n = CONST;
     int *array_durata = new int [n];
     selectionSortByPriority(p, num_processi);
@@ -61,7 +58,6 @@ void algoritmo_priorita (Processo *p, int num_processi) {
  * @param int num_processi
  */
 void algoritmo_BJP (Processo *p, int num_processi) {
-    cout << p[0].nome << endl;
     int n = CONST;
     int *array_durata = new int [n];
     selectionSortByTime(p, num_processi);
@@ -83,7 +79,6 @@ void algoritmo_BJP (Processo *p, int num_processi) {
  */
 
 void algoritmo_RR (Processo *p, int num_processi, int quanto) {
-    cout << p[0].nome << endl;
     int array_counter = 0;
     int n = CONST;
     cout << "RR ";
@@ -123,8 +118,8 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
  * @param int num_processi
  */
 void algoritmo_SRTF (Processo *p, int num_processi) {
-    cout << p[0].nome << endl;
     int counter = 0; int time = -1; Processo temp;
+    list<Processo_log> log;
     list<Processo> lista;
     list<Processo> processi_analizzati;
     bool flag = false;
@@ -163,10 +158,16 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
         /// Ad ogni iterazione viene decrementata la durata del processo "front" della lista
 
         lista.front().durata--;
-        //cout << "TIME " << time << endl;
-        //cout << "Primo processo della lista " << lista.front().nome << " DURATA " << lista.front().durata << endl;
 
         cout << " TIME:\t" << time << "\tPROCESSO:\t" << lista.front().nome << endl;
+
+        /// Inserimenti del processo all'intenro del log
+
+        Processo_log temp;
+        temp.nome = lista.front().nome;
+        temp.time = time;
+        log.push_front(temp);
+
         cout << "----------------------------------" << endl;
 
         /*!
@@ -176,13 +177,13 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
 
         if (lista.front().durata == 0) {
             lista.pop_front();
-            //cout << "NUOVO FRONT " << lista.front().nome << endl;
         }
 
         /// L'algoritmo termina quando la lista è vuota
 
         if (lista.empty()) { flag = true; }
     }
+    avg_SRTF(log, p, num_processi);
 }
 
 /*!
@@ -193,8 +194,8 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
  * @param num_processi
  * @param quanto
  */
+
 void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
-    cout << p[0].nome << endl;
     int array_counter = 0;
     int n = CONST;
     queue<Processo> processi = from_array_to_queue(p, num_processi);
@@ -222,7 +223,6 @@ void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
  * @param quanto
  */
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
-    cout << p[0].nome << endl;
     bool not_empty;
     int n = CONST; int num_proc_uguale_priorita = 0;
     Processo *stessa_priorita = new Processo [n];
@@ -233,7 +233,7 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
 
     selectionSortByPriority(p, num_processi);
 
-    cout << "PRIORITÀ ";
+    cout << "RR con PRIORITÀ ";
     for (int i = 0; i < num_processi; i++) {
         not_empty = false;
         for (int j = 0; j < num_processi; j++) {

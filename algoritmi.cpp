@@ -7,6 +7,7 @@
 #include <queue>
 #include <list>
 #include "algoritmi.h"
+#include "struct.h"
 
 
 using namespace std;
@@ -20,6 +21,8 @@ const int CONST = 100;
  * @param int num_processi
  */
 void algoritmo_FCFS (Processo *p, int num_processi) {
+    cout << p[0].nome << endl;
+
     int n = CONST;
     int *array_durata = new int[n];
     cout << "FCFS ";
@@ -38,6 +41,7 @@ void algoritmo_FCFS (Processo *p, int num_processi) {
  * @param int num_processi
  */
 void algoritmo_priorita (Processo *p, int num_processi) {
+    cout << p[0].nome << endl;
     int n = CONST;
     int *array_durata = new int [n];
     selectionSortByPriority(p, num_processi);
@@ -57,6 +61,7 @@ void algoritmo_priorita (Processo *p, int num_processi) {
  * @param int num_processi
  */
 void algoritmo_BJP (Processo *p, int num_processi) {
+    cout << p[0].nome << endl;
     int n = CONST;
     int *array_durata = new int [n];
     selectionSortByTime(p, num_processi);
@@ -78,6 +83,7 @@ void algoritmo_BJP (Processo *p, int num_processi) {
  */
 
 void algoritmo_RR (Processo *p, int num_processi, int quanto) {
+    cout << p[0].nome << endl;
     int array_counter = 0;
     int n = CONST;
     cout << "RR ";
@@ -117,6 +123,7 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
  * @param int num_processi
  */
 void algoritmo_SRTF (Processo *p, int num_processi) {
+    cout << p[0].nome << endl;
     int counter = 0; int time = -1; Processo temp;
     list<Processo> lista;
     list<Processo> processi_analizzati;
@@ -187,6 +194,7 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
  * @param quanto
  */
 void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
+    cout << p[0].nome << endl;
     int array_counter = 0;
     int n = CONST;
     queue<Processo> processi = from_array_to_queue(p, num_processi);
@@ -214,6 +222,7 @@ void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
  * @param quanto
  */
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
+    cout << p[0].nome << endl;
     bool not_empty;
     int n = CONST; int num_proc_uguale_priorita = 0;
     Processo *stessa_priorita = new Processo [n];

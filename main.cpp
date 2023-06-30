@@ -73,35 +73,58 @@ int main(int argc, char *argv[]) {
 
     /// @brief Esecuzione degli algoritmi
 
+    Processo arr_copia[num_processi];
+
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
+
     cout << "Esecuzione algoritmo FCFS" << endl;
-    algoritmo_FCFS(arr, num_processi);
+    algoritmo_FCFS(arr_copia, num_processi);
 
     cout << "<------------------------------------------->" << endl;
 
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
+
     cout << "Esecuzione algoritmo BJP" << endl;
-    algoritmo_BJP(arr, num_processi);
+    algoritmo_BJP(arr_copia, num_processi);
 
     cout << "<------------------------------------------->" << endl;
 
     cout << "Esecuzione algoritmo Priorità" << endl;
-    algoritmo_priorita(arr, num_processi);
+    algoritmo_priorita(arr_copia, num_processi);
 
     cout << "<------------------------------------------->" << endl;
+
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
 
     cout << "Esecuzione algoritmo RR" << endl;
-    algoritmo_RR(arr, num_processi, quanto);
+    algoritmo_RR(arr_copia, num_processi, quanto);
 
     cout << "<------------------------------------------->" << endl;
+
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
 
     cout << "Esecuzione algoritmo SRTF" << endl;
-    algoritmo_SRTF(arr, num_processi);
+    algoritmo_SRTF(arr_copia, num_processi);
 
     cout << "<------------------------------------------->" << endl;
 
-    cout << "Esecuzione algoritmo priorità RR" << endl;
-    algoritmo_priorita_RR(arr, num_processi, quanto);
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
 
-    /// @brief Cancellazione dell'array con allocazione dinamica
+    cout << "Esecuzione algoritmo priorità RR" << endl;
+    algoritmo_priorita_RR(arr_copia, num_processi, quanto);
+
+    /// @brief Cancellazione degli array creati con allocazione dinamica
+
     delete[] arr;
 
     return 0;

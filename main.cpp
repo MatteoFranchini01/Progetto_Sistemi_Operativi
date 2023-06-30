@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
     if (myfile.is_open()) {
         while (getline(myfile, str5, ' ')) {
             if (counter == -1) {
-                getline(myfile, nome, ' ');
                 getline(myfile, str3, ' ');
                 istringstream tk3 (str3);
                 tk3 >> num_processi;

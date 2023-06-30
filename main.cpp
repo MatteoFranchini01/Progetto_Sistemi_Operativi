@@ -8,10 +8,12 @@
 #include <string>
 #include <queue>
 #include "algoritmi.h"
+#include "auxyliary_functions.h"
 
 using namespace std;
 
 const int CONST = 100;
+const int NUM_ALGORITMI = 6;
 
 int main(int argc, char *argv[]) {
 
@@ -71,57 +73,58 @@ int main(int argc, char *argv[]) {
         myfile.close();
     } else cout << "Impossibile aprire il file";
 
-    /// @brief Esecuzione degli algoritmi
+    /*!
+     * @brief
+     * Creazione di un array di copia per far si che l'array originale venga mantenuto
+     * anche dopo l'esecuzione di un algoritmo
+     */
 
     Processo arr_copia[num_processi];
 
-    for (int i = 0; i < num_processi; i++) {
-        arr_copia[i] = arr[i];
+    /// @brief Esecuzione degli algoritmi
+
+    for (int j = 0; j < NUM_ALGORITMI; j++) {
+
+        /*!
+         * @brief
+         * Reset dell'array di copia dopo ogni esecuzione di un algoritmo
+         * in modo che l'array di copia sia sempre uguale all'array originale
+         */
+
+        reset_array(arr, arr_copia, num_processi);
+        switch (j) {
+            case 0:
+                cout << "Esecuzione algoritmo FCFS" << endl;
+                algoritmo_FCFS(arr_copia, num_processi);
+                break;
+            case 1:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo BJP" << endl;
+                algoritmo_BJP(arr_copia, num_processi);
+                break;
+            case 2:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo Priorità" << endl;
+                algoritmo_priorita(arr_copia, num_processi);
+                break;
+            case 3:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo RR" << endl;
+                algoritmo_RR(arr_copia, num_processi, quanto);
+                break;
+            case 4:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo SRTF" << endl;
+                algoritmo_SRTF(arr_copia, num_processi);
+                break;
+            case 5:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo priorità RR" << endl;
+                algoritmo_priorita_RR(arr_copia, num_processi, quanto);
+                break;
+        }
     }
 
-    cout << "Esecuzione algoritmo FCFS" << endl;
-    algoritmo_FCFS(arr_copia, num_processi);
-
-    cout << "<------------------------------------------->" << endl;
-
-    for (int i = 0; i < num_processi; i++) {
-        arr_copia[i] = arr[i];
-    }
-
-    cout << "Esecuzione algoritmo BJP" << endl;
-    algoritmo_BJP(arr_copia, num_processi);
-
-    cout << "<------------------------------------------->" << endl;
-
-    cout << "Esecuzione algoritmo Priorità" << endl;
-    algoritmo_priorita(arr_copia, num_processi);
-
-    cout << "<------------------------------------------->" << endl;
-
-    for (int i = 0; i < num_processi; i++) {
-        arr_copia[i] = arr[i];
-    }
-
-    cout << "Esecuzione algoritmo RR" << endl;
-    algoritmo_RR(arr_copia, num_processi, quanto);
-
-    cout << "<------------------------------------------->" << endl;
-
-    for (int i = 0; i < num_processi; i++) {
-        arr_copia[i] = arr[i];
-    }
-
-    cout << "Esecuzione algoritmo SRTF" << endl;
-    algoritmo_SRTF(arr_copia, num_processi);
-
-    cout << "<------------------------------------------->" << endl;
-
-    for (int i = 0; i < num_processi; i++) {
-        arr_copia[i] = arr[i];
-    }
-
-    cout << "Esecuzione algoritmo priorità RR" << endl;
-    algoritmo_priorita_RR(arr_copia, num_processi, quanto);
 
     /// @brief Cancellazione degli array creati con allocazione dinamica
 

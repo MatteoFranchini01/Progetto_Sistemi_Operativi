@@ -109,3 +109,16 @@ float avg_RR (Processo *durata, int size, int num_processi) {
     }
     return sum/num_processi;
 }
+
+/*!
+ * Funzione che permette di resettare l'array dei processi
+ * @param Processo arr
+ * @param Processo arr_copia
+ * @param int num_processi
+ */
+
+void reset_array (Processo *arr, Processo *arr_copia, int num_processi) {
+    for (int i = 0; i < num_processi; i++) {
+        arr_copia[i] = arr[i];
+    }
+}

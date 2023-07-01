@@ -188,14 +188,44 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
     cout << "\nTEMPO MEDIO: " << avg_SRTF(log, num_processi) << endl;
 }
 
-/*!
+
+void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
+
+    /// Ordinamento dei processi per priorità
+    selectionSortByPriority(p, num_processi);
+
+    /// Creazione della coda di processi a partire da un array ordinato per priorità
+    queue<Processo> coda_processi;
+    coda_processi = from_array_to_queue(p, num_processi);
+
+    while(not coda_processi.empty()) {
+        if (coda_processi.front().durata <= quanto) {
+            cout << "->" << coda_processi.front().nome;
+            coda_processi.pop();
+        }
+        else if (coda_processi.front().durata > quanto) {
+            Processo temp;
+            temp.nome = coda_processi.front().nome;
+            temp.durata = coda_processi.front().durata - quanto;
+            temp.priorita = coda_processi.front().priorita;
+            temp.istante_arrivo = coda_processi.front().istante_arrivo;
+            cout << "->" << temp.nome;
+            coda_processi.pop();
+            coda_processi.push(temp);
+        }
+    }
+    //cout << endl << "TEMPO MEDIO " << avg_SRTF << endl;
+}
+
+/*
+*//*!
  * Questo algoritmo viene chiamato quando abbiamo due processi
  * con uguale priorità, è simile al RR visto prima, ma con qualche modifica
  * per adattarsi meglio al caso in questione
  * @param p
  * @param num_processi
  * @param quanto
- */
+ *//*
 
 void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
     int array_counter = 0;
@@ -218,20 +248,21 @@ void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
     }
 }
 
-/*!
+*//*!
  * @brief Algoritmo priorità che in caso di processi uguali chiama la funzione algoritmo_RR_modificato
  * @param p
  * @param num_processi
  * @param quanto
- */
+ *//*
+
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
     bool not_empty;
     int n = CONST; int num_proc_uguale_priorita = 0;
     Processo *stessa_priorita = new Processo [n];
-    /*!
+    *//*!
      * Chiamo l'algoritmo selectionSortByPriority in modo da
      * ordinare i miei processi per priorità
-     */
+     *//*
 
     selectionSortByPriority(p, num_processi);
 
@@ -260,6 +291,7 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
             cout << "->" << p[i].nome;
         }
     }
+    cout << "QUI" << endl;
     delete [] stessa_priorita;
-}
+}*/
 

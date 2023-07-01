@@ -2,9 +2,10 @@
 // Created by Matteo Franchini on 25/04/23.
 //
 #include <iostream>
-#include <unordered_map>
+#include <map>
 #include "auxyliary_functions.h"
 
+const int CONST_NUM = 100000;
 
 /*!
  * Questa funzione viene chiamata nell'esecuzione dell'algoritmo SRTF
@@ -141,41 +142,169 @@ void reset_array (Processo *arr, Processo *arr_copia, int num_processi) {
     }
 }
 
-void avg_SRTF (list<Processo_log> &log, Processo *p, int num_processi) {
-    list<Processo_log>::iterator temp;
-    list<Processo_log>::iterator it = log.begin();
+/*!
+ * Funzione che permette di stampare i risultati dell'algoritmo SRTF
+ * @param log
+ * @param p
+ * @param num_processi
+ */
 
-    unordered_map<string, int> map;
+void print_SRTF (list<Processo_log> &log) {
+    list<Processo_log>::iterator it = log.end();
+    list<Processo_log>::iterator temp = prev(it);
+    list<Processo_log> cambio_processo;
 
-    for (int i = 0; i < num_processi; i++) {
-        string temp1 = p[i].nome;
-        map[temp1] = 0;
-    }
-
-    while (it != log.end()) {
-       cout << "NOME: " << it->nome << " TEMPO " << it->time << endl;
-
-
-       // ragionare su come funzionano questi indici e cercare di invertire primo con secondo in modo
-       // che l'ordine sia rispettato, una volta fatto quello dovrebbe funzionare
-
-
-       temp = it++;
-       if (temp->nome != it->nome) {
-           cout << "NOME PRIMO " << it->nome << " TEMPO PRIMO " << it->time << endl;
-           cout << "NOME SECONDO " << temp->nome << " TEMPO SECONDO " << temp->time << endl;
-           int in_esecuzione = 60-it->time;
-           cout << "IN ESECUZIONE " << in_esecuzione << endl;
-           map[it->nome] = map[it->nome] + in_esecuzione;
-       }
-       it--;
-
-       //cout << "MAP: " << map[it->nome] << endl;
-       it++;
-    }
-
-    for (auto i = map.begin(); i != map.end(); i++) {
-        cout << "NOME: " << i->first << " TEMPO: " << i->second << endl;
+    while (it != log.begin()) {
+        if (temp->nome != it->nome) {
+            cout << temp->nome << "->";
+        }
+        --it;
+        --temp;
     }
 }
 
+/*!
+ * Funzione che permette di ordinare una lista di processi in base al nome
+ * @param log
+ * @param p
+ * @param num_processi
+ * @return bool
+ */
+
+bool confronto_processi (const Processo_log& a, const Processo_log& b) {
+    return a.nome < b.nome;
+}
+
+/*!
+ * Questa funzione permette il calcolo del tempo di attesa per l'algoritmo SRTF in presenza di più di un processo
+ * ripetuto
+ * @param arr
+ * @param count
+ * @return int sum
+ */
+
+int calcolo_TE_con_processi_multipli (Processo_log *arr, int count) {
+    int sum = 0;
+
+    /*!
+     * Come prima cosa andiamo a prendere il tempo del processo che sarà in posizione count-2
+     * in quanto l'ultimo processo, in posizione count-1, non ci interessa perché stiamo
+     * calcolando il tempo di attesa e non quello di esecuzione, però non basta calcolare il tempo
+     * di esecuzione prendendo questo tempo, ma sarà necessario andare a sottrarre a questo tempo
+     * quello delle precedenti esecuzioni del processo
+     */
+
+    sum = arr[count -2].time;
+    cout << "SOMMA INIZIALE: " << sum << endl;
+
+    /*!
+     * Una volta individuato qual è il processo che ha tempo di attesa più lungo per andare a togliere
+     * il tempo delle precedenti esecuzioni non facciamo altro che andare a sottrarre il tempo che
+     * abbiamo nelle posizioni dispari, questo perché ogni processo ha un valore iniziale e uno finale (il valore
+     * iniziale sarà in posizione dispari mentre quello finale in posizione pari), ma per quanto detto
+     * prima a noi interessa il valore iniziale e quindi prendiamo solo quelli in posizione dispari
+     */
+
+    for (int i = count - 3; i >= 0; i--) {
+        if (count % 2 != 0) {
+            sum = sum - arr[i].time;
+        }
+    }
+
+    cout << "SOMMA FINALE: " << sum << endl;
+    return sum;
+};
+
+
+float avg_SRTF (list<Processo_log> &log, int num_processi) {
+    list<Processo_log>::iterator it = log.end();
+    list<Processo_log>::iterator temp = prev(it);
+    list<Processo_log> cambio_processo;
+
+    while (it != log.begin()) {
+        if (temp->nome != it->nome) {
+
+            if (it->nome != "") {
+                Processo_log temp_proc_prec;
+                temp_proc_prec.nome = it->nome;
+                temp_proc_prec.time = it->time;
+                cambio_processo.push_back(temp_proc_prec);
+            }
+
+            Processo_log temp_proc_succ;
+            temp_proc_succ.nome = temp->nome;
+            temp_proc_succ.time = temp->time;
+            cambio_processo.push_back(temp_proc_succ);
+
+        }
+        --it;
+        --temp;
+
+        if (it == log.begin()) {
+            Processo_log temp_proc_prec;
+            temp_proc_prec.nome = it->nome;
+            temp_proc_prec.time = it->time;
+            cambio_processo.push_back(temp_proc_prec);
+        }
+    }
+
+    cambio_processo.sort(confronto_processi);
+
+    it = cambio_processo.begin();
+    map<string, int> counter;
+    map<string, bool> flag;
+
+    while (it != cambio_processo.end()) {
+        temp = cambio_processo.begin();
+        while (temp != cambio_processo.end()) {
+            if (it->nome == temp->nome && it->time == temp->time) {
+                counter[it->nome]++;
+                flag[it->nome] = false;
+            }
+            ++temp;
+        }
+        ++it;
+    }
+
+    it = cambio_processo.begin();
+    temp = next(it);
+
+    Processo_log *arr_ausiliario = new Processo_log[CONST_NUM];
+    float sum = 0;
+
+    while (it != cambio_processo.end()) {
+        if (it->nome == temp->nome) {
+            if (counter[it->nome] == 2) {
+                if (it->time < temp->time) { sum += it->time;
+                cout << "SOMMA 1 " << sum << endl;}
+                else if (it->time > temp->time) { sum += temp->time;
+                cout << "SOMMA 2 " << sum << endl;}
+            }
+
+            // RIGUARDARE QUESTA FUNZIONE Da mettere a posto
+
+            else if (counter[it->nome] > 2) {
+                cout << "COUNTER " << counter[it->nome] << endl;
+                flag[it->nome] = true;
+                list<Processo_log>::iterator temp2 = it;
+                int count = 0;
+                for (int i = 0; i < counter[it->nome]; i++) {
+                    arr_ausiliario[i] = *it;
+                    cout << arr_ausiliario[i].nome << " TEMP " << arr_ausiliario[i].time << endl;
+                    count++;
+                    temp2++;
+                }
+                cout << "SOMMA 5 " << sum << endl;
+                sum += calcolo_TE_con_processi_multipli(arr_ausiliario, count);
+                cout << "SOMMA 6 " << sum << endl;
+            }
+        }
+        ++it;
+        ++temp;
+    }
+    delete[] arr_ausiliario;
+
+    float size_dec = static_cast<float>(num_processi);
+
+    return sum/size_dec;
+}

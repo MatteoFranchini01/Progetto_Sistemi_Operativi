@@ -183,7 +183,12 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
 
         if (lista.empty()) { flag = true; }
     }
-    avg_SRTF(log, p, num_processi);
+
+    /// Stampa dei risultati dell'algoritmo
+
+    print_SRTF(log);
+
+    cout << "\nTEMPO MEDIO: " << avg_SRTF(log, num_processi) << endl;
 }
 
 /*!

@@ -156,7 +156,7 @@ void print_SRTF (list<Processo_log> &log) {
 
     while (it != log.begin()) {
         if (temp->nome != it->nome) {
-            cout << temp->nome << "->";
+            cout << "->" << temp->nome;
         }
         --it;
         --temp;
@@ -195,7 +195,6 @@ int calcolo_TE_con_processi_multipli (Processo_log *arr, int count) {
      */
 
     sum = arr[count -2].time;
-    cout << "SOMMA INIZIALE: " << sum << endl;
 
     /*!
      * Una volta individuato qual è il processo che ha tempo di attesa più lungo per andare a togliere
@@ -210,11 +209,15 @@ int calcolo_TE_con_processi_multipli (Processo_log *arr, int count) {
             sum = sum - arr[i].time;
         }
     }
-
-    cout << "SOMMA FINALE: " << sum << endl;
     return sum;
 };
 
+/*!
+ * Questa funzione permette il calcolo del tempo di attesa per l'algoritmo SRTF
+ * @param log
+ * @param num_processi
+ * @return float avg
+ */
 
 float avg_SRTF (list<Processo_log> &log, int num_processi) {
     list<Processo_log>::iterator it = log.end();
@@ -252,14 +255,12 @@ float avg_SRTF (list<Processo_log> &log, int num_processi) {
 
     it = cambio_processo.begin();
     map<string, int> counter;
-    map<string, bool> flag;
 
     while (it != cambio_processo.end()) {
         temp = cambio_processo.begin();
         while (temp != cambio_processo.end()) {
             if (it->nome == temp->nome && it->time == temp->time) {
                 counter[it->nome]++;
-                flag[it->nome] = false;
             }
             ++temp;
         }
@@ -272,31 +273,25 @@ float avg_SRTF (list<Processo_log> &log, int num_processi) {
     Processo_log *arr_ausiliario = new Processo_log[CONST_NUM];
     float sum = 0;
 
+    int count = 1;
+    bool flag = false;
+
     while (it != cambio_processo.end()) {
         if (it->nome == temp->nome) {
             if (counter[it->nome] == 2) {
-                if (it->time < temp->time) { sum += it->time;
-                cout << "SOMMA 1 " << sum << endl;}
-                else if (it->time > temp->time) { sum += temp->time;
-                cout << "SOMMA 2 " << sum << endl;}
+                if (it->time < temp->time) { sum += it->time; }
+                else if (it->time > temp->time) { sum += temp->time; }
             }
 
-            // RIGUARDARE QUESTA FUNZIONE Da mettere a posto
-
             else if (counter[it->nome] > 2) {
-                cout << "COUNTER " << counter[it->nome] << endl;
-                flag[it->nome] = true;
-                list<Processo_log>::iterator temp2 = it;
-                int count = 0;
-                for (int i = 0; i < counter[it->nome]; i++) {
-                    arr_ausiliario[i] = *it;
-                    cout << arr_ausiliario[i].nome << " TEMP " << arr_ausiliario[i].time << endl;
-                    count++;
-                    temp2++;
-                }
-                cout << "SOMMA 5 " << sum << endl;
-                sum += calcolo_TE_con_processi_multipli(arr_ausiliario, count);
-                cout << "SOMMA 6 " << sum << endl;
+                arr_ausiliario[count] = *it;
+                count++;
+                if (count+1 == counter[it->nome]) { flag = true; }
+            }
+
+            if (flag) {
+                sum += calcolo_TE_con_processi_multipli(arr_ausiliario, counter[it->nome]);
+                flag = false;
             }
         }
         ++it;

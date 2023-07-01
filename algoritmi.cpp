@@ -117,14 +117,14 @@ void algoritmo_RR (Processo *p, int num_processi, int quanto) {
  * @param Processo p
  * @param int num_processi
  */
+
 void algoritmo_SRTF (Processo *p, int num_processi) {
     int counter = 0; int time = -1; Processo temp;
     list<Processo_log> log;
     list<Processo> lista;
     list<Processo> processi_analizzati;
     bool flag = false;
-    cout << "L'output si riferisce a quale processo viene eseguito per ogni unità di tempo" << endl;
-    cout << "SRTF" << endl;
+    cout << "SRTF ";
     while (flag == false) {
         time++;
 
@@ -159,7 +159,6 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
 
         lista.front().durata--;
 
-        cout << " TIME:\t" << time << "\tPROCESSO:\t" << lista.front().nome << endl;
 
         /// Inserimenti del processo all'intenro del log
 
@@ -167,8 +166,6 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
         temp.nome = lista.front().nome;
         temp.time = time;
         log.push_front(temp);
-
-        cout << "----------------------------------" << endl;
 
         /*!
          * Quando la durata di un processo arriva a 0 lo andiamo

@@ -51,25 +51,25 @@ build cmake_object_order_depends_target_Progetto_Sistemi_Operativi: phony || CMa
 
 build CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o: CXX_COMPILER__Progetto_Sistemi_Operativi_Debug /Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/main.cpp || cmake_object_order_depends_target_Progetto_Sistemi_Operativi
   DEP_FILE = CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o.d
-  FLAGS = -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
 
 build CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o: CXX_COMPILER__Progetto_Sistemi_Operativi_Debug /Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/algoritmi.cpp || cmake_object_order_depends_target_Progetto_Sistemi_Operativi
   DEP_FILE = CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o.d
-  FLAGS = -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
 
 build CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o: CXX_COMPILER__Progetto_Sistemi_Operativi_Debug /Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/selection_sort.cpp || cmake_object_order_depends_target_Progetto_Sistemi_Operativi
   DEP_FILE = CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o.d
-  FLAGS = -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
 
 build CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o: CXX_COMPILER__Progetto_Sistemi_Operativi_Debug /Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/auxyliary_functions.cpp || cmake_object_order_depends_target_Progetto_Sistemi_Operativi
   DEP_FILE = CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o.d
-  FLAGS = -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   OBJECT_FILE_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
 
@@ -82,7 +82,7 @@ build CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o: CXX_C
 # Link the executable Progetto_Sistemi_Operativi
 
 build Progetto_Sistemi_Operativi: CXX_EXECUTABLE_LINKER__Progetto_Sistemi_Operativi_Debug CMakeFiles/Progetto_Sistemi_Operativi.dir/main.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/algoritmi.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/selection_sort.cpp.o CMakeFiles/Progetto_Sistemi_Operativi.dir/auxyliary_functions.cpp.o
-  FLAGS = -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/Progetto_Sistemi_Operativi.dir
   POST_BUILD = :
   PRE_LINK = :

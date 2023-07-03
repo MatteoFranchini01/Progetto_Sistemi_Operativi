@@ -19,5 +19,6 @@ void print_SRTF (list<Processo_log> &log);
 int calcolo_TE_con_processi_multipli (Processo_log *arr, int count);
 bool confronto_processi (const Processo_log& a, const Processo_log& b);
 float avg_SRTF (list<Processo_log> &log, int num_processi);
+float avg_RR_priorita (Processo_log *arr, int num_processi, int size);
 
 #endif //PROGETTO_SISTEMI_OPERATIVI_AUXYLIARY_FUNCTIONS_H

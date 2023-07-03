@@ -188,8 +188,17 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
     cout << "\nTEMPO MEDIO: " << avg_SRTF(log, num_processi) << endl;
 }
 
+/*!
+ * Algoritmo Round Robin con priorità
+ * @param p
+ * @param num_processi
+ * @param quanto
+ */
 
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
+    Processo_log* arr_log = new Processo_log[CONST];
+    int counter = 0;
+    int i = 0;
 
     /// Ordinamento dei processi per priorità
     selectionSortByPriority(p, num_processi);
@@ -200,98 +209,38 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
 
     while(not coda_processi.empty()) {
         if (coda_processi.front().durata <= quanto) {
+            Processo_log temp_log;
+            arr_log[i].nome = coda_processi.front().nome;;
+            arr_log[i].time = counter;
+
             cout << "->" << coda_processi.front().nome;
+            counter = counter + coda_processi.front().durata;
+
             coda_processi.pop();
         }
         else if (coda_processi.front().durata > quanto) {
+            Processo_log temp_log;
+            temp_log.nome = coda_processi.front().nome;
+            temp_log.time = counter;
+            arr_log[i] = temp_log;
+
             Processo temp;
             temp.nome = coda_processi.front().nome;
             temp.durata = coda_processi.front().durata - quanto;
             temp.priorita = coda_processi.front().priorita;
             temp.istante_arrivo = coda_processi.front().istante_arrivo;
             cout << "->" << temp.nome;
+
+            counter = counter + quanto;
+
             coda_processi.pop();
             coda_processi.push(temp);
         }
+        counter++;
+        i++;
     }
-    //cout << endl << "TEMPO MEDIO " << avg_SRTF << endl;
+
+    cout << "\nTEMPO MEDIO: " << avg_RR_priorita(arr_log, num_processi, i) << endl;
+    delete [] arr_log;
 }
-
-/*
-*//*!
- * Questo algoritmo viene chiamato quando abbiamo due processi
- * con uguale priorità, è simile al RR visto prima, ma con qualche modifica
- * per adattarsi meglio al caso in questione
- * @param p
- * @param num_processi
- * @param quanto
- *//*
-
-void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
-    int array_counter = 0;
-    int n = CONST;
-    queue<Processo> processi = from_array_to_queue(p, num_processi);
-    while (not processi.empty()) {
-        if (processi.front().durata <= quanto) {
-            cout << "->" << processi.front().nome;
-            processi.pop();
-        }
-        else if (processi.front().durata > quanto){
-            Processo temp;
-            temp.nome = processi.front().nome;
-            temp.durata = processi.front().durata - quanto;
-            temp.priorita = processi.front().priorita;
-            cout << "->" << temp.nome;
-            processi.push(temp);
-            processi.pop();
-        }
-    }
-}
-
-*//*!
- * @brief Algoritmo priorità che in caso di processi uguali chiama la funzione algoritmo_RR_modificato
- * @param p
- * @param num_processi
- * @param quanto
- *//*
-
-void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
-    bool not_empty;
-    int n = CONST; int num_proc_uguale_priorita = 0;
-    Processo *stessa_priorita = new Processo [n];
-    *//*!
-     * Chiamo l'algoritmo selectionSortByPriority in modo da
-     * ordinare i miei processi per priorità
-     *//*
-
-    selectionSortByPriority(p, num_processi);
-
-    cout << "RR con PRIORITÀ ";
-    for (int i = 0; i < num_processi; i++) {
-        not_empty = false;
-        for (int j = 0; j < num_processi; j++) {
-
-            /// Creo una lista di processi con uguale priorità
-
-            if (p[i].priorita == p[j].priorita && p[i].nome != p[j].nome) {
-                stessa_priorita[j] = (p[j]);
-                not_empty = true;
-                num_proc_uguale_priorita++;
-            }
-        }
-        /// Se ho più di un processo di uguale durata chiamo l'algoritmo RR
-
-        if (not_empty) {
-            algoritmo_RR_modificato(stessa_priorita, num_proc_uguale_priorita, quanto);
-        }
-
-        /// altrimenti proseguo con l'algoritmo "priorità"
-
-        else {
-            cout << "->" << p[i].nome;
-        }
-    }
-    cout << "QUI" << endl;
-    delete [] stessa_priorita;
-}*/
 

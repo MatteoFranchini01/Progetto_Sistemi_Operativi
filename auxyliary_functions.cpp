@@ -226,7 +226,6 @@ float avg_SRTF (list<Processo_log> &log, int num_processi) {
 
     while (it != log.begin()) {
         if (temp->nome != it->nome) {
-
             if (it->nome != "") {
                 Processo_log temp_proc_prec;
                 temp_proc_prec.nome = it->nome;
@@ -301,5 +300,52 @@ float avg_SRTF (list<Processo_log> &log, int num_processi) {
 
     float size_dec = static_cast<float>(num_processi);
 
+    return sum/size_dec;
+}
+
+/*!
+ * Calcolo del tempo medio per l'algoritmo RR con priorità
+ * @param arr
+ * @param num_processi
+ * @param size
+ * @return float avg
+ */
+
+float avg_RR_priorita (Processo_log *arr, int num_processi, int size) {
+    float sum = 0;
+
+    /// Creazione di un dizionario per salvare i processi che sono stati eseguiti per ultiimi
+
+    map<string, int> map_max;
+
+    /*!
+     * Creazione di un dizionario per salvare i tempi di esecuzione dei processi eseguiti
+     * prima dell'ultimo, questo valore andrà sottratto a quello massimo in modo da calcolare il tempo
+     * medio
+     */
+
+    map<string, int> map_sum;
+
+    /// Popolazione dei dizionari
+
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (arr[i].nome == arr[j].nome && arr[i].time <= arr[j].time) {
+                map_max[arr[j].nome] = arr[j].time;
+            }
+        }
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i].time < map_max[arr[i].nome]) {
+            map_sum[arr[i].nome] += arr[i+1].time - arr[i].time - 1;
+        }
+    }
+
+    for (int i = 0; i < num_processi; i++) {
+        sum += map_max[arr[i].nome] - map_sum[arr[i].nome];
+    }
+
+    float size_dec = static_cast<float>(num_processi);
     return sum/size_dec;
 }

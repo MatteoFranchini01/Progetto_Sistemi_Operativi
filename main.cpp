@@ -125,7 +125,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-
+    cout << "<------------------------------------------->" << endl;
     /// @brief Cancellazione degli array creati con allocazione dinamica
 
     delete[] arr;

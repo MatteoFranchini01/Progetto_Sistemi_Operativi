@@ -18,4 +18,15 @@ struct Processo{
     int priorita;
 };
 
+/*!
+ * Struct creata per salvare il nome e il tempo di esecuzione del processo
+ * durante l'esecuzione dell'algoritmo SRTF.
+ * Verrà usata nel calcolo del tempo medio di esecuzione
+ */
+
+struct Processo_log {
+    string nome;
+    int time;
+};
+
 #endif //PROGETTO_SISTEMI_OPERATIVI_STRUCT_H

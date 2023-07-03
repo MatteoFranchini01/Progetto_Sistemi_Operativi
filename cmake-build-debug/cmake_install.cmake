@@ -1,4 +1,4 @@
-# Install script for directory: /Users/matteofranchini/Library/CloudStorage/OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi
+# Install script for directory: /Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/matteofranchini/Library/CloudStorage/OneDrive-UniversitàdegliStudidiParma/Università/Appunti e slide/II anno/Sistemi operativi/Progetto_Sistemi_Operativi/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/matteofranchini/Documents/GitHub/progetto_scheduling_CPU/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

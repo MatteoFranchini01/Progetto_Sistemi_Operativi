@@ -8,10 +8,12 @@
 #include <string>
 #include <queue>
 #include "algoritmi.h"
+#include "auxyliary_functions.h"
 
 using namespace std;
 
 const int CONST = 100;
+const int NUM_ALGORITMI = 6;
 
 int main(int argc, char *argv[]) {
 
@@ -43,7 +45,6 @@ int main(int argc, char *argv[]) {
     if (myfile.is_open()) {
         while (getline(myfile, str5, ' ')) {
             if (counter == -1) {
-                getline(myfile, nome, ' ');
                 getline(myfile, str3, ' ');
                 istringstream tk3 (str3);
                 tk3 >> num_processi;
@@ -72,49 +73,61 @@ int main(int argc, char *argv[]) {
         myfile.close();
     } else cout << "Impossibile aprire il file";
 
-    /// @brief Scelta dell'algoritmo
-    cout << "Selezionare l'algoritmo che si intende utilizzare" << endl;
-    cout << "Premere 1 per FCFS" << endl;
-    cout << "Premere 2 per BJP" << endl;
-    cout << "Premere 3 per Priorità" << endl;
-    cout << "Premere 4 per RR" << endl;
-    cout << "Premere 5 per SRTF" << endl;
-    cout << "Premere 6 per priorità con RR" << endl;
-    cin >> scelta_algoritmo;
+    /*!
+     * @brief
+     * Creazione di un array di copia per far si che l'array originale venga mantenuto
+     * anche dopo l'esecuzione di un algoritmo
+     */
 
-    switch (scelta_algoritmo) {
-        case 1:
-            cout << "Hai scelto l'algoritmo FCFS" << endl;
-            algoritmo_FCFS(arr, num_processi);
-            break;
+    Processo arr_copia[num_processi];
 
-        case 2:
-            cout << "Hai scelto l'algoritmo BJP" << endl;
-            algoritmo_BJP(arr, num_processi);
-            break;
+    /// @brief Esecuzione degli algoritmi
 
-        case 3:
-            cout << "Hai scelto l'algoritmo Priorità" << endl;
-            algoritmo_priorita(arr, num_processi);
-            break;
+    for (int j = 0; j < NUM_ALGORITMI; j++) {
 
-        case 4:
-            cout << "Hai scelto l'algoritmo RR" << endl;
-            algoritmo_RR(arr, num_processi, quanto);
-            break;
+        /*!
+         * @brief
+         * Reset dell'array di copia dopo ogni esecuzione di un algoritmo
+         * in modo che l'array di copia sia sempre uguale all'array originale
+         */
 
-        case 5:
-            cout << "Hai scelto l'algoritmo SRTF" << endl;
-            algoritmo_SRTF(arr, num_processi);
-            break;
-
-        case 6:
-            cout << "Hai scelto l'algoritmo priorità RR" << endl;
-            algoritmo_priorita_RR(arr, num_processi, quanto);
+        reset_array(arr, arr_copia, num_processi);
+        switch (j) {
+            case 0:
+                cout << "Esecuzione algoritmo FCFS" << endl;
+                algoritmo_FCFS(arr_copia, num_processi);
+                break;
+            case 1:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo BJP" << endl;
+                algoritmo_BJP(arr_copia, num_processi);
+                break;
+            case 2:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo Priorità" << endl;
+                algoritmo_priorita(arr_copia, num_processi);
+                break;
+            case 3:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo RR" << endl;
+                algoritmo_RR(arr_copia, num_processi, quanto);
+                break;
+            case 4:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo SRTF" << endl;
+                algoritmo_SRTF(arr_copia, num_processi);
+                break;
+            case 5:
+                cout << "<------------------------------------------->" << endl;
+                cout << "Esecuzione algoritmo priorità RR" << endl;
+                algoritmo_priorita_RR(arr_copia, num_processi, quanto);
+                break;
+        }
     }
 
+    cout << "<------------------------------------------->" << endl;
+    /// @brief Cancellazione degli array creati con allocazione dinamica
 
-    /// @brief Cancellazione dell'array con allocazione dinamica
     delete[] arr;
 
     return 0;

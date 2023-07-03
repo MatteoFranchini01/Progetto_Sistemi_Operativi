@@ -336,9 +336,9 @@ float avg_RR_priorita (Processo_log *arr, int num_processi, int size) {
         }
     }
 
-    for (int i = 0; i < size; i++) {
-        if (arr[i].time < map_max[arr[i].nome]) {
-            map_sum[arr[i].nome] += arr[i+1].time - arr[i].time - 1;
+    for (int i = 1; i < size+1; i++) {
+        if (arr[i-1].time < map_max[arr[i-1].nome]) {
+            map_sum[arr[i-1].nome] += arr[i].time - arr[i-1].time - 1;
         }
     }
 

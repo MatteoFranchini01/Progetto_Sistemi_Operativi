@@ -1,0 +1,6 @@
+<map id="compareByTime" name="compareByTime">
+<area shape="rect" id="node1" title="Funzione per confrontare i processi in base alla durata." alt="" coords="447,5,564,31"/>
+<area shape="rect" id="node2" href="$selection__sort_8cpp.html#ab12f879c287dcc730725c53b04683a85" title="Algoritmo selection sort che ordina in base alla durata secondo la funzione &quot;compareByTime&quot;." alt="" coords="257,5,399,31"/>
+<area shape="rect" id="node3" href="$algoritmi_8cpp.html#a4fb4758345f1160fe3e883512e841243" title=" " alt="" coords="103,5,209,31"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,31"/>
+</map>

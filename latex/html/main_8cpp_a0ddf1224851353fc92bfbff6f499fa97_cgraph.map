@@ -1,0 +1,24 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,153,55,179"/>
+<area shape="rect" id="node2" href="$algoritmi_8cpp.html#a4fb4758345f1160fe3e883512e841243" title=" " alt="" coords="123,5,230,31"/>
+<area shape="rect" id="node6" href="$algoritmi_8cpp.html#a20a98b243ec63926c11036643e703d5b" title=" " alt="" coords="118,55,235,80"/>
+<area shape="rect" id="node7" href="$algoritmi_8cpp.html#afa823a96db950204c54db67098d219a3" title=" " alt="" coords="116,104,237,130"/>
+<area shape="rect" id="node10" href="$algoritmi_8cpp.html#a4656f44f75b49df1d45be0555cd07c3b" title=" " alt="" coords="103,153,250,179"/>
+<area shape="rect" id="node13" href="$algoritmi_8cpp.html#a8297525246f541df4b9f8e6da2402f7d" title=" " alt="" coords="126,203,227,228"/>
+<area shape="rect" id="node15" href="$algoritmi_8cpp.html#a60a51e17222e1a8d06e3419f1b6ea594" title=" " alt="" coords="118,325,235,351"/>
+<area shape="rect" id="node22" href="$auxyliary__functions_8cpp.html#aae959879c312c1a00c537e1a1a35f0ee" title=" " alt="" coords="133,375,220,400"/>
+<area shape="rect" id="node3" href="$auxyliary__functions_8cpp.html#a6c6776f8d3161d3a79e28d7882ed1e21" title=" " alt="" coords="354,55,396,80"/>
+<area shape="rect" id="node4" href="$selection__sort_8cpp.html#ab12f879c287dcc730725c53b04683a85" title="Algoritmo selection sort che ordina in base alla durata secondo la funzione &quot;compareByTime&quot;." alt="" coords="304,5,446,31"/>
+<area shape="rect" id="node5" href="$selection__sort_8cpp.html#a4fe8dea4c73b5643413c2a0eaea1197d" title="Funzione per confrontare i processi in base alla durata." alt="" coords="527,5,644,31"/>
+<area shape="rect" id="node8" href="$selection__sort_8cpp.html#a5f088b07860f6bb7c673e49c6179bc06" title="Algoritmo selection sort che opera in base alla priorità secondo la funzione &quot;compareByPriority&quot;." alt="" coords="298,104,452,130"/>
+<area shape="rect" id="node9" href="$selection__sort_8cpp.html#abe673ebe5e0074d8a5d56555244c20ed" title="Funzioni per ordinare gli elementi in base alla priorità" alt="" coords="521,104,650,130"/>
+<area shape="rect" id="node11" href="$auxyliary__functions_8cpp.html#ae05ae42ab50cb646686f8be610754f85" title=" " alt="" coords="318,153,433,179"/>
+<area shape="rect" id="node12" href="$auxyliary__functions_8cpp.html#ace10562a91dd8d1c495bd5ec8609eab4" title=" " alt="" coords="304,203,447,228"/>
+<area shape="rect" id="node14" href="$auxyliary__functions_8cpp.html#a8c714bb8d5c8f392c4b48d6ba943b104" title=" " alt="" coords="341,252,410,278"/>
+<area shape="rect" id="node16" href="$auxyliary__functions_8cpp.html#a554a44b83cdd2f59675485e795e20ab5" title=" " alt="" coords="318,400,432,426"/>
+<area shape="rect" id="node17" href="$auxyliary__functions_8cpp.html#aaeb7d20917f739703e3861904467dec0" title=" " alt="" coords="526,417,645,443"/>
+<area shape="rect" id="node18" href="$auxyliary__functions_8cpp.html#a5f1b1030d508ce0fadb100b3eca881b5" title=" " alt="" coords="333,301,417,327"/>
+<area shape="rect" id="node21" href="$auxyliary__functions_8cpp.html#afd7dabad87bd2917daadb256cd858b37" title=" " alt="" coords="331,351,419,376"/>
+<area shape="rect" id="node19" href="$auxyliary__functions_8cpp.html#ab761405f451870e7fde29d9a2fe232c4" title=" " alt="" coords="500,335,671,376"/>
+<area shape="rect" id="node20" href="$auxyliary__functions_8cpp.html#afea2382b8f0411c8e85eb5fb050099d4" title=" " alt="" coords="520,285,651,311"/>
+</map>

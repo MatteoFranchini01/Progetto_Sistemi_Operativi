@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Progetto Scheduling CPU:  File sorgente auxyliary_functions.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Progetto Scheduling CPU
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">auxyliary_functions.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="auxyliary__functions_8cpp.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by Matteo Franchini on 25/04/23.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="auxyliary__functions_8h.html">auxyliary_functions.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#a9b382f893218d0c0e047af47f357b1c8">    8</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="auxyliary__functions_8cpp.html#a9b382f893218d0c0e047af47f357b1c8">CONST_NUM</a> = 100000;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#a554a44b83cdd2f59675485e795e20ab5">   20</a></span>list&lt;Processo&gt; <a class="code hl_function" href="auxyliary__functions_8cpp.html#a554a44b83cdd2f59675485e795e20ab5">analisi_processi</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *p, <span class="keywordtype">int</span> num_processi, <span class="keywordtype">int</span> time) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    list&lt;Processo&gt; processi_in_arrivo;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_processi; i++) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (p[i].istante_arrivo == time) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            processi_in_arrivo.push_back(p[i]);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            processi_in_arrivo.sort(<a class="code hl_function" href="auxyliary__functions_8cpp.html#aaeb7d20917f739703e3861904467dec0">confronto_durata</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> processi_in_arrivo;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#aaeb7d20917f739703e3861904467dec0">   39</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#aaeb7d20917f739703e3861904467dec0">confronto_durata</a> (<span class="keyword">const</span> <a class="code hl_struct" href="struct_processo.html">Processo</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_processo.html">Processo</a>&amp; b) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> a.<a class="code hl_variable" href="struct_processo.html#a693d357c160d4e8940034a9525895c00">durata</a> &lt; b.<a class="code hl_variable" href="struct_processo.html#a693d357c160d4e8940034a9525895c00">durata</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#ace10562a91dd8d1c495bd5ec8609eab4">   50</a></span>queue&lt;Processo&gt; <a class="code hl_function" href="auxyliary__functions_8cpp.html#ace10562a91dd8d1c495bd5ec8609eab4">from_array_to_queue</a>(<a class="code hl_struct" href="struct_processo.html">Processo</a> *p, <span class="keywordtype">int</span> num_processi) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    queue&lt;Processo&gt; var;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_processi; i++) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (p[i].nome == <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_struct" href="struct_processo.html">Processo</a> temp;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        temp.<a class="code hl_variable" href="struct_processo.html#a0625c7f6821d0af68a0779c27c38183c">nome</a> = p[i].<a class="code hl_variable" href="struct_processo.html#a0625c7f6821d0af68a0779c27c38183c">nome</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        temp.<a class="code hl_variable" href="struct_processo.html#a693d357c160d4e8940034a9525895c00">durata</a> = p[i].<a class="code hl_variable" href="struct_processo.html#a693d357c160d4e8940034a9525895c00">durata</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        temp.<a class="code hl_variable" href="struct_processo.html#a1af74ac983243b1caa30a4dd6beea988">priorita</a> = p[i].<a class="code hl_variable" href="struct_processo.html#a1af74ac983243b1caa30a4dd6beea988">priorita</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        var.push(temp);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> var;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#a6c6776f8d3161d3a79e28d7882ed1e21">   72</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#a6c6776f8d3161d3a79e28d7882ed1e21">avg</a> (<span class="keywordtype">int</span> *durata, <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// Tempo di attesa del singolo processo</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">int</span> sum_int = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Tempo di attesa complessivo</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; size-1; j++) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        sum_int += durata[j];</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        sum += sum_int;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">float</span> sum_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(sum);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">float</span> size_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(size);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">return</span> sum_dec/size_dec;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#a8c714bb8d5c8f392c4b48d6ba943b104">  106</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#a8c714bb8d5c8f392c4b48d6ba943b104">avg_RR</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *durata, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> num_processi) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_processi; i++) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = size; j &gt;= 0; j--) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (durata[i].nome == durata[j].nome) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">if</span> (flag &amp;&amp; durata[i].nome != durata[j].nome) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                sum += durata[j].<a class="code hl_variable" href="struct_processo.html#a693d357c160d4e8940034a9525895c00">durata</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">float</span> sum_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(sum);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">float</span> processi_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(num_processi);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> sum_dec/processi_dec;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#aae959879c312c1a00c537e1a1a35f0ee">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#aae959879c312c1a00c537e1a1a35f0ee">reset_array</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *arr, <a class="code hl_struct" href="struct_processo.html">Processo</a> *arr_copia, <span class="keywordtype">int</span> num_processi) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_processi; i++) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        arr_copia[i] = arr[i];</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#afd7dabad87bd2917daadb256cd858b37">  152</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#afd7dabad87bd2917daadb256cd858b37">print_SRTF</a> (list&lt;Processo_log&gt; &amp;log) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    list&lt;Processo_log&gt;::iterator it = log.end();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    list&lt;Processo_log&gt;::iterator temp = prev(it);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    list&lt;Processo_log&gt; cambio_processo;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">while</span> (it != log.begin()) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (temp-&gt;nome != it-&gt;nome) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            cout &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; temp-&gt;nome;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        --it;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        --temp;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#afea2382b8f0411c8e85eb5fb050099d4">  174</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#afea2382b8f0411c8e85eb5fb050099d4">confronto_processi</a> (<span class="keyword">const</span> <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a>&amp; b) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordflow">return</span> a.<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a> &lt; b.<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>}</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#ab761405f451870e7fde29d9a2fe232c4">  186</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#ab761405f451870e7fde29d9a2fe232c4">calcolo_TE_con_processi_multipli</a> (<a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> *arr, <span class="keywordtype">int</span> count) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    sum = arr[count -2].<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = count - 3; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">if</span> (count % 2 != 0) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            sum = sum - arr[i].<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>};</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#a5f1b1030d508ce0fadb100b3eca881b5">  222</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#a5f1b1030d508ce0fadb100b3eca881b5">avg_SRTF</a> (list&lt;Processo_log&gt; &amp;log, <span class="keywordtype">int</span> num_processi) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    list&lt;Processo_log&gt;::iterator it = log.end();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    list&lt;Processo_log&gt;::iterator temp = prev(it);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    list&lt;Processo_log&gt; cambio_processo;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">while</span> (it != log.begin()) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span> (temp-&gt;nome != it-&gt;nome) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">if</span> (it-&gt;nome != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> temp_proc_prec;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                temp_proc_prec.<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a> = it-&gt;nome;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                temp_proc_prec.<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a> = it-&gt;time;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                cambio_processo.push_back(temp_proc_prec);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> temp_proc_succ;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            temp_proc_succ.<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a> = temp-&gt;nome;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            temp_proc_succ.<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a> = temp-&gt;time;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            cambio_processo.push_back(temp_proc_succ);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        --it;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        --temp;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordflow">if</span> (it == log.begin()) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> temp_proc_prec;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            temp_proc_prec.<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a> = it-&gt;nome;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            temp_proc_prec.<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a> = it-&gt;time;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            cambio_processo.push_back(temp_proc_prec);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    cambio_processo.sort(<a class="code hl_function" href="auxyliary__functions_8cpp.html#afea2382b8f0411c8e85eb5fb050099d4">confronto_processi</a>);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    it = cambio_processo.begin();</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    map&lt;string, int&gt; counter;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">while</span> (it != cambio_processo.end()) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        temp = cambio_processo.begin();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">while</span> (temp != cambio_processo.end()) {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordflow">if</span> (it-&gt;nome == temp-&gt;nome &amp;&amp; it-&gt;time == temp-&gt;time) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                counter[it-&gt;nome]++;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            ++temp;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        ++it;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    it = cambio_processo.begin();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    temp = next(it);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> *arr_ausiliario = <span class="keyword">new</span> <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a>[<a class="code hl_variable" href="auxyliary__functions_8cpp.html#a9b382f893218d0c0e047af47f357b1c8">CONST_NUM</a>];</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordtype">int</span> count = 1;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">while</span> (it != cambio_processo.end()) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">if</span> (it-&gt;nome == temp-&gt;nome) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keywordflow">if</span> (counter[it-&gt;nome] == 2) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                <span class="keywordflow">if</span> (it-&gt;time &lt; temp-&gt;time) { sum += it-&gt;<a class="code hl_variable" href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">time</a>; }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (it-&gt;time &gt; temp-&gt;time) { sum += temp-&gt;time; }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (counter[it-&gt;nome] &gt; 2) {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                arr_ausiliario[count] = *it;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                count++;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <span class="keywordflow">if</span> (count+1 == counter[it-&gt;nome]) { flag = <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <span class="keywordflow">if</span> (flag) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                sum += <a class="code hl_function" href="auxyliary__functions_8cpp.html#ab761405f451870e7fde29d9a2fe232c4">calcolo_TE_con_processi_multipli</a>(arr_ausiliario, counter[it-&gt;nome]);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        ++it;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        ++temp;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">delete</span>[] arr_ausiliario;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordtype">float</span> size_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(num_processi);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keywordflow">return</span> sum/size_dec;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>}</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="auxyliary__functions_8cpp.html#ae05ae42ab50cb646686f8be610754f85">  314</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8cpp.html#ae05ae42ab50cb646686f8be610754f85">avg_RR_priorita</a> (<a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> *arr, <span class="keywordtype">int</span> num_processi, <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    map&lt;string, int&gt; map_max;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    map&lt;string, int&gt; map_sum;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++) {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; size; j++) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            <span class="keywordflow">if</span> (arr[i].nome == arr[j].nome &amp;&amp; arr[i].time &lt;= arr[j].time) {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                map_max[arr[j].<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a>] = arr[j].time;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++) {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <span class="keywordflow">if</span> (arr[i].time &lt; map_max[arr[i].nome]) {</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            map_sum[arr[i].<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a>] += arr[i+1].time - arr[i].time - 1;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_processi; i++) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        sum += map_max[arr[i].<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a>] - map_sum[arr[i].<a class="code hl_variable" href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">nome</a>];</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordtype">float</span> size_dec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(num_processi);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">return</span> sum/size_dec;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_a554a44b83cdd2f59675485e795e20ab5"><div class="ttname"><a href="auxyliary__functions_8cpp.html#a554a44b83cdd2f59675485e795e20ab5">analisi_processi</a></div><div class="ttdeci">list&lt; Processo &gt; analisi_processi(Processo *p, int num_processi, int time)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00020">auxyliary_functions.cpp:20</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_a5f1b1030d508ce0fadb100b3eca881b5"><div class="ttname"><a href="auxyliary__functions_8cpp.html#a5f1b1030d508ce0fadb100b3eca881b5">avg_SRTF</a></div><div class="ttdeci">float avg_SRTF(list&lt; Processo_log &gt; &amp;log, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00222">auxyliary_functions.cpp:222</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_a6c6776f8d3161d3a79e28d7882ed1e21"><div class="ttname"><a href="auxyliary__functions_8cpp.html#a6c6776f8d3161d3a79e28d7882ed1e21">avg</a></div><div class="ttdeci">float avg(int *durata, int size)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00072">auxyliary_functions.cpp:72</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_a8c714bb8d5c8f392c4b48d6ba943b104"><div class="ttname"><a href="auxyliary__functions_8cpp.html#a8c714bb8d5c8f392c4b48d6ba943b104">avg_RR</a></div><div class="ttdeci">float avg_RR(Processo *durata, int size, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00106">auxyliary_functions.cpp:106</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_a9b382f893218d0c0e047af47f357b1c8"><div class="ttname"><a href="auxyliary__functions_8cpp.html#a9b382f893218d0c0e047af47f357b1c8">CONST_NUM</a></div><div class="ttdeci">const int CONST_NUM</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00008">auxyliary_functions.cpp:8</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_aae959879c312c1a00c537e1a1a35f0ee"><div class="ttname"><a href="auxyliary__functions_8cpp.html#aae959879c312c1a00c537e1a1a35f0ee">reset_array</a></div><div class="ttdeci">void reset_array(Processo *arr, Processo *arr_copia, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00139">auxyliary_functions.cpp:139</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_aaeb7d20917f739703e3861904467dec0"><div class="ttname"><a href="auxyliary__functions_8cpp.html#aaeb7d20917f739703e3861904467dec0">confronto_durata</a></div><div class="ttdeci">bool confronto_durata(const Processo &amp;a, const Processo &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00039">auxyliary_functions.cpp:39</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_ab761405f451870e7fde29d9a2fe232c4"><div class="ttname"><a href="auxyliary__functions_8cpp.html#ab761405f451870e7fde29d9a2fe232c4">calcolo_TE_con_processi_multipli</a></div><div class="ttdeci">int calcolo_TE_con_processi_multipli(Processo_log *arr, int count)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00186">auxyliary_functions.cpp:186</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_ace10562a91dd8d1c495bd5ec8609eab4"><div class="ttname"><a href="auxyliary__functions_8cpp.html#ace10562a91dd8d1c495bd5ec8609eab4">from_array_to_queue</a></div><div class="ttdeci">queue&lt; Processo &gt; from_array_to_queue(Processo *p, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00050">auxyliary_functions.cpp:50</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_ae05ae42ab50cb646686f8be610754f85"><div class="ttname"><a href="auxyliary__functions_8cpp.html#ae05ae42ab50cb646686f8be610754f85">avg_RR_priorita</a></div><div class="ttdeci">float avg_RR_priorita(Processo_log *arr, int num_processi, int size)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00314">auxyliary_functions.cpp:314</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_afd7dabad87bd2917daadb256cd858b37"><div class="ttname"><a href="auxyliary__functions_8cpp.html#afd7dabad87bd2917daadb256cd858b37">print_SRTF</a></div><div class="ttdeci">void print_SRTF(list&lt; Processo_log &gt; &amp;log)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00152">auxyliary_functions.cpp:152</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8cpp_html_afea2382b8f0411c8e85eb5fb050099d4"><div class="ttname"><a href="auxyliary__functions_8cpp.html#afea2382b8f0411c8e85eb5fb050099d4">confronto_processi</a></div><div class="ttdeci">bool confronto_processi(const Processo_log &amp;a, const Processo_log &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00174">auxyliary_functions.cpp:174</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html"><div class="ttname"><a href="auxyliary__functions_8h.html">auxyliary_functions.h</a></div></div>
+<div class="ttc" id="astruct_processo__log_html"><div class="ttname"><a href="struct_processo__log.html">Processo_log</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00027">struct.h:27</a></div></div>
+<div class="ttc" id="astruct_processo__log_html_a53592783547f227078ca431f9a34a8bc"><div class="ttname"><a href="struct_processo__log.html#a53592783547f227078ca431f9a34a8bc">Processo_log::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00028">struct.h:28</a></div></div>
+<div class="ttc" id="astruct_processo__log_html_a61be711af5f870ee481e0f225d657d31"><div class="ttname"><a href="struct_processo__log.html#a61be711af5f870ee481e0f225d657d31">Processo_log::time</a></div><div class="ttdeci">int time</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00029">struct.h:29</a></div></div>
+<div class="ttc" id="astruct_processo_html"><div class="ttname"><a href="struct_processo.html">Processo</a></div><div class="ttdoc">Struct creata per salvare il nome, la durata e la priorità del processo.</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00014">struct.h:14</a></div></div>
+<div class="ttc" id="astruct_processo_html_a0625c7f6821d0af68a0779c27c38183c"><div class="ttname"><a href="struct_processo.html#a0625c7f6821d0af68a0779c27c38183c">Processo::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00015">struct.h:15</a></div></div>
+<div class="ttc" id="astruct_processo_html_a1af74ac983243b1caa30a4dd6beea988"><div class="ttname"><a href="struct_processo.html#a1af74ac983243b1caa30a4dd6beea988">Processo::priorita</a></div><div class="ttdeci">int priorita</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00018">struct.h:18</a></div></div>
+<div class="ttc" id="astruct_processo_html_a693d357c160d4e8940034a9525895c00"><div class="ttname"><a href="struct_processo.html#a693d357c160d4e8940034a9525895c00">Processo::durata</a></div><div class="ttdeci">int durata</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00017">struct.h:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

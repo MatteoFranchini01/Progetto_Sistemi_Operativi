@@ -1,0 +1,238 @@
+\hypertarget{auxyliary__functions_8cpp_source}{}\doxysection{auxyliary\+\_\+functions.\+cpp}
+\mbox{\hyperlink{auxyliary__functions_8cpp}{Vai alla documentazione di questo file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Matteo\ Franchini\ on\ 25/04/23.}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{auxyliary__functions_8h}{auxyliary\_functions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00008}\mbox{\hyperlink{auxyliary__functions_8cpp_a9b382f893218d0c0e047af47f357b1c8}{00008}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{auxyliary__functions_8cpp_a9b382f893218d0c0e047af47f357b1c8}{CONST\_NUM}}\ =\ 100000;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00020}\mbox{\hyperlink{auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5}{00020}}\ list<Processo>\ \mbox{\hyperlink{auxyliary__functions_8cpp_a554a44b83cdd2f59675485e795e20ab5}{analisi\_processi}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi,\ \textcolor{keywordtype}{int}\ time)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00021}00021\ \ \ \ \ list<Processo>\ processi\_in\_arrivo;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p[i].istante\_arrivo\ ==\ time)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ processi\_in\_arrivo.push\_back(p[i]);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ processi\_in\_arrivo.sort(\mbox{\hyperlink{auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0}{confronto\_durata}});}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ processi\_in\_arrivo;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00039}\mbox{\hyperlink{auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0}{00039}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{auxyliary__functions_8cpp_aaeb7d20917f739703e3861904467dec0}{confronto\_durata}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_processo}{Processo}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_processo}{Processo}}\&\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}}\ <\ b.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00050}\mbox{\hyperlink{auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}{00050}}\ queue<Processo>\ \mbox{\hyperlink{auxyliary__functions_8cpp_ace10562a91dd8d1c495bd5ec8609eab4}{from\_array\_to\_queue}}(\mbox{\hyperlink{struct_processo}{Processo}}\ *p,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00051}00051\ \ \ \ \ queue<Processo>\ var;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p[i].nome\ ==\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo}{Processo}}\ temp;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}}\ =\ p[i].\mbox{\hyperlink{struct_processo_a0625c7f6821d0af68a0779c27c38183c}{nome}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}}\ =\ p[i].\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}}\ =\ p[i].\mbox{\hyperlink{struct_processo_a1af74ac983243b1caa30a4dd6beea988}{priorita}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ var.push(temp);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ var;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00072}\mbox{\hyperlink{auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{00072}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{auxyliary__functions_8cpp_a6c6776f8d3161d3a79e28d7882ed1e21}{avg}}\ (\textcolor{keywordtype}{int}\ *durata,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ Tempo\ di\ attesa\ del\ singolo\ processo}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{int}\ sum\_int\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Tempo\ di\ attesa\ complessivo}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size-\/1;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ sum\_int\ +=\ durata[j];}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ sum\ +=\ sum\_int;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sum);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{float}\ size\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{return}\ sum\_dec/size\_dec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00095}00095\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00106}\mbox{\hyperlink{auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}{00106}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{auxyliary__functions_8cpp_a8c714bb8d5c8f392c4b48d6ba943b104}{avg\_RR}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *durata,\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ >=\ 0;\ j-\/-\/)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (durata[i].nome\ ==\ durata[j].nome)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flag\ \&\&\ durata[i].nome\ !=\ durata[j].nome)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ durata[j].\mbox{\hyperlink{struct_processo_a693d357c160d4e8940034a9525895c00}{durata}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sum);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordtype}{float}\ processi\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(num\_processi);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{return}\ sum\_dec/processi\_dec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00130}00130\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00139}\mbox{\hyperlink{auxyliary__functions_8cpp_aae959879c312c1a00c537e1a1a35f0ee}{00139}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{auxyliary__functions_8cpp_aae959879c312c1a00c537e1a1a35f0ee}{reset\_array}}\ (\mbox{\hyperlink{struct_processo}{Processo}}\ *arr,\ \mbox{\hyperlink{struct_processo}{Processo}}\ *arr\_copia,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ arr\_copia[i]\ =\ arr[i];}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00152}\mbox{\hyperlink{auxyliary__functions_8cpp_afd7dabad87bd2917daadb256cd858b37}{00152}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{auxyliary__functions_8cpp_afd7dabad87bd2917daadb256cd858b37}{print\_SRTF}}\ (list<Processo\_log>\ \&log)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00153}00153\ \ \ \ \ list<Processo\_log>::iterator\ it\ =\ log.end();}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00154}00154\ \ \ \ \ list<Processo\_log>::iterator\ temp\ =\ prev(it);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00155}00155\ \ \ \ \ list<Processo\_log>\ cambio\_processo;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ log.begin())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (temp-\/>nome\ !=\ it-\/>nome)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/>"{}}\ <<\ temp-\/>nome;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ -\/-\/temp;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00163}00163\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00164}00164\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00174}\mbox{\hyperlink{auxyliary__functions_8cpp_afea2382b8f0411c8e85eb5fb050099d4}{00174}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{auxyliary__functions_8cpp_afea2382b8f0411c8e85eb5fb050099d4}{confronto\_processi}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\&\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00175}00175\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}\ <\ b.\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00186}\mbox{\hyperlink{auxyliary__functions_8cpp_ab761405f451870e7fde29d9a2fe232c4}{00186}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{auxyliary__functions_8cpp_ab761405f451870e7fde29d9a2fe232c4}{calcolo\_TE\_con\_processi\_multipli}}\ (\mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ *arr,\ \textcolor{keywordtype}{int}\ count)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00197}00197\ \ \ \ \ sum\ =\ arr[count\ -\/2].\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00207}00207\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ count\ -\/\ 3;\ i\ >=\ 0;\ i-\/-\/)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ \%\ 2\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ =\ sum\ -\/\ arr[i].\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00211}00211\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{return}\ sum;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00213}00213\ \};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00222}\mbox{\hyperlink{auxyliary__functions_8cpp_a5f1b1030d508ce0fadb100b3eca881b5}{00222}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{auxyliary__functions_8cpp_a5f1b1030d508ce0fadb100b3eca881b5}{avg\_SRTF}}\ (list<Processo\_log>\ \&log,\ \textcolor{keywordtype}{int}\ num\_processi)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00223}00223\ \ \ \ \ list<Processo\_log>::iterator\ it\ =\ log.end();}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00224}00224\ \ \ \ \ list<Processo\_log>::iterator\ temp\ =\ prev(it);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00225}00225\ \ \ \ \ list<Processo\_log>\ cambio\_processo;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ log.begin())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (temp-\/>nome\ !=\ it-\/>nome)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it-\/>nome\ !=\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ temp\_proc\_prec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_prec.\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}\ =\ it-\/>nome;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_prec.\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}}\ =\ it-\/>time;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cambio\_processo.push\_back(temp\_proc\_prec);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ temp\_proc\_succ;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_succ.\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}\ =\ temp-\/>nome;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_succ.\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}}\ =\ temp-\/>time;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ cambio\_processo.push\_back(temp\_proc\_succ);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ -\/-\/it;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ -\/-\/temp;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ log.begin())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ temp\_proc\_prec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_prec.\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}\ =\ it-\/>nome;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ temp\_proc\_prec.\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}}\ =\ it-\/>time;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ cambio\_processo.push\_back(temp\_proc\_prec);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00251}00251\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00253}00253\ \ \ \ \ cambio\_processo.sort(\mbox{\hyperlink{auxyliary__functions_8cpp_afea2382b8f0411c8e85eb5fb050099d4}{confronto\_processi}});}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00255}00255\ \ \ \ \ it\ =\ cambio\_processo.begin();}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00256}00256\ \ \ \ \ map<string,\ int>\ counter;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ cambio\_processo.end())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ temp\ =\ cambio\_processo.begin();}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp\ !=\ cambio\_processo.end())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it-\/>nome\ ==\ temp-\/>nome\ \&\&\ it-\/>time\ ==\ temp-\/>time)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter[it-\/>nome]++;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ ++temp;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00267}00267\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00269}00269\ \ \ \ \ it\ =\ cambio\_processo.begin();}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00270}00270\ \ \ \ \ temp\ =\ next(it);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00272}00272\ \ \ \ \ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ *arr\_ausiliario\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_processo__log}{Processo\_log}}[\mbox{\hyperlink{auxyliary__functions_8cpp_a9b382f893218d0c0e047af47f357b1c8}{CONST\_NUM}}];}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00273}00273\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00275}00275\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00276}00276\ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00278}00278\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ cambio\_processo.end())\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00279}00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it-\/>nome\ ==\ temp-\/>nome)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter[it-\/>nome]\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it-\/>time\ <\ temp-\/>time)\ \{\ sum\ +=\ it-\/>\mbox{\hyperlink{struct_processo__log_a61be711af5f870ee481e0f225d657d31}{time}};\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (it-\/>time\ >\ temp-\/>time)\ \{\ sum\ +=\ temp-\/>time;\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (counter[it-\/>nome]\ >\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arr\_ausiliario[count]\ =\ *it;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count+1\ ==\ counter[it-\/>nome])\ \{\ flag\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flag)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ \mbox{\hyperlink{auxyliary__functions_8cpp_ab761405f451870e7fde29d9a2fe232c4}{calcolo\_TE\_con\_processi\_multipli}}(arr\_ausiliario,\ counter[it-\/>nome]);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00297}00297\ \ \ \ \ \ \ \ \ ++temp;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00298}00298\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00299}00299\ \ \ \ \ \textcolor{keyword}{delete}[]\ arr\_ausiliario;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00301}00301\ \ \ \ \ \textcolor{keywordtype}{float}\ size\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(num\_processi);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00303}00303\ \ \ \ \ \textcolor{keywordflow}{return}\ sum/size\_dec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00304}00304\ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00314}\mbox{\hyperlink{auxyliary__functions_8cpp_ae05ae42ab50cb646686f8be610754f85}{00314}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{auxyliary__functions_8cpp_ae05ae42ab50cb646686f8be610754f85}{avg\_RR\_priorita}}\ (\mbox{\hyperlink{struct_processo__log}{Processo\_log}}\ *arr,\ \textcolor{keywordtype}{int}\ num\_processi,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00315}00315\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00319}00319\ \ \ \ \ map<string,\ int>\ map\_max;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00327}00327\ \ \ \ \ map<string,\ int>\ map\_sum;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr[i].nome\ ==\ arr[j].nome\ \&\&\ arr[i].time\ <=\ arr[j].time)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ map\_max[arr[j].\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}]\ =\ arr[j].time;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00336}00336\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00337}00337\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00339}00339\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr[i].time\ <\ map\_max[arr[i].nome])\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ map\_sum[arr[i].\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}]\ +=\ arr[i+1].time\ -\/\ arr[i].time\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00342}00342\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00343}00343\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00345}00345\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num\_processi;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00346}00346\ \ \ \ \ \ \ \ \ sum\ +=\ map\_max[arr[i].\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}]\ -\/\ map\_sum[arr[i].\mbox{\hyperlink{struct_processo__log_a53592783547f227078ca431f9a34a8bc}{nome}}];}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00347}00347\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00349}00349\ \ \ \ \ \textcolor{keywordtype}{float}\ size\_dec\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(num\_processi);}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00350}00350\ \ \ \ \ \textcolor{keywordflow}{return}\ sum/size\_dec;}
+\DoxyCodeLine{\Hypertarget{auxyliary__functions_8cpp_source_l00351}00351\ \}}
+
+\end{DoxyCode}

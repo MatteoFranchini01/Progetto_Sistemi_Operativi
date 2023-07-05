@@ -1,0 +1,6 @@
+<map id="algoritmo_BJP" name="algoritmo_BJP">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,112,56"/>
+<area shape="rect" id="node2" href="$auxyliary__functions_8cpp.html#a6c6776f8d3161d3a79e28d7882ed1e21" title=" " alt="" coords="210,5,252,31"/>
+<area shape="rect" id="node3" href="$selection__sort_8cpp.html#ab12f879c287dcc730725c53b04683a85" title="Algoritmo selection sort che ordina in base alla durata secondo la funzione &quot;compareByTime&quot;." alt="" coords="160,55,302,80"/>
+<area shape="rect" id="node4" href="$selection__sort_8cpp.html#a4fe8dea4c73b5643413c2a0eaea1197d" title="Funzione per confrontare i processi in base alla durata." alt="" coords="350,55,466,80"/>
+</map>

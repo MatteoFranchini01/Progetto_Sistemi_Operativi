@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Progetto Scheduling CPU:  File sorgente auxyliary_functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Progetto Scheduling CPU
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Caricamento in corso...</div>
+<div class="SRStatus" id="Searching">Ricerca in corso...</div>
+<div class="SRStatus" id="NoMatches">Nessun risultato</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">auxyliary_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="auxyliary__functions_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by Matteo Franchini on 25/04/23.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PROGETTO_SISTEMI_OPERATIVI_AUXYLIARY_FUNCTIONS_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROGETTO_SISTEMI_OPERATIVI_AUXYLIARY_FUNCTIONS_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="struct_8h.html">struct.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>list&lt;Processo&gt; <a class="code hl_function" href="auxyliary__functions_8h.html#a554a44b83cdd2f59675485e795e20ab5">analisi_processi</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *p, <span class="keywordtype">int</span> num_processi, <span class="keywordtype">int</span> time);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">bool</span> <a class="code hl_function" href="auxyliary__functions_8h.html#aaeb7d20917f739703e3861904467dec0">confronto_durata</a> (<span class="keyword">const</span> <a class="code hl_struct" href="struct_processo.html">Processo</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_processo.html">Processo</a>&amp; b);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>queue&lt;Processo&gt; <a class="code hl_function" href="auxyliary__functions_8h.html#ace10562a91dd8d1c495bd5ec8609eab4">from_array_to_queue</a>(<a class="code hl_struct" href="struct_processo.html">Processo</a> *p, <span class="keywordtype">int</span> num_processi);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8h.html#a6c6776f8d3161d3a79e28d7882ed1e21">avg</a> (<span class="keywordtype">int</span> *durata, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8h.html#a8c714bb8d5c8f392c4b48d6ba943b104">avg_RR</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *durata, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> num_processi);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="auxyliary__functions_8h.html#aae959879c312c1a00c537e1a1a35f0ee">reset_array</a> (<a class="code hl_struct" href="struct_processo.html">Processo</a> *arr, <a class="code hl_struct" href="struct_processo.html">Processo</a> *arr_copia, <span class="keywordtype">int</span> num_processi);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="auxyliary__functions_8h.html#afd7dabad87bd2917daadb256cd858b37">print_SRTF</a> (list&lt;Processo_log&gt; &amp;log);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="auxyliary__functions_8h.html#ab761405f451870e7fde29d9a2fe232c4">calcolo_TE_con_processi_multipli</a> (<a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> *arr, <span class="keywordtype">int</span> count);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">bool</span> <a class="code hl_function" href="auxyliary__functions_8h.html#afea2382b8f0411c8e85eb5fb050099d4">confronto_processi</a> (<span class="keyword">const</span> <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_processo__log.html">Processo_log</a>&amp; b);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8h.html#a5f1b1030d508ce0fadb100b3eca881b5">avg_SRTF</a> (list&lt;Processo_log&gt; &amp;log, <span class="keywordtype">int</span> num_processi);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">float</span> <a class="code hl_function" href="auxyliary__functions_8h.html#ae05ae42ab50cb646686f8be610754f85">avg_RR_priorita</a> (<a class="code hl_struct" href="struct_processo__log.html">Processo_log</a> *arr, <span class="keywordtype">int</span> num_processi, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//PROGETTO_SISTEMI_OPERATIVI_AUXYLIARY_FUNCTIONS_H</span></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_a554a44b83cdd2f59675485e795e20ab5"><div class="ttname"><a href="auxyliary__functions_8h.html#a554a44b83cdd2f59675485e795e20ab5">analisi_processi</a></div><div class="ttdeci">list&lt; Processo &gt; analisi_processi(Processo *p, int num_processi, int time)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00020">auxyliary_functions.cpp:20</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_a5f1b1030d508ce0fadb100b3eca881b5"><div class="ttname"><a href="auxyliary__functions_8h.html#a5f1b1030d508ce0fadb100b3eca881b5">avg_SRTF</a></div><div class="ttdeci">float avg_SRTF(list&lt; Processo_log &gt; &amp;log, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00222">auxyliary_functions.cpp:222</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_a6c6776f8d3161d3a79e28d7882ed1e21"><div class="ttname"><a href="auxyliary__functions_8h.html#a6c6776f8d3161d3a79e28d7882ed1e21">avg</a></div><div class="ttdeci">float avg(int *durata, int size)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00072">auxyliary_functions.cpp:72</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_a8c714bb8d5c8f392c4b48d6ba943b104"><div class="ttname"><a href="auxyliary__functions_8h.html#a8c714bb8d5c8f392c4b48d6ba943b104">avg_RR</a></div><div class="ttdeci">float avg_RR(Processo *durata, int size, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00106">auxyliary_functions.cpp:106</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_aae959879c312c1a00c537e1a1a35f0ee"><div class="ttname"><a href="auxyliary__functions_8h.html#aae959879c312c1a00c537e1a1a35f0ee">reset_array</a></div><div class="ttdeci">void reset_array(Processo *arr, Processo *arr_copia, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00139">auxyliary_functions.cpp:139</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_aaeb7d20917f739703e3861904467dec0"><div class="ttname"><a href="auxyliary__functions_8h.html#aaeb7d20917f739703e3861904467dec0">confronto_durata</a></div><div class="ttdeci">bool confronto_durata(const Processo &amp;a, const Processo &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00039">auxyliary_functions.cpp:39</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_ab761405f451870e7fde29d9a2fe232c4"><div class="ttname"><a href="auxyliary__functions_8h.html#ab761405f451870e7fde29d9a2fe232c4">calcolo_TE_con_processi_multipli</a></div><div class="ttdeci">int calcolo_TE_con_processi_multipli(Processo_log *arr, int count)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00186">auxyliary_functions.cpp:186</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_ace10562a91dd8d1c495bd5ec8609eab4"><div class="ttname"><a href="auxyliary__functions_8h.html#ace10562a91dd8d1c495bd5ec8609eab4">from_array_to_queue</a></div><div class="ttdeci">queue&lt; Processo &gt; from_array_to_queue(Processo *p, int num_processi)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00050">auxyliary_functions.cpp:50</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_ae05ae42ab50cb646686f8be610754f85"><div class="ttname"><a href="auxyliary__functions_8h.html#ae05ae42ab50cb646686f8be610754f85">avg_RR_priorita</a></div><div class="ttdeci">float avg_RR_priorita(Processo_log *arr, int num_processi, int size)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00314">auxyliary_functions.cpp:314</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_afd7dabad87bd2917daadb256cd858b37"><div class="ttname"><a href="auxyliary__functions_8h.html#afd7dabad87bd2917daadb256cd858b37">print_SRTF</a></div><div class="ttdeci">void print_SRTF(list&lt; Processo_log &gt; &amp;log)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00152">auxyliary_functions.cpp:152</a></div></div>
+<div class="ttc" id="aauxyliary__functions_8h_html_afea2382b8f0411c8e85eb5fb050099d4"><div class="ttname"><a href="auxyliary__functions_8h.html#afea2382b8f0411c8e85eb5fb050099d4">confronto_processi</a></div><div class="ttdeci">bool confronto_processi(const Processo_log &amp;a, const Processo_log &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="auxyliary__functions_8cpp_source.html#l00174">auxyliary_functions.cpp:174</a></div></div>
+<div class="ttc" id="astruct_8h_html"><div class="ttname"><a href="struct_8h.html">struct.h</a></div></div>
+<div class="ttc" id="astruct_processo__log_html"><div class="ttname"><a href="struct_processo__log.html">Processo_log</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00027">struct.h:27</a></div></div>
+<div class="ttc" id="astruct_processo_html"><div class="ttname"><a href="struct_processo.html">Processo</a></div><div class="ttdoc">Struct creata per salvare il nome, la durata e la priorità del processo.</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00014">struct.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

@@ -197,13 +197,14 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
   * @param quanto
   */
 
- void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto) {
-     int array_counter = 0;
-     int n = CONST;
+void algoritmo_RR_modificato (Processo *p, int num_processi, int quanto, int *counter) {
+    int i = 0;
+    int n = CONST;
      queue<Processo> processi = from_array_to_queue(p, num_processi);
      while (not processi.empty()) {
          if (processi.front().durata <= quanto) {
              cout << "->" << processi.front().nome;
+             counter[i] = processi.front().durata;
              processi.pop();
          }
          else if (processi.front().durata > quanto){
@@ -212,6 +213,7 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
              temp.durata = processi.front().durata - quanto;
              temp.priorita = processi.front().priorita;
              cout << "->" << temp.nome;
+             counter[i] = quanto;
              processi.push(temp);
              processi.pop();
          }
@@ -224,7 +226,9 @@ void algoritmo_SRTF (Processo *p, int num_processi) {
 * @param num_processi
 * @param quanto
 */
+
 void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
+    int *counter = new int [CONST];
     bool not_empty;
     int n = CONST; int num_proc_uguale_priorita = 0;
     Processo *stessa_priorita = new Processo [n];
@@ -233,7 +237,7 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
      * ordinare i miei processi per priorità
      */
     selectionSortByPriority(p, num_processi);
-    cout << "PRIORITÀ ";
+    cout << "RR PRIORITÀ ";
     for (int i = 0; i < num_processi; i++) {
         not_empty = false;
         for (int j = 0; j < num_processi; j++) {
@@ -248,13 +252,14 @@ void algoritmo_priorita_RR (Processo *p, int num_processi, int quanto) {
         /// Se ho più di un processo di uguale durata chiamo l'algoritmo RR
 
         if (not_empty) {
-            algoritmo_RR_modificato(stessa_priorita, num_proc_uguale_priorita, quanto);
+            algoritmo_RR_modificato(stessa_priorita, num_proc_uguale_priorita, quanto, counter);
         }
-            /// altrimenti proseguo con l'algoritmo "priorità"
+        /// altrimenti proseguo con l'algoritmo "priorità"
         else {
+            counter[i] = p[i].durata;
             cout << "->" << p[i].nome;
         }
     }
-    cout << "\nTEMPO MEDIO" << endl;
+    cout << "\nTEMPO MEDIO: " << avg(counter, num_processi) << endl;
     delete [] stessa_priorita;
 }
